@@ -32,6 +32,8 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
+    <meta name="description" content="这是我的个人博客，欢迎来的你。" />
+
 
 
   <meta name="keywords" content="Hexo,next" />
@@ -43,15 +45,15 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description">
+<meta name="description" content="这是我的个人博客，欢迎来的你。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Sunshine">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:site_name" content="Sunshine">
+<meta property="og:description" content="这是我的个人博客，欢迎来的你。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Sunshine">
+<meta name="twitter:description" content="这是我的个人博客，欢迎来的你。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +65,7 @@
 
 
 
-  <title> Hexo </title>
+  <title> Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -96,11 +98,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">Sunshine</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">Do one thing at a time, and do well.</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -163,6 +165,668 @@
       <div class="main-inner">
         <div id="content" class="content"> 
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/22/正则表达式/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-22T21:00:51+08:00" content="2015-10-22">
+              2015-10-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="字符类型">字符类型</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.  任意字符</span><br><span class="line">[] 可以在字符串中限定字符的范围</span><br><span class="line">\d [<span class="number">0</span>-<span class="number">9</span>] 数字</span><br><span class="line">\D [^<span class="number">0</span>-<span class="number">9</span>] 非数字</span><br><span class="line">\s 所有不可见字符（空格、tab）</span><br><span class="line">\S 所有可见字符</span><br><span class="line">\w [<span class="number">0</span>-<span class="number">9</span>a-zA-Z_] 单词（数字、字母、下划线）</span><br><span class="line">\W [^<span class="number">0</span>-<span class="number">9</span>a-zA-Z] 非单词</span><br></pre></td></tr></table></figure>
+<h3 id="数量限定">数量限定</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">?     前面的一个字符或者（）至多出现1次 (0次或1次)</span><br><span class="line">+     前面的一个字符或者（）至少出现1次 (1次或者多次)</span><br><span class="line"><span class="comment">*     前面的一个字符或者（）可以出现任意次数 (0次、1次或者多次)</span></span><br><span class="line">&#123;<span class="keyword">n</span>&#125;   前面的一个字符或者（）出现<span class="keyword">n</span>次</span><br><span class="line">&#123;<span class="keyword">n</span>,&#125;  前面的一个字符或者（）至少出现<span class="keyword">n</span>次</span><br><span class="line">&#123;<span class="keyword">n</span>,<span class="keyword">m</span>&#125; 前面的一个字符或者（）出现<span class="keyword">n</span>到<span class="keyword">m</span>次</span><br></pre></td></tr></table></figure>
+<h3 id="其他字符">其他字符</h3><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">^     以什么开始 ^<span class="literal">A</span>表示以<span class="literal">A</span>开始</span><br><span class="line">$     以什么结束 B$表示以B结束</span><br><span class="line">|     表示选择 gray|grey表示gray或者grey</span><br><span class="line">()    可以改变优先级，作为一个整体</span><br></pre></td></tr></table></figure>
+<p>练习：</p>
+<ol>
+<li>整数     <code>^-?\d+$</code></li>
+<li>长度为8-10位的用户密码，要求以字母开始，剩余部分可以包含大写或小写字母、数字、下划线 <code>^[a-zA-Z]\w{7,9}$</code></li>
+<li><code>^.{8}\.[a-zA-Z]{1,3}$</code></li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/22/常用正则表达式/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-22T21:00:51+08:00" content="2015-10-22">
+              2015-10-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>####常用正则表达式</p>
+<p> NSString <em>urlStr = @”jwfwfwfwf@163.com”;<br>        NSError </em>error;<br>        NSRegularExpression <em>reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;error];<br>        NSTextCheckingResult </em>firstMatch = [reg firstMatchInString:urlStr options:0 range:NSMakeRange(0, [urlStr length])];<br>        NSRange resultRange = [firstMatch rangeAtIndex:0];<br>        NSString *result = [urlStr substringWithRange:resultRange];<br>        NSLog(@”%@”, result);</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">匹配中文字符的正则表达式： <span class="special">[</span><span class="command">\u</span>4e00-<span class="command">\u</span>9fa5<span class="special">]</span></span><br><span class="line">评注：匹配中文还真是个头疼的事，有了这个表达式就好办了</span><br><span class="line"></span><br><span class="line">匹配双字节字符(包括汉字在内)：<span class="special">[</span>^<span class="command">\x</span>00-<span class="command">\xff</span><span class="special">]</span></span><br><span class="line">评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）</span><br><span class="line"></span><br><span class="line">匹配空白行的正则表达式：<span class="command">\n</span><span class="command">\s*</span><span class="command">\r</span></span><br><span class="line">评注：可以用来删除空白行</span><br><span class="line"></span><br><span class="line">匹配HTML标记的正则表达式：&lt;(<span class="command">\S*</span>?)<span class="special">[</span>^&gt;<span class="special">]</span>*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt;</span><br><span class="line">评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力</span><br><span class="line"></span><br><span class="line">匹配首尾空白字符的正则表达式：^<span class="command">\s*</span>|<span class="command">\s*</span><span class="formula">$</span><br><span class="line">评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式</span><br><span class="line"></span><br><span class="line">匹配Email地址的正则表达式：<span class="command">\w</span>+(<span class="special">[</span>-+.<span class="special">]</span><span class="command">\w</span>+)*@<span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*<span class="command">\.</span><span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*</span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配网址URL的正则表达式：<span class="special">[</span>a-zA-z<span class="special">]</span>+://<span class="special">[</span>^<span class="command">\s</span><span class="special">]</span>*</span><br><span class="line">评注：网上流传的版本功能很有限，上面这个基本可以满足需求</span><br><span class="line"></span><br><span class="line">匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^<span class="special">[</span>a-zA-Z<span class="special">]</span><span class="special">[</span>a-zA-Z0-9_<span class="special">]</span><span class="special">&#123;</span>4,15<span class="special">&#125;</span>$</span></span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配国内电话号码：<span class="command">\d</span><span class="special">&#123;</span>3<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>8<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>4<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>7<span class="special">&#125;</span></span><br><span class="line">评注：匹配形式如 0511-4405222 或 021-87888822</span><br><span class="line"></span><br><span class="line">匹配腾讯QQ号：<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>4,<span class="special">&#125;</span></span><br><span class="line">评注：腾讯QQ号从10000开始</span><br><span class="line"></span><br><span class="line">匹配中国邮政编码：<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d</span><span class="special">&#123;</span>5<span class="special">&#125;</span>(?!<span class="command">\d</span>)</span><br><span class="line">评注：中国邮政编码为6位数字</span><br><span class="line"></span><br><span class="line">匹配身份证：<span class="command">\d</span><span class="special">&#123;</span>15<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>18<span class="special">&#125;</span></span><br><span class="line">评注：中国的身份证为15位或18位</span><br><span class="line"></span><br><span class="line">匹配ip地址：<span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+</span><br><span class="line">评注：提取ip地址时有用</span><br></pre></td></tr></table></figure>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/22/git-merge&git-rebase/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-22T20:59:49+08:00" content="2015-10-22">
+              2015-10-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="git_merge_(冲突版)">git merge (冲突版)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mkdir mergeDemo</span><br><span class="line">cd mergeDemo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line">echo <span class="string">"test"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by test"</span></span><br><span class="line"></span><br><span class="line">git co master</span><br><span class="line">echo <span class="string">"master"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by master"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git merge test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上命令执行完之后，会遇到冲突。首先，通过vim打开冲突的文件，在这里是1.c，修改完冲突之后，wq保存退出;<br>接着，运行如下命令，完成后续操作</p>
+</blockquote>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add 1.c</span><br><span class="line">git <span class="keyword">ci</span> -<span class="keyword">m</span> <span class="string">"fixed conflict"</span></span><br></pre></td></tr></table></figure>
+<h1 id="git_rebase_(冲突版)">git rebase (冲突版)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mkdir rebaseDemo</span><br><span class="line">cd rebaseDemo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line">echo <span class="string">"test"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by test"</span></span><br><span class="line"></span><br><span class="line">git co master</span><br><span class="line">echo <span class="string">"master"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by master"</span></span><br><span class="line"></span><br><span class="line">git rebase master test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上命令执行完之后，会遇到冲突。首先，通过vim打开冲突的文件，在这里是1.c，修改完冲突之后，wq保存退出;<br>接着，运行如下命令，完成后续操作</p>
+</blockquote>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> <span class="number">1.</span>c</span><br><span class="line">git rebase <span class="comment">--continue</span></span><br><span class="line">git co master</span><br><span class="line">git <span class="built_in">merge</span> test</span><br></pre></td></tr></table></figure>
+<h1 id="git_rebase_-i">git rebase -i</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mkdir rebase-i-demo</span><br><span class="line">cd rebase-i-demo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line"></span><br><span class="line">echo <span class="string">"111"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 111"</span></span><br><span class="line">echo <span class="string">"2x2"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 222"</span></span><br><span class="line">echo <span class="string">"333"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 333"</span></span><br><span class="line">echo <span class="string">"444"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 444"</span></span><br><span class="line">echo <span class="string">"555"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 5xx"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>执行完以上命令之后，我们模拟出了这样一个场景：在test分支上对1.c文件修改了5次。</p>
+<p>第二次修改有误，本想修改为222，却误将其修改为了2x2，因此，对第二次修改需要更正（edit）；</p>
+<p>第三次修改和第四次修改希望想融合为一次提交log，但是内容都保留，因此，对第四次修改需要融合（squash）；</p>
+<p>第五次修改的提交log有误，本想提交为”test 修改了 1.c 555”，却误输入为”test 修改了 1.c 5xx”，因此，对第五次修改需要更新log(reword)</p>
+</blockquote>
+<p>基于以上分析，假设这五次提交的commit号分别为 <code>1abcdef</code> <code>2abcdef</code> <code>3abcdef</code> <code>4abcdef</code> <code>5abcdef</code>，那需要进行如下操作</p>
+<ol>
+<li>执行命令 <code>git rebase -i master test</code></li>
+<li><p>编辑以上命令执行完之后的文件为如下内容</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p <span class="number">1</span>abcdef</span><br><span class="line">e <span class="number">2</span>abcdef</span><br><span class="line">p <span class="number">3</span>abcdef</span><br><span class="line">s <span class="number">4</span>abcdef</span><br><span class="line">r <span class="number">5</span>abcdef</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑完之后，wq保存退出，后续步骤根据 <code>git status</code>的提醒，类似git rebase的操作继续操作即可</p>
+</li>
+<li><p>在<code>git rebase -i master test</code>命令的后续操作都完成之后，在执行如下两条命令即可</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co master</span><br><span class="line">git <span class="operator"><span class="keyword">merge</span> <span class="keyword">test</span></span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/11/编码规范/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-11T15:37:33+08:00" content="2015-10-11">
+              2015-10-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>##编码规范</p>
+<p>###一、文档结构管理</p>
+<p>1.建立Libraries文件夹，所有第三方库放入其中。</p>
+<p>2.建立Utilities文件夹，自已封装的类放入其中。</p>
+<p>3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。</p>
+<p>4.每个功能块放入一个Group，在目录里建立实际文件夹管理。</p>
+<p>5.程序资源文件放入Supporting Files文件夹中。如.plist、数据库资料等。</p>
+<p>6.在Supporting Files文件夹下建立Images、Musics和Videos等相关文件夹。图片、音频、视频等资源分别放入其中。图片资源以程序逻辑框架建立相应实体文件夹管理，若多个功能块共用的，建立Common文件夹，放入其中。<code>由于苹果公司Images.xcassets的推出，图片资源以后用Images.xcassets来管理。</code></p>
+<p>###二、编码规范<br>说明：为了不影响阅读，一个类的代码行数尽量不要超过300行;一个方法尽量不要超过30行。有超过的在重构的时候想办法分解。</p>
+<p>1.每个.h文件最开始处用简短文字说明一下该类的功能逻辑。<br>2.引入其它类时，若要作为实例变量的在.h中引入。否则在.m中引入。</p>
+<p>3.@interface与@implementation与#import 之间空一行。@synthesize紧接着@implementation写。</p>
+<p>4.a: 声明实例变量一律以属性声明。</p>
+<p>b: 其它类要访问的实例变量和方法在.h文件中声明，否则声明于.m文件中。</p>
+<p>c: 实例变量及方法以功能块放在一起，实现一个功能的连续着放在一起，另一个功能的空一行开始声明。</p>
+<p>d:实例变量紧接@interface后开始，方法在实例变量后空一行开始。</p>
+<p>e:每个功能块可作简单说明，单个实例变量方法可不作说明，关键的或特殊的变量或方法单独作说明。注释放于变量声明上一行。</p>
+<p>5.类中第个功能模块以 #pragma mark -  分隔，上空两行，下空一行。</p>
+<p>6.NSLog在测试完成后一律删除。（换成自定义log）</p>
+<p>7.对于系统的常用类作实例变量声明时加入后缀：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">UIViewController</span><span class="symbol">:VC</span>            <span class="constant">UIImage</span><span class="symbol">:Img</span>    </span><br><span class="line"><span class="constant">UIImageView</span><span class="symbol">:ImgView</span>            <span class="constant">UIView</span><span class="symbol">:View</span>　　<span class="constant">UILabel</span><span class="symbol">:Lbl</span></span><br><span class="line"><span class="constant">UIButton</span><span class="symbol">:Btn</span>　　                <span class="constant">UINavigationBar</span><span class="symbol">:NBar</span></span><br><span class="line"><span class="constant">UIToolBar</span><span class="symbol">:TBar</span>　　              <span class="constant">UISearchBar</span><span class="symbol">:SBar</span></span><br><span class="line"><span class="constant">UITextField</span><span class="symbol">:TextField</span>　　       <span class="constant">UITextView</span><span class="symbol">:TextView</span></span><br><span class="line"><span class="constant">NSArray</span><span class="symbol">:Array</span>　　               <span class="constant">NSMutableArray</span><span class="symbol">:MArray</span></span><br><span class="line"><span class="constant">NSDictionary</span><span class="symbol">:Dict</span>　　			 <span class="constant">NSMutableDictionary</span><span class="symbol">:MDict</span></span><br><span class="line"><span class="constant">NSString</span><span class="symbol">:Str</span>　　       			<span class="constant">NSMutableString</span><span class="symbol">:MStr</span></span><br><span class="line"><span class="constant">NSSet</span><span class="symbol">:Set</span>　　　　　            <span class="constant">NSMutableSet</span><span class="symbol">:MSet</span></span><br></pre></td></tr></table></figure>
+<p>8.程序中变量、方法命名尽量能以字面意思表示功能，对于需要用注释来解释的部分代码，注释以如下格式表述：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> 方法或变量说明</span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param 参数1说明(针对方法)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param 参数2说明(针对方法)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@return 若方法有返回值则对返回值作说明</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<p>###三、Xcode配置</p>
+<p>1.全部统一用ARC。</p>
+<p>2.用git管理代码。</p>
+<p>3.在项目.pch文件加入一段去除release状态的NSLog代码:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">ifndef</span> __OPTIMIZE__</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) NSLog(__VA_ARGS__)</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">else</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) &#123;&#125;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/11/Xcode快捷键/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-11T15:37:33+08:00" content="2015-10-11">
+              2015-10-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="光标移动">光标移动</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">C</span>-f	向前移动光标</span><br><span class="line"><span class="keyword">C</span>-Option-f 向前移动一个单词</span><br><span class="line"><span class="keyword">C</span>-b 向后移动光标</span><br><span class="line"><span class="keyword">C</span>-Option-b 向后移动一个单词</span><br><span class="line"><span class="keyword">C</span>-n 向下移动光标</span><br><span class="line"><span class="keyword">C</span>-p 向上移动光标</span><br><span class="line"></span><br><span class="line"><span class="keyword">C</span>-a 移动光标到行首</span><br><span class="line"><span class="keyword">C</span>-e 移动光标到行尾</span><br></pre></td></tr></table></figure>
+<h3 id="选中操作">选中操作</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">C</span>-Shift-f 向前移动光标并选中</span><br><span class="line"><span class="keyword">C</span>-Option-Shitf-f 向前选中一个单词</span><br><span class="line"><span class="keyword">C</span>-Shift-b 向后移动光标并选中</span><br><span class="line"><span class="keyword">C</span>-Option-Shitf-b 向后选中一个单词</span><br><span class="line"><span class="keyword">C</span>-Shift-n 向下移动光标并选中</span><br><span class="line"><span class="keyword">C</span>-Shift-p 向上移动光标并选中</span><br><span class="line"></span><br><span class="line"><span class="keyword">C</span>-Shift-a 从当前光标到行首选中</span><br><span class="line"><span class="keyword">C</span>-Shift-e 从当前光标到行尾选中</span><br></pre></td></tr></table></figure>
+<h3 id="删除操作">删除操作</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">C</span>-d 删除当前光标后面的一个字符</span><br><span class="line"><span class="keyword">C</span>-h 删除当前光标前面的一个字符</span><br><span class="line"><span class="keyword">C</span>-k 删除当前光标到行尾的内容</span><br></pre></td></tr></table></figure>
+<h3 id="类似Windows的操作">类似Windows的操作</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">CMD</span>-a 全选</span><br><span class="line"><span class="built_ins">CMD</span>-c 复制</span><br><span class="line"><span class="built_ins">CMD</span>-v 粘贴</span><br><span class="line"><span class="built_ins">CMD</span>-z 撤销</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/11/git常用操作/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-10-11T15:35:50+08:00" content="2015-10-11">
+              2015-10-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="Git操作_-_By_尤明">Git操作    - By 尤明</h1><h2 id="基本操作">基本操作</h2><ol>
+<li><p>初始化仓库</p>
+<ul>
+<li>git init</li>
+</ul>
+</li>
+<li><p>配置作者信息</p>
+<ul>
+<li>git config –global user.email “youremail@corp.com”</li>
+<li>git config –global user.name “yourname”</li>
+</ul>
+</li>
+<li><p>添加文件到暂存区</p>
+<ul>
+<li>git add \<filename\> </filename\></li>
+<li>git add * (添加所有文件到暂存区)</li>
+</ul>
+</li>
+<li>移除文件<ul>
+<li>git rm \<filename\></filename\></li>
+</ul>
+</li>
+<li>重命名一个文件<ul>
+<li>git mv \<oldfilename\> \<newfilename\></newfilename\></oldfilename\></li>
+</ul>
+</li>
+<li><p>提交暂存区</p>
+<p> <code>git commit只会提交暂存区（staged）里面的文件</code></p>
+<ul>
+<li>git commit -m “message”    </li>
+</ul>
+</li>
+<li>查看工作目录的状态<ul>
+<li>git status</li>
+</ul>
+</li>
+<li>查看提交历史记录<ul>
+<li>git log</li>
+</ul>
+</li>
+<li>查看文件改变<ul>
+<li>git diff</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>##撤销操作</p>
+<ol>
+<li>撤销加入暂存区的操作<ul>
+<li>git reset HEAD \<file\></file\></li>
+</ul>
+</li>
+<li>撤销修改的操作<ul>
+<li>git checkout – \<file\></file\></li>
+</ul>
+</li>
+<li>将本地的修改放进回收站<ul>
+<li>git stash</li>
+</ul>
+</li>
+<li>从回收站中恢复本地的修改<ul>
+<li>git stash apply</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Tag操作">Tag操作</h2><ol>
+<li>查看tag<ul>
+<li>git tag</li>
+</ul>
+</li>
+<li>创建tag<ul>
+<li>git tag -a v1.0 -m “my version 1.0”</li>
+</ul>
+</li>
+<li>显示tag信息<ul>
+<li>git show v1.0</li>
+</ul>
+</li>
+<li>对之前的提交打tag<ul>
+<li>git tag -a v0.1 -m “version 0.1”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="分支操作">分支操作</h2><ol>
+<li>查看分支<ul>
+<li>git branch</li>
+</ul>
+</li>
+<li>创建分支<ul>
+<li>git branch \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>删除分支<ul>
+<li>git branch -d \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>切换分支<ul>
+<li>git checkout \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>合并分支<ul>
+<li>git merge \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>rebase操作<ul>
+<li>git rebase \<basebranch\> \<newbranch\></newbranch\></basebranch\></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="远端仓库操作">远端仓库操作</h2><ol>
+<li>克隆一个远端仓库<ul>
+<li>git clone <em>URL</em></li>
+</ul>
+</li>
+<li>添加远端仓库<ul>
+<li>git remote add \<name\> \<url\></url\></name\></li>
+</ul>
+</li>
+<li>更新远端仓库的分支和数据<ul>
+<li>git fetch \<name\> </name\></li>
+</ul>
+</li>
+<li>获取并合并远端仓库的分支到当前分支<ul>
+<li>git pull \<reponame\> \<branchname\></branchname\></reponame\></li>
+<li>eg: <code>git pull origin master</code></li>
+</ul>
+</li>
+<li>上传本地分支和数据到远端仓库<ul>
+<li>git push \<reponame\> \<branchname\></branchname\></reponame\></li>
+<li>eg: <code>git push origin master</code> </li>
+</ul>
+</li>
+<li>跟踪远端仓库上的分支<ul>
+<li>git checkout –track origin/testbranch</li>
+<li>git checkout -b test origin/testbranch</li>
+</ul>
+</li>
+</ol>
+<hr>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -348,89 +1012,6 @@
 <p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/10/10/test/" itemprop="url">
-                  传值
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-10T21:50:00+08:00" content="2015-10-10">
-              2015-10-10
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h4 id="属性传值:">属性传值:</h4><p>属性传值适用于从前往后传值</p>
-<p>===  </p>
-<h4 id="代理传值:">代理传值:</h4><p>适用于从后往前传值.</p>
-<h4 id="单例传值:">单例传值:</h4><p>适合于从前往后传,从后往前传都可以,但是内存空间不会被释放直到应用程序结束</p>
-<h4 id="NSUserDefaults:">NSUserDefaults:</h4><p>数据持久化的一种方式,数据可以长久的存储,存到本地然后再从本地获取.通知:通知的使用需要注册通知,以及发送通知.</p>
-<h4 id="block:">block:</h4><p>需要定义block,当block进行回调时将值传给其他界面,适用于从后往前</p>
-<h4 id="初始化方法:">初始化方法:</h4><p>给第二个界面写一个初始化方法,当进入下一界面时,将第一个界面的值作为初始化方法的参数.适用于从前往后传值.</p>
-<h4 id="全局变量:">全局变量:</h4><p>适合多个界面之间进行传值,但是空间不会被释放. </p>
 
             
           </span>
@@ -714,739 +1295,6 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
 
     
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/05/04/字典副本/" itemprop="url">
-                  字典
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-05-04T13:40:54+08:00" content="2015-05-04">
-              2015-05-04
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="Foundition框架">Foundition框架</h2><h4 id="字典">字典</h4><ol>
-<li>不可变数组 ： NSDictionary  *dictionary1;</li>
-<li><p>可变数组 ： <code>NSMutableDictionary</code>  *dictionary2;</p>
-<p> 字典初始化：</p>
-<p> <code>Dictionary *dictionary1 = [NSDictionary dictionaryWithObjectsAndKeys:str1,@&quot;hello&quot;,str2,@&quot;word&quot;,str3,@&quot;two&quot;,nil];</code></p>
-<p> <code>Dictionary *dictionary1 = @{@&quot;num1&quot;:@12,@&quot;num2&quot;:@34,@&quot;str1&quot;:@&quot;hello&quot;,@&quot;str2&quot;:@&quot;error&quot;};</code></p>
-<p> //创建空字典</p>
-<p> <code>NSMutableDictionary  *dictionary2 = [NSMutableDictionary dictionary];</code></p>
-<p> //用已有的字典创建新字典</p>
-<p> <code>NSMutableDictionary  *dictionary2 = [NSMutableDictionary dictionaryWithDictionary:array];</code></p>
-<p> //创建一个字典，并预分配内存</p>
-<p> <code>NSMutableDictionary  *dictionary2 = [NSMutableDictionary dictionaryWithCapacity:40];</code></p>
-<p> 对可变字典的操作：</p>
-<p> 2.1 增加元素 </p>
-<p> <code>[dictionary2 addObjects:(id)forKey:@&quot;key&quot;];</code></p>
-<p> 2.2 删除元素</p>
-<p> <code>[dictionary2 removeObjectForKey:@&quot;key&quot;];</code></p>
-<p> 2.3 修改元素（替换）</p>
-<p> <code>[dictionary2 setObject:（id）forKey:@&quot;key&quot;];</code></p>
-<p> 2.4 访问字典</p>
-<p> <code>dictionary2［@“key”］;</code></p>
-<p> <code>[dictionary2 objectForKey:@&quot;key&quot;]</code></p>
-</li>
-</ol>
-<h4 id="装箱－开箱">装箱－开箱</h4><ol>
-<li><p>对基本数据类型的装箱－NSNumber</p>
-<p> //装箱方法1</p>
-<p> <code>NSNumber *number = [NSNumber numberWithChar:&#39;X&#39;];</code></p>
-<p> <code>NSNumber *number = [NSNumber numberWithINT:23];</code></p>
-<p> <code>NSNumber *number = [NSNumber numberWithBOOL:YES];</code></p>
-<p> <code>NSNumber *number = [NSNumber numberWithDouble:34.5];</code></p>
-<p> //装箱方法2</p>
-<p> @23，@34.5</p>
-<p> //开箱</p>
-<p> <code>[number charValue];</code></p>
-<p> <code>[number intValue];</code></p>
-<p> <code>[number BOOLValue];</code></p>
-<p> <code>[number DoubleValue];</code>    </p>
-</li>
-<li><p>对所有非对象类型的装箱（包括基本数据类型）－ NSValue</p>
-<p> //对NSRect，NSPoint，NSRange装箱,也可以对基本数据类型进行装箱</p>
-<p> NSRect rect = NSMakeRect(10,20,30,40);</p>
-<p> <code>NSValue *value = [NSvalue valueWithBytes:&amp;rect objCType:@encode(NSRect)];</code></p>
-<p> int a ＝ 5；</p>
-<p> <code>NSValue *value = [NSvalue valueWithBytes:&amp;a objCType:@encode(int)];</code></p>
-<p> //开箱</p>
-<p> NSRect rect2 ＝ ｛0｝；</p>
-<p> <code>［value getValue:&amp;rect］;</code></p>
-<p> int b = 0;</p>
-<p> <code>[value getValue:&amp;b];</code></p>
-<p> //仅对NSRect，NSPoint，NSRange装箱</p>
-<p> <code>NSValue *value = [NSValue valueWithRect];</code></p>
-<p> <code>NSValue *value = [NSValue valueWithRange];</code></p>
-<p> <code>NSValue *value = [NSValue valueWithPoint];</code></p>
-<p> //开箱</p>
-<p> NSRect rect2 ＝ ｛0｝；</p>
-<p> <code>[value rectValue];</code></p>
-<p> NSRange range = {0};</p>
-<p> <code>[value rangeValue];</code></p>
-<p> NSPoint point = {0};</p>
-<p> <code>[value pointValue];</code></p>
-</li>
-</ol>
-<h4 id="枚举">枚举</h4><pre><code><span class="comment">//normal enumerator</span>
-
-<span class="built_in">NSEnumerator</span> *enumer = [array objectEnumerator];
-
-<span class="keyword">id</span> obj;
-<span class="keyword">while</span> (obj = [enumer nextObject]) {
-    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj);
-}
-
-<span class="built_in">NSEnumerator</span> *enumer2 = [array reverseObjectEnumerator];
-<span class="keyword">while</span> (obj = [enumer2 nextObject]) {
-    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj);
-}
-
-<span class="comment">//fast enumerator</span>
-
-<span class="keyword">for</span> (<span class="keyword">id</span> obj2 <span class="keyword">in</span> array) {
-    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj2);
-}
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/05/04/类别副本/" itemprop="url">
-                  类别
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-05-04T13:36:53+08:00" content="2015-05-04">
-              2015-05-04
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="类别">类别</h2><ol>
-<li><p>类别的简述</p>
-<ul>
-<li>为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；</li>
-<li>类别可以解决继承不能为累簇添加新方法的问题。</li>
-</ul>
-</li>
-<li><p>类别的声明和实现</p>
-<p> 格式： <code>类名 ＋ 类别名</code></p>
-<p> 如：为NSString 创建一个类别 <code>NSString＋NumberConvenience</code>；</p>
-<p> 只要保证类别名称唯一，可以向一个类中添加任意数量的类别。</p>
-<p> 声明：</p>
-<p> @interface NSString （NumberConvenience）</p>
-<p> － （NSNumber *）lengthAsNumber;</p>
-<p> @end</p>
-<p> 实现：</p>
-<p> @implementation NSString （NumberConvenience）</p>
-<p> － （NSNumber *）lengthAsNumber<br> {</p>
-<p> }</p>
-<p> @end</p>
-</li>
-<li><p>类别的优缺点</p>
-<p> 缺点：</p>
-<pre><code><span class="bullet">* </span>只能添加方法，只可以访问原始类的实例变量，无法向类别中添加新的实例变量
-<span class="bullet">* </span>名称冲突。类别具有最高优先级，即当类别中定义与对应类中已有的方法同名的方法，对象调用该方法时，会优先调用类别中定义的方法。
-<span class="bullet">* </span>多个Category中如果实现了相同的方法，只有最后一个参与编译的才会有效   
-</code></pre><p> 优点：</p>
-<pre><code><span class="bullet">* </span>将类的实现代码分散到多个不同文件或框架中。
-<span class="bullet">* </span>可以创建对类中私有方法的前向引用，
-<span class="bullet">* </span>向对象添加非正式协议。
-</code></pre></li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/04/30/协议副本/" itemprop="url">
-                  协议
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-30T21:27:37+08:00" content="2015-04-30">
-              2015-04-30
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="协议">协议</h2><ol>
-<li><p>基本用途</p>
-<ul>
-<li>可以用来声明一大堆方法（不能声明成员变量）</li>
-<li>只要某个类遵守了这个协议，就相当于拥有这个协议中的所有方法声明</li>
-<li>只要父类遵守了某个协议，就相当于子类也遵守了    </li>
-</ul>
-</li>
-<li><p>格式<br> @protocol 协议名</p>
-<p> 方法声明列表</p>
-<p> @end</p>
-<p> 某个类遵守某个协议</p>
-<p> @interface 类名 : 父类名&lt;协议名&gt;</p>
-<p> @end</p>
-</li>
-<li><p>关键字</p>
-<p> 协议中有2个关键字可以控制方法是否要实现（默认是@required），在大多数情况下，用途在于程序员之间的交流</p>
-<ul>
-<li>@required: 该关键字以下且@optional关键字以上的方法必须要实现（若不实现，编译器会发出警告</li>
-<li>@optional: 该关键字以下且@required关键字以上的方法可以选择性的实现</li>
-</ul>
-</li>
-<li><p>协议遵守协议</p>
-<ul>
-<li><p>一个协议可以遵守其他多个协议，多个协议之间用逗号 , 隔开</p>
-<ul>
-<li>一个协议遵守了其他协议，就相当于拥有了其他协议中的方法声明</li>
-</ul>
-<p>@protocol 协议名称 &lt;协议1, 协议2&gt;</p>
-<p>@end</p>
-</li>
-</ul>
-</li>
-<li><p>基协议</p>
-<ul>
-<li>NSObject是一个基类，最根本最基本的类，任何其他类最终都要继承它</li>
-<li>其实还有一个协议，名字也叫NSObject，它是一个基协议，最根本最基本的协议</li>
-<li>NSObject协议中声明很多最基本的方法，比如description、retain、release等</li>
-<li>建议每个新的协议都要遵守NSObject协议</li>
-</ul>
-</li>
-<li><p>定义变量时指定协议</p>
-<p> // NSObject类型的对象，并且要遵守NSCopying协议</p>
-<ul>
-<li><p>NSObject<nscopying> *obj;</nscopying></p>
-<p>// 任何OC对象，并且要遵守NSCoding协议</p>
-</li>
-<li><p>id<nscoding> obj2;</nscoding></p>
-</li>
-</ul>
-</li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/04/30/内存管理副本/" itemprop="url">
-                  内存管理
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-30T21:25:44+08:00" content="2015-04-30">
-              2015-04-30
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="内存管理">内存管理</h2><p><strong>内存管理机制：引用计数</strong></p>
-<ol>
-<li><p>引用计数的计算</p>
-<ul>
-<li>alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1<ul>
-<li><ul>
-<li>(id) retain; //给对象发送retain消息后，对象的引用计数器加1</li>
-</ul>
-</li>
-<li><ul>
-<li>(void) release; //给对像发送release消息后，对象的引用计数器减1</li>
-</ul>
-</li>
-<li>-(void)dealloc; //当一个对象的引用计数器变为0而即将被销毁时,Objective-C自动向对                             象发送一条dealloc消息，我们通常都会在自己的对象中重写dealloc方法</li>
-<li><ul>
-<li>(unsigned) retainCount;//获取当前对象的引用计数器的值</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>非ARC环境下内存的管理</p>
-<p> 当某个对象被持有有，［对象名 retain］；<br> 当某个对象不再被持有时，［对象名 release］；</p>
-</li>
-<li><p>ARC环境下内存的管理</p>
-<ul>
-<li><p>规则</p>
-<p>  只要还有一个强指针变量指向对象，对象就会保持在内存中</p>
-</li>
-<li><p>强引用，弱引用</p>
-<p>  ➢    默认所有实例变量和局部变量都是Strong指针</p>
-<p>  ➢    弱指针指向的对象被回收后，弱指针会自动变为nil指针，不会引发野指针错误。其修饰符号为__weak;</p>
-</li>
-<li><p>注意点</p>
-<pre><code>➢    不能调用<span class="operator"><span class="keyword">release</span>、retain、autorelease、retainCount</span>
-</code></pre><p> ➢    可以重写dealloc，但是不能调用[super dealloc]</p>
-<p> ➢    @property : 想长期拥有某个对象，应该用strong，其他对象用weak</p>
-<p> ➢    其他基本数据类型依然用assign</p>
-<p> ➢    两端互相引用时，一端用strong、一端用weak</p>
-<ol>
-<li>自动释放池</li>
-</ol>
-</li>
-<li>自动释放池是一个存放实体的集合，这些实体可能是对象，这些对象能够被自动释放。</li>
-<li><p>/ - (id) autorelease; //是NSObject类提供的方法，此方法在某一个预定的时候，向对象发送release消息，返回值是接收消息的对象。实际上当给一个对象发送autorelease消息的时候，就是将这个对象添加到的自动释放池(NSAutoreleasePool)中，当自动释放池销毁时，会向该池中的所有对象发送release消息。</p>
-<p>如： - (NSString <em>) description<br>{<br>  NSString </em>desc;<br>   desc = [[NSString alloc] initWithFormat: @” I am %d years old”,29];<br>   return ([desc autorelease]);<br>}</p>
-</li>
-</ul>
-</li>
-<li><p>内存管理规则</p>
-<ul>
-<li>如果我使用了new , alloc 或者copy方法获得一个对象，则我必须释放或自释放该对象。</li>
-<li>如果你对对象调用了retain消息，那么你必须负责释放(release)这个对象，保证retain和release的使用次数相等。</li>
-</ul>
-</li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/04/30/OC副本/" itemprop="url">
-                  OC
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-30T11:49:42+08:00" content="2015-04-30">
-              2015-04-30
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p><img src="http://www.52nx.net/article/UploadPic/2011-10/2011101515463073132.png" alt="image"></p>
-<p>##NSLog 与 printf的不同</p>
-<pre><code><span class="number">1.</span> NSLog接收oc字符串作为参数，<span class="built_in">printf</span>接收c语言的字符串作为参数
-<span class="number">2.</span> NSLog输出后会自动换行，<span class="built_in">printf</span>在输出后不会自动换行
-<span class="number">3.</span> 使用NSLog时，需要包含头文件<span class="preprocessor">#import &lt;Foundition/Foundition.h&gt;；而使用printf时，需要包含头文件#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
-<span class="number">4.</span> NSLog可以输出日期，时间戳，进程号等信息，而<span class="built_in">printf</span>不能输出这些信息
-</code></pre><h2 id="常用术语">常用术语</h2><p>面向过程 ： Procedure Oriented</p>
-<p>面向对象 ： Object Oriented ，<strong>简称OO</strong></p>
-<p>面向编程 ： Object Oriented Programming，<strong>简称OOP</strong></p>
-<h2 id="OC_语法">OC 语法</h2><ol>
-<li><strong>类的声明</strong></li>
-</ol>
-<pre><code><span class="class"><span class="keyword">@interface</span> 类名：父类（默认为 <span class="title">NSObject</span> 该类时根类）</span>
-
-{
-
-    定义成员变量；（默认情况下，成员变量为protect类型，）
-
-}    
-
-（ 可以用<span class="keyword">@public</span>将其定义为public类型，此时定义的属性或变量允许被外界访问）
-<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>/atomic,<span class="keyword">readonly</span>/<span class="keyword">readwrite</span>,<span class="keyword">assign</span>/<span class="keyword">strong</span>/retain/wake)类型 属性名；（定义属性可以自动生成setter和getter方法）
-
-声明类方法；（标识 ＋ 该方法向类发消息）
-
-声明实例方法； （标识 － 该方法向对象发消息） 声明类方法时 返回值最好定义为`instancetype`类型
-
-<span class="keyword">@end</span>
-</code></pre><ol>
-<li><p><strong>类的实现</strong></p>
-<pre><code> <span class="variable">@implemention</span> 类名
-
- － 实例方法
-｛
-        实现代码； 
- ｝
-
- ＋ 类fangfa
-｛ 
-        实现代码； 
- ｝
-
- 重写父类方法；
- 如：descripition、 dealloc、init等
-
- <span class="variable">@end</span>
-</code></pre><p>3.<strong>创建对象</strong></p>
-<pre><code><span class="number">1.</span>包含所创建类的头文件
-<span class="number">2.</span>类名 ＊对象名；
-<span class="number">2.1</span> 类名 ＊对象名 ＝ ［［类名 alloc］init］；（创建对象并为其分配内存、初始化）
-<span class="number">2.2</span> 类名 ＊对象名 ＝ ［类名 <span class="keyword">new</span>］；（每次都会创建出新的对象，并且返回对象的地址。）
-<span class="number">3.</span> 给对象赋值；（可以调用相应的类方法）；
-<span class="number">4.</span> 给对象发消息，完成所需要进行的操作；［对象 方法］；
-</code></pre></li>
-<li><p><strong>匿名对象</strong></p>
-<pre><code>方法调用：
-
-    ［［类名 <span class="literal">new</span>］方法］；／［［［类名 alloc］init］方法］；
-
-属性访问：
-
-    ［类名 <span class="literal">new</span>］<span class="subst">-&gt;</span>属性 ＝ 赋值；（外界访问定义为<span class="keyword">public</span>类型的属性）
-</code></pre></li>
-</ol>
-<h2 id="OC方法和函数的区别">OC方法和函数的区别</h2><pre><code>1. OC方法的声明只能在@interface 和 @<span class="operator"><span class="keyword">end</span>之间，只能在@implementation 和 @<span class="keyword">end</span>之间。即OC方法独立于类存在。
-<span class="number">2.</span> <span class="keyword">C</span>函数不属于类，跟类没有联系，<span class="keyword">C</span>函数所有权只属于定义函数的文件
-<span class="number">3.</span> <span class="keyword">C</span>函数不能访问OC对象的成员变量。</span>
-</code></pre><h2 id="OC语法细节">OC语法细节</h2><pre><code><span class="number">1.</span> 成员变量不能在｛｝中进行初始化、不能直接拿去访问
-<span class="number">2.</span> 方法的声明不能写在@end之后
-<span class="number">3.</span> 方法不能当作函数一样调用
-<span class="number">4.</span> 成员变量、方法不能用<span class="keyword">static</span>等关键字进行修饰
-</code></pre><h2 id="OC方法注意点">OC方法注意点</h2><pre><code>方法只有声明，没有实现（经典错误，系统提示警告）
-方法没有声明，只有实现（编译器警告，但是可以调用，OC的弱语法）
-编译的时候，访问没有定义的成员变量直接报错，调用没有的方法，只是警告
-没有<span class="class"><span class="keyword">@interface</span>，纸偶@<span class="title">implemenation</span>也可以成功定义一个类</span>
-        @implemenation Dog : <span class="built_in">NSObject</span>
-        {
-            <span class="keyword">int</span> _age;
-            <span class="built_in">NSString</span> *_name;
-        }
-
-        - (<span class="keyword">void</span>)print
-        {
-            <span class="built_in">NSLog</span>(<span class="string">@"The dog's name is %@,ang de it's %d years old!"</span>,_name,_age);
-        }
-        <span class="keyword">@end</span>
-
-@implemenation 中不能声明和<span class="class"><span class="keyword">@interface</span>一样的成员变量</span>
-</code></pre><p>!!! OC中有<code>BOOL</code>基本数据类型，其值是<code>YES</code>和<code>NO</code>，而不是true 和false，它实际上是一种对带符号的自负类型（signed char）的定义（typedef），它使用8为存储空间。<code>YES定义为1，NO定义为0</code>；</p>
-<p><img src="http://www.52nx.net/article/UploadPic/2011-7/2011772043927764.png" alt="image"></p>
-<h3 id="类方法he实例方法">类方法he实例方法</h3><ol>
-<li><p><strong>类方法</strong></p>
-<pre><code>＊ 该方法是直接可以用类名来执行的方法（类本身会在内存中占据存储空间，里面有类／对象方法列表）
-＊ 以加号 ＋ 开头
-＊ 只能用类名调用，对象不能调用
-＊ 类方法不能访问实例变量（成员变量）
-＊ 使用场合：当不需要访问成员变量时，尽量使用类方法
-＊ 类方法和对象方法可以同名
-</code></pre></li>
-<li><p><strong>实例方法</strong></p>
-<pre><code>＊ 该方法是用对象名来执行的方法
-＊ 以减号 — 开头
-＊ 只能用对象名调用，类不能调用，该方法没有对象是不能被执行的
-＊ 对象方法能访问实例变量（成员变量）
-</code></pre></li>
-</ol>
-<h3 id="setter和getter方法">setter和getter方法</h3><ol>
-<li><p><strong>setter和getter方法的使用场合</strong></p>
-<pre><code>@<span class="keyword">public</span>的成员可以随意被赋植，应该使用<span class="keyword">set</span>和<span class="keyword">get</span>方法来管理成员变量的访问
-</code></pre></li>
-<li><p><strong>setter方法</strong></p>
-<pre><code>作用：用来设置成员变量，可以在方法里面过滤一些不合理的值
-命名规范：方法以<span class="keyword">set</span>开头，而且后面跟上成员变量名，成员变量名必须首字母大写，尽量形参名称不要与成员变量名重名（成员变量名最好以下划线 _ 开头）
-返回值：一般为<span class="keyword">void</span>
-</code></pre></li>
-<li><p><strong>getter方法</strong></p>
-<pre><code>作用：返回对象内部的成员变量
-命名规范：方法名和成员变量名同名
-返回值：一般与成员变量的类型相同  
-</code></pre></li>
-</ol>
-<h3 id="self关键字">self关键字</h3><ol>
-<li><p><strong>成员变量和局部变量同名</strong></p>
-<pre><code>当成员变量和局部变量同名时，采取就近原则，访问的是局部变量
-当<span class="keyword">self</span>访问成员变量，区分同名的局部变量
-</code></pre></li>
-<li><p><strong>使用细节</strong></p>
-<pre><code><span class="number">1.</span> 出现的地方：所有的OC方法中（对象方法／类方法），不能出现在函数
-<span class="number">2.</span> 作用：
-    使用“<span class="built_in">self</span><span class="built_in">.</span>属性”访问当前方法中的成员变量
-    使用“<span class="built_in">self</span><span class="subst">-&gt; </span>成员变量”访问当前方法中<span class="keyword">public</span>成员变量
-    使用“［<span class="built_in">self</span> 方法］”调用方法（类方法／实例方法）
-<span class="number">3.</span> 类方法中<span class="built_in">self</span>只能调用类方法，实例方法中<span class="built_in">self</span>只能调用实例方法
-</code></pre></li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1482,14 +1330,14 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="John Doe" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">John Doe</p>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Kitty Zhe" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Kitty Zhe</p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
+        <p class="site-description motion-element" itemprop="description">这是我的个人博客，欢迎来的你。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1542,7 +1390,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Kitty Zhe</span>
 </div>
 
 <div class="powered-by">

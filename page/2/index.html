@@ -32,6 +32,8 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
+    <meta name="description" content="这是我的个人博客，欢迎来的你。" />
+
 
 
   <meta name="keywords" content="Hexo,next" />
@@ -43,15 +45,15 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description">
+<meta name="description" content="这是我的个人博客，欢迎来的你。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Sunshine">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:site_name" content="Sunshine">
+<meta property="og:description" content="这是我的个人博客，欢迎来的你。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Sunshine">
+<meta name="twitter:description" content="这是我的个人博客，欢迎来的你。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +65,7 @@
 
 
 
-  <title> Hexo </title>
+  <title> Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -96,11 +98,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">Sunshine</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">Do one thing at a time, and do well.</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -163,6 +165,739 @@
       <div class="main-inner">
         <div id="content" class="content"> 
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/05/04/字典副本/" itemprop="url">
+                  字典
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-05-04T13:40:54+08:00" content="2015-05-04">
+              2015-05-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="Foundition框架">Foundition框架</h2><h4 id="字典">字典</h4><ol>
+<li>不可变数组 ： NSDictionary  *dictionary1;</li>
+<li><p>可变数组 ： <code>NSMutableDictionary</code>  *dictionary2;</p>
+<p> 字典初始化：</p>
+<p> <code>Dictionary *dictionary1 = [NSDictionary dictionaryWithObjectsAndKeys:str1,@&quot;hello&quot;,str2,@&quot;word&quot;,str3,@&quot;two&quot;,nil];</code></p>
+<p> <code>Dictionary *dictionary1 = @{@&quot;num1&quot;:@12,@&quot;num2&quot;:@34,@&quot;str1&quot;:@&quot;hello&quot;,@&quot;str2&quot;:@&quot;error&quot;};</code></p>
+<p> //创建空字典</p>
+<p> <code>NSMutableDictionary  *dictionary2 = [NSMutableDictionary dictionary];</code></p>
+<p> //用已有的字典创建新字典</p>
+<p> <code>NSMutableDictionary  *dictionary2 = [NSMutableDictionary dictionaryWithDictionary:array];</code></p>
+<p> //创建一个字典，并预分配内存</p>
+<p> <code>NSMutableDictionary  *dictionary2 = [NSMutableDictionary dictionaryWithCapacity:40];</code></p>
+<p> 对可变字典的操作：</p>
+<p> 2.1 增加元素 </p>
+<p> <code>[dictionary2 addObjects:(id)forKey:@&quot;key&quot;];</code></p>
+<p> 2.2 删除元素</p>
+<p> <code>[dictionary2 removeObjectForKey:@&quot;key&quot;];</code></p>
+<p> 2.3 修改元素（替换）</p>
+<p> <code>[dictionary2 setObject:（id）forKey:@&quot;key&quot;];</code></p>
+<p> 2.4 访问字典</p>
+<p> <code>dictionary2［@“key”］;</code></p>
+<p> <code>[dictionary2 objectForKey:@&quot;key&quot;]</code></p>
+</li>
+</ol>
+<h4 id="装箱－开箱">装箱－开箱</h4><ol>
+<li><p>对基本数据类型的装箱－NSNumber</p>
+<p> //装箱方法1</p>
+<p> <code>NSNumber *number = [NSNumber numberWithChar:&#39;X&#39;];</code></p>
+<p> <code>NSNumber *number = [NSNumber numberWithINT:23];</code></p>
+<p> <code>NSNumber *number = [NSNumber numberWithBOOL:YES];</code></p>
+<p> <code>NSNumber *number = [NSNumber numberWithDouble:34.5];</code></p>
+<p> //装箱方法2</p>
+<p> @23，@34.5</p>
+<p> //开箱</p>
+<p> <code>[number charValue];</code></p>
+<p> <code>[number intValue];</code></p>
+<p> <code>[number BOOLValue];</code></p>
+<p> <code>[number DoubleValue];</code>    </p>
+</li>
+<li><p>对所有非对象类型的装箱（包括基本数据类型）－ NSValue</p>
+<p> //对NSRect，NSPoint，NSRange装箱,也可以对基本数据类型进行装箱</p>
+<p> NSRect rect = NSMakeRect(10,20,30,40);</p>
+<p> <code>NSValue *value = [NSvalue valueWithBytes:&amp;rect objCType:@encode(NSRect)];</code></p>
+<p> int a ＝ 5；</p>
+<p> <code>NSValue *value = [NSvalue valueWithBytes:&amp;a objCType:@encode(int)];</code></p>
+<p> //开箱</p>
+<p> NSRect rect2 ＝ ｛0｝；</p>
+<p> <code>［value getValue:&amp;rect］;</code></p>
+<p> int b = 0;</p>
+<p> <code>[value getValue:&amp;b];</code></p>
+<p> //仅对NSRect，NSPoint，NSRange装箱</p>
+<p> <code>NSValue *value = [NSValue valueWithRect];</code></p>
+<p> <code>NSValue *value = [NSValue valueWithRange];</code></p>
+<p> <code>NSValue *value = [NSValue valueWithPoint];</code></p>
+<p> //开箱</p>
+<p> NSRect rect2 ＝ ｛0｝；</p>
+<p> <code>[value rectValue];</code></p>
+<p> NSRange range = {0};</p>
+<p> <code>[value rangeValue];</code></p>
+<p> NSPoint point = {0};</p>
+<p> <code>[value pointValue];</code></p>
+</li>
+</ol>
+<h4 id="枚举">枚举</h4><pre><code><span class="comment">//normal enumerator</span>
+
+<span class="built_in">NSEnumerator</span> *enumer = [array objectEnumerator];
+
+<span class="keyword">id</span> obj;
+<span class="keyword">while</span> (obj = [enumer nextObject]) {
+    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj);
+}
+
+<span class="built_in">NSEnumerator</span> *enumer2 = [array reverseObjectEnumerator];
+<span class="keyword">while</span> (obj = [enumer2 nextObject]) {
+    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj);
+}
+
+<span class="comment">//fast enumerator</span>
+
+<span class="keyword">for</span> (<span class="keyword">id</span> obj2 <span class="keyword">in</span> array) {
+    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj2);
+}
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/05/04/类别副本/" itemprop="url">
+                  类别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-05-04T13:36:53+08:00" content="2015-05-04">
+              2015-05-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="类别">类别</h2><ol>
+<li><p>类别的简述</p>
+<ul>
+<li>为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；</li>
+<li>类别可以解决继承不能为累簇添加新方法的问题。</li>
+</ul>
+</li>
+<li><p>类别的声明和实现</p>
+<p> 格式： <code>类名 ＋ 类别名</code></p>
+<p> 如：为NSString 创建一个类别 <code>NSString＋NumberConvenience</code>；</p>
+<p> 只要保证类别名称唯一，可以向一个类中添加任意数量的类别。</p>
+<p> 声明：</p>
+<p> @interface NSString （NumberConvenience）</p>
+<p> － （NSNumber *）lengthAsNumber;</p>
+<p> @end</p>
+<p> 实现：</p>
+<p> @implementation NSString （NumberConvenience）</p>
+<p> － （NSNumber *）lengthAsNumber<br> {</p>
+<p> }</p>
+<p> @end</p>
+</li>
+<li><p>类别的优缺点</p>
+<p> 缺点：</p>
+<pre><code><span class="bullet">* </span>只能添加方法，只可以访问原始类的实例变量，无法向类别中添加新的实例变量
+<span class="bullet">* </span>名称冲突。类别具有最高优先级，即当类别中定义与对应类中已有的方法同名的方法，对象调用该方法时，会优先调用类别中定义的方法。
+<span class="bullet">* </span>多个Category中如果实现了相同的方法，只有最后一个参与编译的才会有效   
+</code></pre><p> 优点：</p>
+<pre><code><span class="bullet">* </span>将类的实现代码分散到多个不同文件或框架中。
+<span class="bullet">* </span>可以创建对类中私有方法的前向引用，
+<span class="bullet">* </span>向对象添加非正式协议。
+</code></pre></li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/04/30/协议副本/" itemprop="url">
+                  协议
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-04-30T21:27:37+08:00" content="2015-04-30">
+              2015-04-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="协议">协议</h2><ol>
+<li><p>基本用途</p>
+<ul>
+<li>可以用来声明一大堆方法（不能声明成员变量）</li>
+<li>只要某个类遵守了这个协议，就相当于拥有这个协议中的所有方法声明</li>
+<li>只要父类遵守了某个协议，就相当于子类也遵守了    </li>
+</ul>
+</li>
+<li><p>格式<br> @protocol 协议名</p>
+<p> 方法声明列表</p>
+<p> @end</p>
+<p> 某个类遵守某个协议</p>
+<p> @interface 类名 : 父类名&lt;协议名&gt;</p>
+<p> @end</p>
+</li>
+<li><p>关键字</p>
+<p> 协议中有2个关键字可以控制方法是否要实现（默认是@required），在大多数情况下，用途在于程序员之间的交流</p>
+<ul>
+<li>@required: 该关键字以下且@optional关键字以上的方法必须要实现（若不实现，编译器会发出警告</li>
+<li>@optional: 该关键字以下且@required关键字以上的方法可以选择性的实现</li>
+</ul>
+</li>
+<li><p>协议遵守协议</p>
+<ul>
+<li><p>一个协议可以遵守其他多个协议，多个协议之间用逗号 , 隔开</p>
+<ul>
+<li>一个协议遵守了其他协议，就相当于拥有了其他协议中的方法声明</li>
+</ul>
+<p>@protocol 协议名称 &lt;协议1, 协议2&gt;</p>
+<p>@end</p>
+</li>
+</ul>
+</li>
+<li><p>基协议</p>
+<ul>
+<li>NSObject是一个基类，最根本最基本的类，任何其他类最终都要继承它</li>
+<li>其实还有一个协议，名字也叫NSObject，它是一个基协议，最根本最基本的协议</li>
+<li>NSObject协议中声明很多最基本的方法，比如description、retain、release等</li>
+<li>建议每个新的协议都要遵守NSObject协议</li>
+</ul>
+</li>
+<li><p>定义变量时指定协议</p>
+<p> // NSObject类型的对象，并且要遵守NSCopying协议</p>
+<ul>
+<li><p>NSObject<nscopying> *obj;</nscopying></p>
+<p>// 任何OC对象，并且要遵守NSCoding协议</p>
+</li>
+<li><p>id<nscoding> obj2;</nscoding></p>
+</li>
+</ul>
+</li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/04/30/内存管理副本/" itemprop="url">
+                  内存管理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-04-30T21:25:44+08:00" content="2015-04-30">
+              2015-04-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="内存管理">内存管理</h2><p><strong>内存管理机制：引用计数</strong></p>
+<ol>
+<li><p>引用计数的计算</p>
+<ul>
+<li>alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1<ul>
+<li><ul>
+<li>(id) retain; //给对象发送retain消息后，对象的引用计数器加1</li>
+</ul>
+</li>
+<li><ul>
+<li>(void) release; //给对像发送release消息后，对象的引用计数器减1</li>
+</ul>
+</li>
+<li>-(void)dealloc; //当一个对象的引用计数器变为0而即将被销毁时,Objective-C自动向对                             象发送一条dealloc消息，我们通常都会在自己的对象中重写dealloc方法</li>
+<li><ul>
+<li>(unsigned) retainCount;//获取当前对象的引用计数器的值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>非ARC环境下内存的管理</p>
+<p> 当某个对象被持有有，［对象名 retain］；<br> 当某个对象不再被持有时，［对象名 release］；</p>
+</li>
+<li><p>ARC环境下内存的管理</p>
+<ul>
+<li><p>规则</p>
+<p>  只要还有一个强指针变量指向对象，对象就会保持在内存中</p>
+</li>
+<li><p>强引用，弱引用</p>
+<p>  ➢    默认所有实例变量和局部变量都是Strong指针</p>
+<p>  ➢    弱指针指向的对象被回收后，弱指针会自动变为nil指针，不会引发野指针错误。其修饰符号为__weak;</p>
+</li>
+<li><p>注意点</p>
+<pre><code>➢    不能调用<span class="operator"><span class="keyword">release</span>、retain、autorelease、retainCount</span>
+</code></pre><p> ➢    可以重写dealloc，但是不能调用[super dealloc]</p>
+<p> ➢    @property : 想长期拥有某个对象，应该用strong，其他对象用weak</p>
+<p> ➢    其他基本数据类型依然用assign</p>
+<p> ➢    两端互相引用时，一端用strong、一端用weak</p>
+<ol>
+<li>自动释放池</li>
+</ol>
+</li>
+<li>自动释放池是一个存放实体的集合，这些实体可能是对象，这些对象能够被自动释放。</li>
+<li><p>/ - (id) autorelease; //是NSObject类提供的方法，此方法在某一个预定的时候，向对象发送release消息，返回值是接收消息的对象。实际上当给一个对象发送autorelease消息的时候，就是将这个对象添加到的自动释放池(NSAutoreleasePool)中，当自动释放池销毁时，会向该池中的所有对象发送release消息。</p>
+<p>如： - (NSString <em>) description<br>{<br>  NSString </em>desc;<br>   desc = [[NSString alloc] initWithFormat: @” I am %d years old”,29];<br>   return ([desc autorelease]);<br>}</p>
+</li>
+</ul>
+</li>
+<li><p>内存管理规则</p>
+<ul>
+<li>如果我使用了new , alloc 或者copy方法获得一个对象，则我必须释放或自释放该对象。</li>
+<li>如果你对对象调用了retain消息，那么你必须负责释放(release)这个对象，保证retain和release的使用次数相等。</li>
+</ul>
+</li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/04/30/OC副本/" itemprop="url">
+                  OC
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-04-30T11:49:42+08:00" content="2015-04-30">
+              2015-04-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p><img src="http://www.52nx.net/article/UploadPic/2011-10/2011101515463073132.png" alt="image"></p>
+<p>##NSLog 与 printf的不同</p>
+<pre><code><span class="number">1.</span> NSLog接收oc字符串作为参数，<span class="built_in">printf</span>接收c语言的字符串作为参数
+<span class="number">2.</span> NSLog输出后会自动换行，<span class="built_in">printf</span>在输出后不会自动换行
+<span class="number">3.</span> 使用NSLog时，需要包含头文件<span class="preprocessor">#import &lt;Foundition/Foundition.h&gt;；而使用printf时，需要包含头文件#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
+<span class="number">4.</span> NSLog可以输出日期，时间戳，进程号等信息，而<span class="built_in">printf</span>不能输出这些信息
+</code></pre><h2 id="常用术语">常用术语</h2><p>面向过程 ： Procedure Oriented</p>
+<p>面向对象 ： Object Oriented ，<strong>简称OO</strong></p>
+<p>面向编程 ： Object Oriented Programming，<strong>简称OOP</strong></p>
+<h2 id="OC_语法">OC 语法</h2><ol>
+<li><strong>类的声明</strong></li>
+</ol>
+<pre><code><span class="class"><span class="keyword">@interface</span> 类名：父类（默认为 <span class="title">NSObject</span> 该类时根类）</span>
+
+{
+
+    定义成员变量；（默认情况下，成员变量为protect类型，）
+
+}    
+
+（ 可以用<span class="keyword">@public</span>将其定义为public类型，此时定义的属性或变量允许被外界访问）
+<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>/atomic,<span class="keyword">readonly</span>/<span class="keyword">readwrite</span>,<span class="keyword">assign</span>/<span class="keyword">strong</span>/retain/wake)类型 属性名；（定义属性可以自动生成setter和getter方法）
+
+声明类方法；（标识 ＋ 该方法向类发消息）
+
+声明实例方法； （标识 － 该方法向对象发消息） 声明类方法时 返回值最好定义为`instancetype`类型
+
+<span class="keyword">@end</span>
+</code></pre><ol>
+<li><p><strong>类的实现</strong></p>
+<pre><code> <span class="variable">@implemention</span> 类名
+
+ － 实例方法
+｛
+        实现代码； 
+ ｝
+
+ ＋ 类fangfa
+｛ 
+        实现代码； 
+ ｝
+
+ 重写父类方法；
+ 如：descripition、 dealloc、init等
+
+ <span class="variable">@end</span>
+</code></pre><p>3.<strong>创建对象</strong></p>
+<pre><code><span class="number">1.</span>包含所创建类的头文件
+<span class="number">2.</span>类名 ＊对象名；
+<span class="number">2.1</span> 类名 ＊对象名 ＝ ［［类名 alloc］init］；（创建对象并为其分配内存、初始化）
+<span class="number">2.2</span> 类名 ＊对象名 ＝ ［类名 <span class="keyword">new</span>］；（每次都会创建出新的对象，并且返回对象的地址。）
+<span class="number">3.</span> 给对象赋值；（可以调用相应的类方法）；
+<span class="number">4.</span> 给对象发消息，完成所需要进行的操作；［对象 方法］；
+</code></pre></li>
+<li><p><strong>匿名对象</strong></p>
+<pre><code>方法调用：
+
+    ［［类名 <span class="literal">new</span>］方法］；／［［［类名 alloc］init］方法］；
+
+属性访问：
+
+    ［类名 <span class="literal">new</span>］<span class="subst">-&gt;</span>属性 ＝ 赋值；（外界访问定义为<span class="keyword">public</span>类型的属性）
+</code></pre></li>
+</ol>
+<h2 id="OC方法和函数的区别">OC方法和函数的区别</h2><pre><code>1. OC方法的声明只能在@interface 和 @<span class="operator"><span class="keyword">end</span>之间，只能在@implementation 和 @<span class="keyword">end</span>之间。即OC方法独立于类存在。
+<span class="number">2.</span> <span class="keyword">C</span>函数不属于类，跟类没有联系，<span class="keyword">C</span>函数所有权只属于定义函数的文件
+<span class="number">3.</span> <span class="keyword">C</span>函数不能访问OC对象的成员变量。</span>
+</code></pre><h2 id="OC语法细节">OC语法细节</h2><pre><code><span class="number">1.</span> 成员变量不能在｛｝中进行初始化、不能直接拿去访问
+<span class="number">2.</span> 方法的声明不能写在@end之后
+<span class="number">3.</span> 方法不能当作函数一样调用
+<span class="number">4.</span> 成员变量、方法不能用<span class="keyword">static</span>等关键字进行修饰
+</code></pre><h2 id="OC方法注意点">OC方法注意点</h2><pre><code>方法只有声明，没有实现（经典错误，系统提示警告）
+方法没有声明，只有实现（编译器警告，但是可以调用，OC的弱语法）
+编译的时候，访问没有定义的成员变量直接报错，调用没有的方法，只是警告
+没有<span class="class"><span class="keyword">@interface</span>，纸偶@<span class="title">implemenation</span>也可以成功定义一个类</span>
+        @implemenation Dog : <span class="built_in">NSObject</span>
+        {
+            <span class="keyword">int</span> _age;
+            <span class="built_in">NSString</span> *_name;
+        }
+
+        - (<span class="keyword">void</span>)print
+        {
+            <span class="built_in">NSLog</span>(<span class="string">@"The dog's name is %@,ang de it's %d years old!"</span>,_name,_age);
+        }
+        <span class="keyword">@end</span>
+
+@implemenation 中不能声明和<span class="class"><span class="keyword">@interface</span>一样的成员变量</span>
+</code></pre><p>!!! OC中有<code>BOOL</code>基本数据类型，其值是<code>YES</code>和<code>NO</code>，而不是true 和false，它实际上是一种对带符号的自负类型（signed char）的定义（typedef），它使用8为存储空间。<code>YES定义为1，NO定义为0</code>；</p>
+<p><img src="http://www.52nx.net/article/UploadPic/2011-7/2011772043927764.png" alt="image"></p>
+<h3 id="类方法he实例方法">类方法he实例方法</h3><ol>
+<li><p><strong>类方法</strong></p>
+<pre><code>＊ 该方法是直接可以用类名来执行的方法（类本身会在内存中占据存储空间，里面有类／对象方法列表）
+＊ 以加号 ＋ 开头
+＊ 只能用类名调用，对象不能调用
+＊ 类方法不能访问实例变量（成员变量）
+＊ 使用场合：当不需要访问成员变量时，尽量使用类方法
+＊ 类方法和对象方法可以同名
+</code></pre></li>
+<li><p><strong>实例方法</strong></p>
+<pre><code>＊ 该方法是用对象名来执行的方法
+＊ 以减号 — 开头
+＊ 只能用对象名调用，类不能调用，该方法没有对象是不能被执行的
+＊ 对象方法能访问实例变量（成员变量）
+</code></pre></li>
+</ol>
+<h3 id="setter和getter方法">setter和getter方法</h3><ol>
+<li><p><strong>setter和getter方法的使用场合</strong></p>
+<pre><code>@<span class="keyword">public</span>的成员可以随意被赋植，应该使用<span class="keyword">set</span>和<span class="keyword">get</span>方法来管理成员变量的访问
+</code></pre></li>
+<li><p><strong>setter方法</strong></p>
+<pre><code>作用：用来设置成员变量，可以在方法里面过滤一些不合理的值
+命名规范：方法以<span class="keyword">set</span>开头，而且后面跟上成员变量名，成员变量名必须首字母大写，尽量形参名称不要与成员变量名重名（成员变量名最好以下划线 _ 开头）
+返回值：一般为<span class="keyword">void</span>
+</code></pre></li>
+<li><p><strong>getter方法</strong></p>
+<pre><code>作用：返回对象内部的成员变量
+命名规范：方法名和成员变量名同名
+返回值：一般与成员变量的类型相同  
+</code></pre></li>
+</ol>
+<h3 id="self关键字">self关键字</h3><ol>
+<li><p><strong>成员变量和局部变量同名</strong></p>
+<pre><code>当成员变量和局部变量同名时，采取就近原则，访问的是局部变量
+当<span class="keyword">self</span>访问成员变量，区分同名的局部变量
+</code></pre></li>
+<li><p><strong>使用细节</strong></p>
+<pre><code><span class="number">1.</span> 出现的地方：所有的OC方法中（对象方法／类方法），不能出现在函数
+<span class="number">2.</span> 作用：
+    使用“<span class="built_in">self</span><span class="built_in">.</span>属性”访问当前方法中的成员变量
+    使用“<span class="built_in">self</span><span class="subst">-&gt; </span>成员变量”访问当前方法中<span class="keyword">public</span>成员变量
+    使用“［<span class="built_in">self</span> 方法］”调用方法（类方法／实例方法）
+<span class="number">3.</span> 类方法中<span class="built_in">self</span>只能调用类方法，实例方法中<span class="built_in">self</span>只能调用实例方法
+</code></pre></li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -790,88 +1525,6 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
             
             
               
-                <a class="post-title-link" href="/2015/04/16/大道生副本/" itemprop="url">
-                  大道生
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-16T14:28:33+08:00" content="2015-04-16">
-              2015-04-16
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>《德可延年》明代养生家吕坤说：【仁者可寿，德可延年，养德尤养生第一要义。】明确提出了要把道德修养、品德仁爱作为养生的准则。</p>
-<p>《安可静心》宋代文学家苏东坡认为：养生在于【安】、【和】二字。【安】即静心，【和】则顺心。【安则物之感我者轻，和则我之应物者顺】就是说，一个人对世界万物要有安和心态，以达到物我相宜之养生境界。</p>
-<p>《形神兼养》孔子曰：【君子有三戒，少之时，血气未定，戒之在色；及其壮也，血气方刚，戒之在斗；及其老也，血气既养，戒之在得。】意指养生非一朝一夕，乃贯穿人之一生，要行为检点，了解得失。</p>
-<p>《慎动寡欲》明代医学家万密斋提出养生之法有四：【一曰寡欲，慎动，三曰法时，四曰却疾】即从保健的角度说，人要节制性欲，谨慎行事，顺应时节，去除生病的隐患。</p>
-<p>《审因施养》宋代名人周守忠说：【知喜怒之损性，故豁情以宽心；知思虑之销神，故损情而内守；知语烦之侵气，故闭口而忘言；知哀乐之损寿，故抑之而不有，知情欲之窃命，故忍之而不为。五之养生勿要使七情六欲宣泄】</p>
-<p>《节怒养肝》明代医学家汪绮石说：【节嗜欲以养生，节烦恼以养神，节愤怒以养肝，节辛勤以养力，节思虑以养心，节悲哀以养肺】养生重在养身，养身即养好人的【精、气、神】。</p>
-<p>《以看养血》看些有益的书籍、电视节目以及观看山水风景等，可以使人精神愉快、脾胃健康，血液生化也就充盛，这就是【视养血】的道理。不过【久视则伤血】，必须重视掌握分寸。另外还应注意身体的保暖和膳食的营养搭配，保持气血充足。</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 <a class="post-title-link" href="/2015/04/14/继承，多态与复合副本/" itemprop="url">
                   继承，多态与复合
                 </a>
@@ -994,389 +1647,6 @@ OC对象具有多态性
 
 
     
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/04/10/block副本/" itemprop="url">
-                  block
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-10T21:29:57+08:00" content="2015-04-10">
-              2015-04-10
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="BLOCK">BLOCK</h2><ol>
-<li><p>基本概念</p>
-<p> 代码块本质上是和其他变量类似。不同的是，代码块存储的数据是一个函数体。使用代码块时，可以像调用其他标准函数一样，传入参数数，并得到返回值。    </p>
-</li>
-</ol>
-<pre><code><span class="bullet">* </span>Block封装了一段代码,可以在任何时候执行
-<span class="bullet">* </span>Block可以作为函数参数或者函数的返回值，而其本身又可以带输入参数或返回值。
-<span class="bullet">* </span>苹果官方建议尽量多用block。在多线程、异步任务、集合遍历、集合排序、动画转场用的很多
-</code></pre><ol>
-<li><p>定义</p>
-<pre><code><span class="keyword">int</span> (^MySum)(<span class="keyword">int</span>, <span class="keyword">int</span>) = ^(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
-<span class="keyword">return</span> a+b;
-};
-</code></pre><p>定义了一个叫MySum的blocks对象，它带有两个int参数，返回int。等式右边就是blocks的具体实现</p>
-</li>
-<li><p>对变量的访问权限</p>
-<ul>
-<li>对全局变量具有读写权限 </li>
-<li>对静态变量具有读写权限</li>
-<li>对局部变量只有访问权限（可以用<code>__block</code>修饰局部变量，这样可以对其进行修改）</li>
-</ul>
-</li>
-<li><p>与函数指针的对比</p>
-<p> <strong>定义函数指针</strong><br> int (<em>p)(int,int);<br> <em>*定义Blocks</em></em><br> int (^Blocks)(int,int);</p>
-<p> <strong>调用函数指针</strong><br> (<em>p)(10, 20);<br> <em>*调用Blocks</em></em><br> Blocks(10, 20);</p>
-</li>
-<li><p>typedef和赋值</p>
-<ul>
-<li><p>在声明的同时定义变量，然后赋值<br>int (^MySum)(int,int) = ^(int a,int b) {<br>return a + b;<br>};</p>
-</li>
-<li><p>也可先用typedef先声明类型，再定义变量进行赋值<br>typedef int (^MySum)(int,int);<br>MySum sum = ^(int a,int b) {<br>return a + b;<br>}; </p>
-</li>
-</ul>
-</li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/03/30/拷贝副本/" itemprop="url">
-                  拷贝
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-03-30T21:23:29+08:00" content="2015-03-30">
-              2015-03-30
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="拷贝">拷贝</h2><ol>
-<li><p>浅拷贝（shallow copy）</p>
-<p> 不会复制所引用的对象，新复制的对象只会指向现有的引用对象上。（引用计数加 1 ，地址不变）</p>
-</li>
-<li><p>深拷贝（deep copy）</p>
-<p> 真正意义的复制概念。得到的结果是多个，而非只是对象的引用。（引用计数 不变 ，地址发生变化）</p>
-</li>
-<li><p>关键字</p>
-<p> <code>copy</code>：对不可变的集合copy为浅拷贝，对可变的集合copy为深拷贝</p>
-<p> <code>mutableCopy</code>：对可变的或不可变的集合mutableCopy都是深拷贝，但是对于集合内部对象的拷贝时浅拷贝。</p>
-</li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/03/20/uilabel副本/" itemprop="url">
-                  UILabel
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-03-20T21:31:21+08:00" content="2015-03-20">
-              2015-03-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>#UILabel</p>
-<p> 文本：text NSString<br> 字体：font UIFont<br> 字体颜色：textColor UIColor<br> 字体对齐方式：textAlignment NSTextAlignment<br> 文本截断方式：lineBreakMode NSLineBreakMode       </p>
-<p>  是否启用：enabled  BOOL </p>
-<p> 字体大小随label宽度自适应：adjustsFontSizeToFitWidth BOOL<br> 文本基线：baselineAdjustment UIBaselineAdjustment </p>
-<p> 字体最小限制：minimumFontSize<br> 文本显示行数：numberOfLines </p>
-<p> 高亮颜色：highlightedTextColor UIColor<br> 是否高亮：highlighted  BOOL</p>
-<p> 文本阴影：<br> 阴影颜色：shadowColor UIColor<br> 阴影偏移量：shadowOffset  CGSize</p>
-<p> 是否允许交互：userInteractionEnabled  BOOL  </p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/03/14/kvc误点副本/" itemprop="url">
-                  KVC误点
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-03-14T21:14:39+08:00" content="2015-03-14">
-              2015-03-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>###setValue：forKey 和 setObject：forKey</p>
-<pre><code>在使用NSMutableDictionary的时候经常会使用<span class="built_in">set</span>Value <span class="keyword">for</span>Key与<span class="built_in">set</span>Object <span class="keyword">for</span>Key
-<span class="number">1</span>。<span class="built_in">set</span>Value： <span class="keyword">for</span>Key：
-发送<span class="built_in">set</span>Object:<span class="keyword">for</span>Key 给接收者，也就是调用<span class="built_in">set</span>Object:<span class="keyword">for</span>Key方法
-除非value为nil的时候，调用方法removeObject:<span class="keyword">for</span>Key
-
-<span class="number">2</span>。<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：
-Key的对象是一个id类型，并不是NSString，只不过我们经常使用NSString而已。
-</code></pre><p>####区别：<br>    1.setObject：forkey：中value是不能够为nil的，不然会报错。<br>      setValue：forKey：中value能够为nil，当value为nil的时候，自动调用removeObject：forKey方法</p>
-<pre><code><span class="number">2</span>.<span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中key的参数只能够是NSString
-  <span class="built_in">set</span>Object：<span class="keyword">for</span>Key：的可以是任何类型
-
-!!!注意：<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：对象不能存放nil要与下面的这种情况区分：
-<span class="number">1</span>.[imageDictionarysetObject:[NSNullnull] <span class="keyword">for</span>Key:indexNumber];
-[NSNull null]表示的是一个空对象，并不是nil
-
-<span class="number">2</span>.<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：中Key是NSNumber对象的时候，如下：
-[imageDictionarysetObject:obj <span class="keyword">for</span>Key:[NSNumber numberWithInt：<span class="number">10</span>]];
-</code></pre><p>####注意：<br>      上面说的区别是针对调用者是dictionary而言的。</p>
-<pre><code><span class="built_in">set</span>Object:<span class="keyword">for</span>Key:方法NSMutabledictionary特有的
-<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是KVC（键-值编码）的主要方法。
-
-当 <span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法调用者是对象的时候：
-<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是在NSObject对象中创建的，也就是说所有的oc对象都有这个方法，所以可以用于任何类。
-             比如使用:
-  SomeClass *someObj = [[SomeClass alloc] init];
-[someObj <span class="built_in">set</span>Value:<span class="literal">self</span> <span class="keyword">for</span>Key:@<span class="string">"delegate"</span>];
-表示的意思是：对象someObj设置他的delegate属性的值为当前类，当然调用此方法的对象必须要有delegate属性才能设置，不然调用了也没效果
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1412,14 +1682,14 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="John Doe" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">John Doe</p>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Kitty Zhe" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Kitty Zhe</p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
+        <p class="site-description motion-element" itemprop="description">这是我的个人博客，欢迎来的你。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1472,7 +1742,7 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Kitty Zhe</span>
 </div>
 
 <div class="powered-by">

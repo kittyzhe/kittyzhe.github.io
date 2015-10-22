@@ -45,55 +45,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="内存管理内存管理机制：引用计数
-
-引用计数的计算
-
-alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1
-
-(id) retain; //给对象发送retain消息后，对象的引用计数器加1
-
-
-
-(void) release; //给对像发送release消息后，对象的引用计数器减1
-
-
--(void)dealloc; //当一个对">
+<meta name="description" content="git merge (冲突版)12345678910111213141516171819mkdir mergeDemocd mergeDemogit initecho &quot;1.c&quot; &amp;gt; 1.cgit add 1.cgit ci -m &quot;1.c by master&quot;git co -b testecho &quot;test&quot; &amp;gt;&amp;gt; 1.cgit add 1.cgit ci -m &quot;1.c mo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内存管理">
-<meta property="og:url" content="http://yoursite.com/2015/04/30/内存管理副本/index.html">
+<meta property="og:title" content="Sunshine">
+<meta property="og:url" content="http://yoursite.com/2015/10/22/git-merge&git-rebase/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="内存管理内存管理机制：引用计数
-
-引用计数的计算
-
-alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1
-
-(id) retain; //给对象发送retain消息后，对象的引用计数器加1
-
-
-
-(void) release; //给对像发送release消息后，对象的引用计数器减1
-
-
--(void)dealloc; //当一个对">
-<meta property="og:updated_time" content="2015-04-30T13:26:12.000Z">
+<meta property="og:description" content="git merge (冲突版)12345678910111213141516171819mkdir mergeDemocd mergeDemogit initecho &quot;1.c&quot; &amp;gt; 1.cgit add 1.cgit ci -m &quot;1.c by master&quot;git co -b testecho &quot;test&quot; &amp;gt;&amp;gt; 1.cgit add 1.cgit ci -m &quot;1.c mo">
+<meta property="og:updated_time" content="2015-05-23T01:42:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="内存管理">
-<meta name="twitter:description" content="内存管理内存管理机制：引用计数
-
-引用计数的计算
-
-alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1
-
-(id) retain; //给对象发送retain消息后，对象的引用计数器加1
-
-
-
-(void) release; //给对像发送release消息后，对象的引用计数器减1
-
-
--(void)dealloc; //当一个对">
+<meta name="twitter:title" content="Sunshine">
+<meta name="twitter:description" content="git merge (冲突版)12345678910111213141516171819mkdir mergeDemocd mergeDemogit initecho &quot;1.c&quot; &amp;gt; 1.cgit add 1.cgit ci -m &quot;1.c by master&quot;git co -b testecho &quot;test&quot; &amp;gt;&amp;gt; 1.cgit add 1.cgit ci -m &quot;1.c mo">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -105,7 +66,7 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
 
 
 
-  <title> 内存管理 | Sunshine </title>
+  <title>  | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -220,7 +181,7 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
             
             
               
-                内存管理
+                
               
             
           </h1>
@@ -229,8 +190,8 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-04-30T21:25:44+08:00" content="2015-04-30">
-              2015-04-30
+            <time itemprop="dateCreated" datetime="2015-10-22T20:59:49+08:00" content="2015-10-22">
+              2015-10-22
             </time>
           </span>
 
@@ -253,62 +214,33 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
       
 
       
-        <span itemprop="articleBody"><h2 id="内存管理">内存管理</h2><p><strong>内存管理机制：引用计数</strong></p>
+        <span itemprop="articleBody"><h1 id="git_merge_(冲突版)">git merge (冲突版)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mkdir mergeDemo</span><br><span class="line">cd mergeDemo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line">echo <span class="string">"test"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by test"</span></span><br><span class="line"></span><br><span class="line">git co master</span><br><span class="line">echo <span class="string">"master"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by master"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git merge test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上命令执行完之后，会遇到冲突。首先，通过vim打开冲突的文件，在这里是1.c，修改完冲突之后，wq保存退出;<br>接着，运行如下命令，完成后续操作</p>
+</blockquote>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add 1.c</span><br><span class="line">git <span class="keyword">ci</span> -<span class="keyword">m</span> <span class="string">"fixed conflict"</span></span><br></pre></td></tr></table></figure>
+<h1 id="git_rebase_(冲突版)">git rebase (冲突版)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mkdir rebaseDemo</span><br><span class="line">cd rebaseDemo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line">echo <span class="string">"test"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by test"</span></span><br><span class="line"></span><br><span class="line">git co master</span><br><span class="line">echo <span class="string">"master"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by master"</span></span><br><span class="line"></span><br><span class="line">git rebase master test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上命令执行完之后，会遇到冲突。首先，通过vim打开冲突的文件，在这里是1.c，修改完冲突之后，wq保存退出;<br>接着，运行如下命令，完成后续操作</p>
+</blockquote>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> <span class="number">1.</span>c</span><br><span class="line">git rebase <span class="comment">--continue</span></span><br><span class="line">git co master</span><br><span class="line">git <span class="built_in">merge</span> test</span><br></pre></td></tr></table></figure>
+<h1 id="git_rebase_-i">git rebase -i</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mkdir rebase-i-demo</span><br><span class="line">cd rebase-i-demo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line"></span><br><span class="line">echo <span class="string">"111"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 111"</span></span><br><span class="line">echo <span class="string">"2x2"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 222"</span></span><br><span class="line">echo <span class="string">"333"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 333"</span></span><br><span class="line">echo <span class="string">"444"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 444"</span></span><br><span class="line">echo <span class="string">"555"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 5xx"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>执行完以上命令之后，我们模拟出了这样一个场景：在test分支上对1.c文件修改了5次。</p>
+<p>第二次修改有误，本想修改为222，却误将其修改为了2x2，因此，对第二次修改需要更正（edit）；</p>
+<p>第三次修改和第四次修改希望想融合为一次提交log，但是内容都保留，因此，对第四次修改需要融合（squash）；</p>
+<p>第五次修改的提交log有误，本想提交为”test 修改了 1.c 555”，却误输入为”test 修改了 1.c 5xx”，因此，对第五次修改需要更新log(reword)</p>
+</blockquote>
+<p>基于以上分析，假设这五次提交的commit号分别为 <code>1abcdef</code> <code>2abcdef</code> <code>3abcdef</code> <code>4abcdef</code> <code>5abcdef</code>，那需要进行如下操作</p>
 <ol>
-<li><p>引用计数的计算</p>
-<ul>
-<li>alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1<ul>
-<li><ul>
-<li>(id) retain; //给对象发送retain消息后，对象的引用计数器加1</li>
-</ul>
+<li>执行命令 <code>git rebase -i master test</code></li>
+<li><p>编辑以上命令执行完之后的文件为如下内容</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p <span class="number">1</span>abcdef</span><br><span class="line">e <span class="number">2</span>abcdef</span><br><span class="line">p <span class="number">3</span>abcdef</span><br><span class="line">s <span class="number">4</span>abcdef</span><br><span class="line">r <span class="number">5</span>abcdef</span><br></pre></td></tr></table></figure>
 </li>
-<li><ul>
-<li>(void) release; //给对像发送release消息后，对象的引用计数器减1</li>
-</ul>
+<li><p>编辑完之后，wq保存退出，后续步骤根据 <code>git status</code>的提醒，类似git rebase的操作继续操作即可</p>
 </li>
-<li>-(void)dealloc; //当一个对象的引用计数器变为0而即将被销毁时,Objective-C自动向对                             象发送一条dealloc消息，我们通常都会在自己的对象中重写dealloc方法</li>
-<li><ul>
-<li>(unsigned) retainCount;//获取当前对象的引用计数器的值</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>非ARC环境下内存的管理</p>
-<p> 当某个对象被持有有，［对象名 retain］；<br> 当某个对象不再被持有时，［对象名 release］；</p>
-</li>
-<li><p>ARC环境下内存的管理</p>
-<ul>
-<li><p>规则</p>
-<p>  只要还有一个强指针变量指向对象，对象就会保持在内存中</p>
-</li>
-<li><p>强引用，弱引用</p>
-<p>  ➢    默认所有实例变量和局部变量都是Strong指针</p>
-<p>  ➢    弱指针指向的对象被回收后，弱指针会自动变为nil指针，不会引发野指针错误。其修饰符号为__weak;</p>
-</li>
-<li><p>注意点</p>
-<pre><code>➢    不能调用<span class="operator"><span class="keyword">release</span>、retain、autorelease、retainCount</span>
-</code></pre><p> ➢    可以重写dealloc，但是不能调用[super dealloc]</p>
-<p> ➢    @property : 想长期拥有某个对象，应该用strong，其他对象用weak</p>
-<p> ➢    其他基本数据类型依然用assign</p>
-<p> ➢    两端互相引用时，一端用strong、一端用weak</p>
-<ol>
-<li>自动释放池</li>
-</ol>
-</li>
-<li>自动释放池是一个存放实体的集合，这些实体可能是对象，这些对象能够被自动释放。</li>
-<li><p>/ - (id) autorelease; //是NSObject类提供的方法，此方法在某一个预定的时候，向对象发送release消息，返回值是接收消息的对象。实际上当给一个对象发送autorelease消息的时候，就是将这个对象添加到的自动释放池(NSAutoreleasePool)中，当自动释放池销毁时，会向该池中的所有对象发送release消息。</p>
-<p>如： - (NSString <em>) description<br>{<br>  NSString </em>desc;<br>   desc = [[NSString alloc] initWithFormat: @” I am %d years old”,29];<br>   return ([desc autorelease]);<br>}</p>
-</li>
-</ul>
-</li>
-<li><p>内存管理规则</p>
-<ul>
-<li>如果我使用了new , alloc 或者copy方法获得一个对象，则我必须释放或自释放该对象。</li>
-<li>如果你对对象调用了retain消息，那么你必须负责释放(release)这个对象，保证retain和release的使用次数相等。</li>
-</ul>
-</li>
+<li><p>在<code>git rebase -i master test</code>命令的后续操作都完成之后，在执行如下两条命令即可</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co master</span><br><span class="line">git <span class="operator"><span class="keyword">merge</span> <span class="keyword">test</span></span></span><br></pre></td></tr></table></figure></li>
 </ol>
 </span>
       
@@ -321,16 +253,16 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/30/OC副本/" rel="next" title="OC">
-                <i class="fa fa-chevron-left"></i> OC
+              <a href="/2015/10/11/编码规范/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/04/30/协议副本/" rel="prev" title="协议">
-                协议 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/10/22/常用正则表达式/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -438,7 +370,7 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内存管理"><span class="nav-number">1.</span> <span class="nav-text">内存管理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git_merge_(冲突版)"><span class="nav-number">1.</span> <span class="nav-text">git merge (冲突版)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git_rebase_(冲突版)"><span class="nav-number">2.</span> <span class="nav-text">git rebase (冲突版)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git_rebase_-i"><span class="nav-number">3.</span> <span class="nav-text">git rebase -i</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

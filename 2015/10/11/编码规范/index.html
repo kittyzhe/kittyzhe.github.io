@@ -45,55 +45,34 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="内存管理内存管理机制：引用计数
-
-引用计数的计算
-
-alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1
-
-(id) retain; //给对象发送retain消息后，对象的引用计数器加1
-
-
-
-(void) release; //给对像发送release消息后，对象的引用计数器减1
-
-
--(void)dealloc; //当一个对">
+<meta name="description" content="##编码规范
+###一、文档结构管理
+1.建立Libraries文件夹，所有第三方库放入其中。
+2.建立Utilities文件夹，自已封装的类放入其中。
+3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
+4.每个功能块放入一个Group，在目录里建立实际文件夹管理。
+5.程序资源文件放入Supporting Files文件夹中。如.pl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内存管理">
-<meta property="og:url" content="http://yoursite.com/2015/04/30/内存管理副本/index.html">
+<meta property="og:title" content="Sunshine">
+<meta property="og:url" content="http://yoursite.com/2015/10/11/编码规范/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="内存管理内存管理机制：引用计数
-
-引用计数的计算
-
-alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1
-
-(id) retain; //给对象发送retain消息后，对象的引用计数器加1
-
-
-
-(void) release; //给对像发送release消息后，对象的引用计数器减1
-
-
--(void)dealloc; //当一个对">
-<meta property="og:updated_time" content="2015-04-30T13:26:12.000Z">
+<meta property="og:description" content="##编码规范
+###一、文档结构管理
+1.建立Libraries文件夹，所有第三方库放入其中。
+2.建立Utilities文件夹，自已封装的类放入其中。
+3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
+4.每个功能块放入一个Group，在目录里建立实际文件夹管理。
+5.程序资源文件放入Supporting Files文件夹中。如.pl">
+<meta property="og:updated_time" content="2015-07-21T03:37:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="内存管理">
-<meta name="twitter:description" content="内存管理内存管理机制：引用计数
-
-引用计数的计算
-
-alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1
-
-(id) retain; //给对象发送retain消息后，对象的引用计数器加1
-
-
-
-(void) release; //给对像发送release消息后，对象的引用计数器减1
-
-
--(void)dealloc; //当一个对">
+<meta name="twitter:title" content="Sunshine">
+<meta name="twitter:description" content="##编码规范
+###一、文档结构管理
+1.建立Libraries文件夹，所有第三方库放入其中。
+2.建立Utilities文件夹，自已封装的类放入其中。
+3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
+4.每个功能块放入一个Group，在目录里建立实际文件夹管理。
+5.程序资源文件放入Supporting Files文件夹中。如.pl">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -105,7 +84,7 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
 
 
 
-  <title> 内存管理 | Sunshine </title>
+  <title>  | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -220,7 +199,7 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
             
             
               
-                内存管理
+                
               
             
           </h1>
@@ -229,8 +208,8 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-04-30T21:25:44+08:00" content="2015-04-30">
-              2015-04-30
+            <time itemprop="dateCreated" datetime="2015-10-11T15:37:33+08:00" content="2015-10-11">
+              2015-10-11
             </time>
           </span>
 
@@ -253,63 +232,33 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
       
 
       
-        <span itemprop="articleBody"><h2 id="内存管理">内存管理</h2><p><strong>内存管理机制：引用计数</strong></p>
-<ol>
-<li><p>引用计数的计算</p>
-<ul>
-<li>alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方法创建对象时，对象的引用计数器为1<ul>
-<li><ul>
-<li>(id) retain; //给对象发送retain消息后，对象的引用计数器加1</li>
-</ul>
-</li>
-<li><ul>
-<li>(void) release; //给对像发送release消息后，对象的引用计数器减1</li>
-</ul>
-</li>
-<li>-(void)dealloc; //当一个对象的引用计数器变为0而即将被销毁时,Objective-C自动向对                             象发送一条dealloc消息，我们通常都会在自己的对象中重写dealloc方法</li>
-<li><ul>
-<li>(unsigned) retainCount;//获取当前对象的引用计数器的值</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>非ARC环境下内存的管理</p>
-<p> 当某个对象被持有有，［对象名 retain］；<br> 当某个对象不再被持有时，［对象名 release］；</p>
-</li>
-<li><p>ARC环境下内存的管理</p>
-<ul>
-<li><p>规则</p>
-<p>  只要还有一个强指针变量指向对象，对象就会保持在内存中</p>
-</li>
-<li><p>强引用，弱引用</p>
-<p>  ➢    默认所有实例变量和局部变量都是Strong指针</p>
-<p>  ➢    弱指针指向的对象被回收后，弱指针会自动变为nil指针，不会引发野指针错误。其修饰符号为__weak;</p>
-</li>
-<li><p>注意点</p>
-<pre><code>➢    不能调用<span class="operator"><span class="keyword">release</span>、retain、autorelease、retainCount</span>
-</code></pre><p> ➢    可以重写dealloc，但是不能调用[super dealloc]</p>
-<p> ➢    @property : 想长期拥有某个对象，应该用strong，其他对象用weak</p>
-<p> ➢    其他基本数据类型依然用assign</p>
-<p> ➢    两端互相引用时，一端用strong、一端用weak</p>
-<ol>
-<li>自动释放池</li>
-</ol>
-</li>
-<li>自动释放池是一个存放实体的集合，这些实体可能是对象，这些对象能够被自动释放。</li>
-<li><p>/ - (id) autorelease; //是NSObject类提供的方法，此方法在某一个预定的时候，向对象发送release消息，返回值是接收消息的对象。实际上当给一个对象发送autorelease消息的时候，就是将这个对象添加到的自动释放池(NSAutoreleasePool)中，当自动释放池销毁时，会向该池中的所有对象发送release消息。</p>
-<p>如： - (NSString <em>) description<br>{<br>  NSString </em>desc;<br>   desc = [[NSString alloc] initWithFormat: @” I am %d years old”,29];<br>   return ([desc autorelease]);<br>}</p>
-</li>
-</ul>
-</li>
-<li><p>内存管理规则</p>
-<ul>
-<li>如果我使用了new , alloc 或者copy方法获得一个对象，则我必须释放或自释放该对象。</li>
-<li>如果你对对象调用了retain消息，那么你必须负责释放(release)这个对象，保证retain和release的使用次数相等。</li>
-</ul>
-</li>
-</ol>
+        <span itemprop="articleBody"><p>##编码规范</p>
+<p>###一、文档结构管理</p>
+<p>1.建立Libraries文件夹，所有第三方库放入其中。</p>
+<p>2.建立Utilities文件夹，自已封装的类放入其中。</p>
+<p>3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。</p>
+<p>4.每个功能块放入一个Group，在目录里建立实际文件夹管理。</p>
+<p>5.程序资源文件放入Supporting Files文件夹中。如.plist、数据库资料等。</p>
+<p>6.在Supporting Files文件夹下建立Images、Musics和Videos等相关文件夹。图片、音频、视频等资源分别放入其中。图片资源以程序逻辑框架建立相应实体文件夹管理，若多个功能块共用的，建立Common文件夹，放入其中。<code>由于苹果公司Images.xcassets的推出，图片资源以后用Images.xcassets来管理。</code></p>
+<p>###二、编码规范<br>说明：为了不影响阅读，一个类的代码行数尽量不要超过300行;一个方法尽量不要超过30行。有超过的在重构的时候想办法分解。</p>
+<p>1.每个.h文件最开始处用简短文字说明一下该类的功能逻辑。<br>2.引入其它类时，若要作为实例变量的在.h中引入。否则在.m中引入。</p>
+<p>3.@interface与@implementation与#import 之间空一行。@synthesize紧接着@implementation写。</p>
+<p>4.a: 声明实例变量一律以属性声明。</p>
+<p>b: 其它类要访问的实例变量和方法在.h文件中声明，否则声明于.m文件中。</p>
+<p>c: 实例变量及方法以功能块放在一起，实现一个功能的连续着放在一起，另一个功能的空一行开始声明。</p>
+<p>d:实例变量紧接@interface后开始，方法在实例变量后空一行开始。</p>
+<p>e:每个功能块可作简单说明，单个实例变量方法可不作说明，关键的或特殊的变量或方法单独作说明。注释放于变量声明上一行。</p>
+<p>5.类中第个功能模块以 #pragma mark -  分隔，上空两行，下空一行。</p>
+<p>6.NSLog在测试完成后一律删除。（换成自定义log）</p>
+<p>7.对于系统的常用类作实例变量声明时加入后缀：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">UIViewController</span><span class="symbol">:VC</span>            <span class="constant">UIImage</span><span class="symbol">:Img</span>    </span><br><span class="line"><span class="constant">UIImageView</span><span class="symbol">:ImgView</span>            <span class="constant">UIView</span><span class="symbol">:View</span>　　<span class="constant">UILabel</span><span class="symbol">:Lbl</span></span><br><span class="line"><span class="constant">UIButton</span><span class="symbol">:Btn</span>　　                <span class="constant">UINavigationBar</span><span class="symbol">:NBar</span></span><br><span class="line"><span class="constant">UIToolBar</span><span class="symbol">:TBar</span>　　              <span class="constant">UISearchBar</span><span class="symbol">:SBar</span></span><br><span class="line"><span class="constant">UITextField</span><span class="symbol">:TextField</span>　　       <span class="constant">UITextView</span><span class="symbol">:TextView</span></span><br><span class="line"><span class="constant">NSArray</span><span class="symbol">:Array</span>　　               <span class="constant">NSMutableArray</span><span class="symbol">:MArray</span></span><br><span class="line"><span class="constant">NSDictionary</span><span class="symbol">:Dict</span>　　			 <span class="constant">NSMutableDictionary</span><span class="symbol">:MDict</span></span><br><span class="line"><span class="constant">NSString</span><span class="symbol">:Str</span>　　       			<span class="constant">NSMutableString</span><span class="symbol">:MStr</span></span><br><span class="line"><span class="constant">NSSet</span><span class="symbol">:Set</span>　　　　　            <span class="constant">NSMutableSet</span><span class="symbol">:MSet</span></span><br></pre></td></tr></table></figure>
+<p>8.程序中变量、方法命名尽量能以字面意思表示功能，对于需要用注释来解释的部分代码，注释以如下格式表述：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> 方法或变量说明</span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param 参数1说明(针对方法)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param 参数2说明(针对方法)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@return 若方法有返回值则对返回值作说明</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<p>###三、Xcode配置</p>
+<p>1.全部统一用ARC。</p>
+<p>2.用git管理代码。</p>
+<p>3.在项目.pch文件加入一段去除release状态的NSLog代码:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">ifndef</span> __OPTIMIZE__</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) NSLog(__VA_ARGS__)</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">else</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) &#123;&#125;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -321,16 +270,16 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/30/OC副本/" rel="next" title="OC">
-                <i class="fa fa-chevron-left"></i> OC
+              <a href="/2015/10/11/Xcode快捷键/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/04/30/协议副本/" rel="prev" title="协议">
-                协议 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/10/22/git-merge&git-rebase/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -438,7 +387,7 @@ alloc 、new 、copy(copy生成接收对象的一个副本) //使用这三个方
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内存管理"><span class="nav-number">1.</span> <span class="nav-text">内存管理</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

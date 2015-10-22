@@ -32,6 +32,8 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
+    <meta name="description" content="这是我的个人博客，欢迎来的你。" />
+
 
 
   <meta name="keywords" content="Hexo,next" />
@@ -43,15 +45,15 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description">
+<meta name="description" content="这是我的个人博客，欢迎来的你。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Sunshine">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:site_name" content="Sunshine">
+<meta property="og:description" content="这是我的个人博客，欢迎来的你。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Sunshine">
+<meta name="twitter:description" content="这是我的个人博客，欢迎来的你。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +65,7 @@
 
 
 
-  <title> Hexo </title>
+  <title> Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -96,11 +98,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">Sunshine</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">Do one thing at a time, and do well.</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -163,6 +165,389 @@
       <div class="main-inner">
         <div id="content" class="content"> 
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/04/10/block副本/" itemprop="url">
+                  block
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-04-10T21:29:57+08:00" content="2015-04-10">
+              2015-04-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="BLOCK">BLOCK</h2><ol>
+<li><p>基本概念</p>
+<p> 代码块本质上是和其他变量类似。不同的是，代码块存储的数据是一个函数体。使用代码块时，可以像调用其他标准函数一样，传入参数数，并得到返回值。    </p>
+</li>
+</ol>
+<pre><code><span class="bullet">* </span>Block封装了一段代码,可以在任何时候执行
+<span class="bullet">* </span>Block可以作为函数参数或者函数的返回值，而其本身又可以带输入参数或返回值。
+<span class="bullet">* </span>苹果官方建议尽量多用block。在多线程、异步任务、集合遍历、集合排序、动画转场用的很多
+</code></pre><ol>
+<li><p>定义</p>
+<pre><code><span class="keyword">int</span> (^MySum)(<span class="keyword">int</span>, <span class="keyword">int</span>) = ^(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
+<span class="keyword">return</span> a+b;
+};
+</code></pre><p>定义了一个叫MySum的blocks对象，它带有两个int参数，返回int。等式右边就是blocks的具体实现</p>
+</li>
+<li><p>对变量的访问权限</p>
+<ul>
+<li>对全局变量具有读写权限 </li>
+<li>对静态变量具有读写权限</li>
+<li>对局部变量只有访问权限（可以用<code>__block</code>修饰局部变量，这样可以对其进行修改）</li>
+</ul>
+</li>
+<li><p>与函数指针的对比</p>
+<p> <strong>定义函数指针</strong><br> int (<em>p)(int,int);<br> <em>*定义Blocks</em></em><br> int (^Blocks)(int,int);</p>
+<p> <strong>调用函数指针</strong><br> (<em>p)(10, 20);<br> <em>*调用Blocks</em></em><br> Blocks(10, 20);</p>
+</li>
+<li><p>typedef和赋值</p>
+<ul>
+<li><p>在声明的同时定义变量，然后赋值<br>int (^MySum)(int,int) = ^(int a,int b) {<br>return a + b;<br>};</p>
+</li>
+<li><p>也可先用typedef先声明类型，再定义变量进行赋值<br>typedef int (^MySum)(int,int);<br>MySum sum = ^(int a,int b) {<br>return a + b;<br>}; </p>
+</li>
+</ul>
+</li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/03/30/拷贝副本/" itemprop="url">
+                  拷贝
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-03-30T21:23:29+08:00" content="2015-03-30">
+              2015-03-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="拷贝">拷贝</h2><ol>
+<li><p>浅拷贝（shallow copy）</p>
+<p> 不会复制所引用的对象，新复制的对象只会指向现有的引用对象上。（引用计数加 1 ，地址不变）</p>
+</li>
+<li><p>深拷贝（deep copy）</p>
+<p> 真正意义的复制概念。得到的结果是多个，而非只是对象的引用。（引用计数 不变 ，地址发生变化）</p>
+</li>
+<li><p>关键字</p>
+<p> <code>copy</code>：对不可变的集合copy为浅拷贝，对可变的集合copy为深拷贝</p>
+<p> <code>mutableCopy</code>：对可变的或不可变的集合mutableCopy都是深拷贝，但是对于集合内部对象的拷贝时浅拷贝。</p>
+</li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/03/20/uilabel副本/" itemprop="url">
+                  UILabel
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-03-20T21:31:21+08:00" content="2015-03-20">
+              2015-03-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>#UILabel</p>
+<p> 文本：text NSString<br> 字体：font UIFont<br> 字体颜色：textColor UIColor<br> 字体对齐方式：textAlignment NSTextAlignment<br> 文本截断方式：lineBreakMode NSLineBreakMode       </p>
+<p>  是否启用：enabled  BOOL </p>
+<p> 字体大小随label宽度自适应：adjustsFontSizeToFitWidth BOOL<br> 文本基线：baselineAdjustment UIBaselineAdjustment </p>
+<p> 字体最小限制：minimumFontSize<br> 文本显示行数：numberOfLines </p>
+<p> 高亮颜色：highlightedTextColor UIColor<br> 是否高亮：highlighted  BOOL</p>
+<p> 文本阴影：<br> 阴影颜色：shadowColor UIColor<br> 阴影偏移量：shadowOffset  CGSize</p>
+<p> 是否允许交互：userInteractionEnabled  BOOL  </p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/03/14/kvc误点副本/" itemprop="url">
+                  KVC误点
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-03-14T21:14:39+08:00" content="2015-03-14">
+              2015-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>###setValue：forKey 和 setObject：forKey</p>
+<pre><code>在使用NSMutableDictionary的时候经常会使用<span class="built_in">set</span>Value <span class="keyword">for</span>Key与<span class="built_in">set</span>Object <span class="keyword">for</span>Key
+<span class="number">1</span>。<span class="built_in">set</span>Value： <span class="keyword">for</span>Key：
+发送<span class="built_in">set</span>Object:<span class="keyword">for</span>Key 给接收者，也就是调用<span class="built_in">set</span>Object:<span class="keyword">for</span>Key方法
+除非value为nil的时候，调用方法removeObject:<span class="keyword">for</span>Key
+
+<span class="number">2</span>。<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：
+Key的对象是一个id类型，并不是NSString，只不过我们经常使用NSString而已。
+</code></pre><p>####区别：<br>    1.setObject：forkey：中value是不能够为nil的，不然会报错。<br>      setValue：forKey：中value能够为nil，当value为nil的时候，自动调用removeObject：forKey方法</p>
+<pre><code><span class="number">2</span>.<span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中key的参数只能够是NSString
+  <span class="built_in">set</span>Object：<span class="keyword">for</span>Key：的可以是任何类型
+
+!!!注意：<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：对象不能存放nil要与下面的这种情况区分：
+<span class="number">1</span>.[imageDictionarysetObject:[NSNullnull] <span class="keyword">for</span>Key:indexNumber];
+[NSNull null]表示的是一个空对象，并不是nil
+
+<span class="number">2</span>.<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：中Key是NSNumber对象的时候，如下：
+[imageDictionarysetObject:obj <span class="keyword">for</span>Key:[NSNumber numberWithInt：<span class="number">10</span>]];
+</code></pre><p>####注意：<br>      上面说的区别是针对调用者是dictionary而言的。</p>
+<pre><code><span class="built_in">set</span>Object:<span class="keyword">for</span>Key:方法NSMutabledictionary特有的
+<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是KVC（键-值编码）的主要方法。
+
+当 <span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法调用者是对象的时候：
+<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是在NSObject对象中创建的，也就是说所有的oc对象都有这个方法，所以可以用于任何类。
+             比如使用:
+  SomeClass *someObj = [[SomeClass alloc] init];
+[someObj <span class="built_in">set</span>Value:<span class="literal">self</span> <span class="keyword">for</span>Key:@<span class="string">"delegate"</span>];
+表示的意思是：对象someObj设置他的delegate属性的值为当前类，当然调用此方法的对象必须要有delegate属性才能设置，不然调用了也没效果
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -408,14 +793,14 @@
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="John Doe" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">John Doe</p>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Kitty Zhe" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Kitty Zhe</p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
+        <p class="site-description motion-element" itemprop="description">这是我的个人博客，欢迎来的你。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -468,7 +853,7 @@
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Kitty Zhe</span>
 </div>
 
 <div class="powered-by">
