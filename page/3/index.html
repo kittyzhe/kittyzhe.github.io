@@ -182,111 +182,6 @@
             
             
               
-                <a class="post-title-link" href="/2015/03/14/kvc误点副本/" itemprop="url">
-                  KVC误点
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-03-14T21:14:39+08:00" content="2015-03-14">
-              2015-03-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h3 id="setValue：forKey_和_setObject：forKey">setValue：forKey 和 setObject：forKey</h3><pre><code>在使用NSMutableDictionary的时候经常会使用<span class="built_in">set</span>Value <span class="keyword">for</span>Key与<span class="built_in">set</span>Object <span class="keyword">for</span>Key
-<span class="number">1</span>。<span class="built_in">set</span>Value： <span class="keyword">for</span>Key：
-发送<span class="built_in">set</span>Object:<span class="keyword">for</span>Key 给接收者，也就是调用<span class="built_in">set</span>Object:<span class="keyword">for</span>Key方法
-除非value为nil的时候，调用方法removeObject:<span class="keyword">for</span>Key
-
-<span class="number">2</span>。<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：
-Key的对象是一个id类型，并不是NSString，只不过我们经常使用NSString而已。
-</code></pre><h4 id="区别：">区别：</h4><pre><code><span class="number">1</span>.<span class="built_in">set</span>Object：forkey：中value是不能够为nil的，不然会报错。
-  <span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中value能够为nil，当value为nil的时候，自动调用removeObject：<span class="keyword">for</span>Key方法
-
-<span class="number">2</span>.<span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中key的参数只能够是NSString
-  <span class="built_in">set</span>Object：<span class="keyword">for</span>Key：的可以是任何类型
-
-!!!注意：<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：对象不能存放nil要与下面的这种情况区分：
-<span class="number">1</span>.[imageDictionarysetObject:[NSNullnull] <span class="keyword">for</span>Key:indexNumber];
-[NSNull null]表示的是一个空对象，并不是nil
-
-<span class="number">2</span>.<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：中Key是NSNumber对象的时候，如下：
-[imageDictionarysetObject:obj <span class="keyword">for</span>Key:[NSNumber numberWithInt：<span class="number">10</span>]];
-</code></pre><h4 id="注意：">注意：</h4><pre><code>  上面说的区别是针对调用者是dictionary而言的。
-
-<span class="built_in">set</span>Object:<span class="keyword">for</span>Key:方法NSMutabledictionary特有的
-<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是KVC（键-值编码）的主要方法。
-
-当 <span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法调用者是对象的时候：
-<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是在NSObject对象中创建的，也就是说所有的oc对象都有这个方法，所以可以用于任何类。
-             比如使用:
-  SomeClass *someObj = [[SomeClass alloc] init];
-[someObj <span class="built_in">set</span>Value:<span class="literal">self</span> <span class="keyword">for</span>Key:@<span class="string">"delegate"</span>];
-表示的意思是：对象someObj设置他的delegate属性的值为当前类，当然调用此方法的对象必须要有delegate属性才能设置，不然调用了也没效果
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 <a class="post-title-link" href="/2015/03/04/正则表达式/" itemprop="url">
                   正则表达式
                 </a>
@@ -587,6 +482,109 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
             
             
               
+                <a class="post-title-link" href="/2015/03/04/git-merge&git-rebase/" itemprop="url">
+                  Git冲突解决
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-03-04T00:00:00+08:00" content="2015-03-04">
+              2015-03-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="git_merge_(冲突版)">git merge (冲突版)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">mkdir mergeDemo</span><br><span class="line">cd mergeDemo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line">echo <span class="string">"test"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by test"</span></span><br><span class="line"></span><br><span class="line">git co master</span><br><span class="line">echo <span class="string">"master"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by master"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git merge test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上命令执行完之后，会遇到冲突。首先，通过vim打开冲突的文件，在这里是1.c，修改完冲突之后，wq保存退出;<br>接着，运行如下命令，完成后续操作</p>
+</blockquote>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add 1.c</span><br><span class="line">git <span class="keyword">ci</span> -<span class="keyword">m</span> <span class="string">"fixed conflict"</span></span><br></pre></td></tr></table></figure>
+<h1 id="git_rebase_(冲突版)">git rebase (冲突版)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mkdir rebaseDemo</span><br><span class="line">cd rebaseDemo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line">echo <span class="string">"test"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by test"</span></span><br><span class="line"></span><br><span class="line">git co master</span><br><span class="line">echo <span class="string">"master"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c modified by master"</span></span><br><span class="line"></span><br><span class="line">git rebase master test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上命令执行完之后，会遇到冲突。首先，通过vim打开冲突的文件，在这里是1.c，修改完冲突之后，wq保存退出;<br>接着，运行如下命令，完成后续操作</p>
+</blockquote>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> <span class="number">1.</span>c</span><br><span class="line">git rebase <span class="comment">--continue</span></span><br><span class="line">git co master</span><br><span class="line">git <span class="built_in">merge</span> test</span><br></pre></td></tr></table></figure>
+<h1 id="git_rebase_-i">git rebase -i</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mkdir rebase-i-demo</span><br><span class="line">cd rebase-i-demo</span><br><span class="line">git init</span><br><span class="line">echo <span class="string">"1.c"</span> &gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"1.c by master"</span></span><br><span class="line"></span><br><span class="line">git co -<span class="tag">b</span> test</span><br><span class="line"></span><br><span class="line">echo <span class="string">"111"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 111"</span></span><br><span class="line">echo <span class="string">"2x2"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 222"</span></span><br><span class="line">echo <span class="string">"333"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 333"</span></span><br><span class="line">echo <span class="string">"444"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 444"</span></span><br><span class="line">echo <span class="string">"555"</span> &gt;&gt; <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git add <span class="number">1</span><span class="class">.c</span></span><br><span class="line">git ci -m <span class="string">"test 修改了 1.c 5xx"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>执行完以上命令之后，我们模拟出了这样一个场景：在test分支上对1.c文件修改了5次。</p>
+<p>第二次修改有误，本想修改为222，却误将其修改为了2x2，因此，对第二次修改需要更正（edit）；</p>
+<p>第三次修改和第四次修改希望想融合为一次提交log，但是内容都保留，因此，对第四次修改需要融合（squash）；</p>
+<p>第五次修改的提交log有误，本想提交为”test 修改了 1.c 555”，却误输入为”test 修改了 1.c 5xx”，因此，对第五次修改需要更新log(reword)</p>
+</blockquote>
+<p>基于以上分析，假设这五次提交的commit号分别为 <code>1abcdef</code> <code>2abcdef</code> <code>3abcdef</code> <code>4abcdef</code> <code>5abcdef</code>，那需要进行如下操作</p>
+<ol>
+<li>执行命令 <code>git rebase -i master test</code></li>
+<li><p>编辑以上命令执行完之后的文件为如下内容</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p <span class="number">1</span>abcdef</span><br><span class="line">e <span class="number">2</span>abcdef</span><br><span class="line">p <span class="number">3</span>abcdef</span><br><span class="line">s <span class="number">4</span>abcdef</span><br><span class="line">r <span class="number">5</span>abcdef</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑完之后，wq保存退出，后续步骤根据 <code>git status</code>的提醒，类似git rebase的操作继续操作即可</p>
+</li>
+<li><p>在<code>git rebase -i master test</code>命令的后续操作都完成之后，在执行如下两条命令即可</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co master</span><br><span class="line">git <span class="operator"><span class="keyword">merge</span> <span class="keyword">test</span></span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 <a class="post-title-link" href="/2015/03/02/KVC副本/" itemprop="url">
                   KVC
                 </a>
@@ -694,7 +692,7 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
             
             
               
-                <a class="post-title-link" href="/2015/02/17/Xcode快捷键/" itemprop="url">
+                <a class="post-title-link" href="/2015/02/07/Xcode快捷键/" itemprop="url">
                   Xcode 快捷键操作
                 </a>
               
@@ -705,8 +703,8 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-02-17T00:00:00+08:00" content="2015-02-17">
-              2015-02-17
+            <time itemprop="dateCreated" datetime="2015-02-07T00:00:00+08:00" content="2015-02-07">
+              2015-02-07
             </time>
           </span>
 
