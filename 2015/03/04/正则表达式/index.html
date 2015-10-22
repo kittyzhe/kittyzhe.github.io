@@ -45,34 +45,19 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="##编码规范
-###一、文档结构管理
-1.建立Libraries文件夹，所有第三方库放入其中。
-2.建立Utilities文件夹，自已封装的类放入其中。
-3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
-4.每个功能块放入一个Group，在目录里建立实际文件夹管理。
-5.程序资源文件放入Supporting Files文件夹中。如.pl">
+<meta name="description" content="字符类型12345678.  任意字符[] 可以在字符串中限定字符的范围\d [0-9] 数字\D [^0-9] 非数字\s 所有不可见字符（空格、tab）\S 所有可见字符\w [0-9a-zA-Z_] 单词（数字、字母、下划线）\W [^0-9a-zA-Z] 非单词
+数量限定123456?     前面的一个字符或者（）至多出现1次 (0次或1次)+     前面的一个字符或者（）至少出现1次">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sunshine">
-<meta property="og:url" content="http://yoursite.com/2015/10/11/编码规范/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2015/03/04/正则表达式/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="##编码规范
-###一、文档结构管理
-1.建立Libraries文件夹，所有第三方库放入其中。
-2.建立Utilities文件夹，自已封装的类放入其中。
-3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
-4.每个功能块放入一个Group，在目录里建立实际文件夹管理。
-5.程序资源文件放入Supporting Files文件夹中。如.pl">
-<meta property="og:updated_time" content="2015-07-21T03:37:08.000Z">
+<meta property="og:description" content="字符类型12345678.  任意字符[] 可以在字符串中限定字符的范围\d [0-9] 数字\D [^0-9] 非数字\s 所有不可见字符（空格、tab）\S 所有可见字符\w [0-9a-zA-Z_] 单词（数字、字母、下划线）\W [^0-9a-zA-Z] 非单词
+数量限定123456?     前面的一个字符或者（）至多出现1次 (0次或1次)+     前面的一个字符或者（）至少出现1次">
+<meta property="og:updated_time" content="2015-10-22T13:41:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sunshine">
-<meta name="twitter:description" content="##编码规范
-###一、文档结构管理
-1.建立Libraries文件夹，所有第三方库放入其中。
-2.建立Utilities文件夹，自已封装的类放入其中。
-3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
-4.每个功能块放入一个Group，在目录里建立实际文件夹管理。
-5.程序资源文件放入Supporting Files文件夹中。如.pl">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="字符类型12345678.  任意字符[] 可以在字符串中限定字符的范围\d [0-9] 数字\D [^0-9] 非数字\s 所有不可见字符（空格、tab）\S 所有可见字符\w [0-9a-zA-Z_] 单词（数字、字母、下划线）\W [^0-9a-zA-Z] 非单词
+数量限定123456?     前面的一个字符或者（）至多出现1次 (0次或1次)+     前面的一个字符或者（）至少出现1次">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -84,7 +69,7 @@
 
 
 
-  <title>  | Sunshine </title>
+  <title> 正则表达式 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -199,7 +184,7 @@
             
             
               
-                
+                正则表达式
               
             
           </h1>
@@ -208,8 +193,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-10-11T15:37:33+08:00" content="2015-10-11">
-              2015-10-11
+            <time itemprop="dateCreated" datetime="2015-03-04T14:40:34+08:00" content="2015-03-04">
+              2015-03-04
             </time>
           </span>
 
@@ -232,33 +217,15 @@
       
 
       
-        <span itemprop="articleBody"><p>##编码规范</p>
-<p>###一、文档结构管理</p>
-<p>1.建立Libraries文件夹，所有第三方库放入其中。</p>
-<p>2.建立Utilities文件夹，自已封装的类放入其中。</p>
-<p>3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。</p>
-<p>4.每个功能块放入一个Group，在目录里建立实际文件夹管理。</p>
-<p>5.程序资源文件放入Supporting Files文件夹中。如.plist、数据库资料等。</p>
-<p>6.在Supporting Files文件夹下建立Images、Musics和Videos等相关文件夹。图片、音频、视频等资源分别放入其中。图片资源以程序逻辑框架建立相应实体文件夹管理，若多个功能块共用的，建立Common文件夹，放入其中。<code>由于苹果公司Images.xcassets的推出，图片资源以后用Images.xcassets来管理。</code></p>
-<p>###二、编码规范<br>说明：为了不影响阅读，一个类的代码行数尽量不要超过300行;一个方法尽量不要超过30行。有超过的在重构的时候想办法分解。</p>
-<p>1.每个.h文件最开始处用简短文字说明一下该类的功能逻辑。<br>2.引入其它类时，若要作为实例变量的在.h中引入。否则在.m中引入。</p>
-<p>3.@interface与@implementation与#import 之间空一行。@synthesize紧接着@implementation写。</p>
-<p>4.a: 声明实例变量一律以属性声明。</p>
-<p>b: 其它类要访问的实例变量和方法在.h文件中声明，否则声明于.m文件中。</p>
-<p>c: 实例变量及方法以功能块放在一起，实现一个功能的连续着放在一起，另一个功能的空一行开始声明。</p>
-<p>d:实例变量紧接@interface后开始，方法在实例变量后空一行开始。</p>
-<p>e:每个功能块可作简单说明，单个实例变量方法可不作说明，关键的或特殊的变量或方法单独作说明。注释放于变量声明上一行。</p>
-<p>5.类中第个功能模块以 #pragma mark -  分隔，上空两行，下空一行。</p>
-<p>6.NSLog在测试完成后一律删除。（换成自定义log）</p>
-<p>7.对于系统的常用类作实例变量声明时加入后缀：</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">UIViewController</span><span class="symbol">:VC</span>            <span class="constant">UIImage</span><span class="symbol">:Img</span>    </span><br><span class="line"><span class="constant">UIImageView</span><span class="symbol">:ImgView</span>            <span class="constant">UIView</span><span class="symbol">:View</span>　　<span class="constant">UILabel</span><span class="symbol">:Lbl</span></span><br><span class="line"><span class="constant">UIButton</span><span class="symbol">:Btn</span>　　                <span class="constant">UINavigationBar</span><span class="symbol">:NBar</span></span><br><span class="line"><span class="constant">UIToolBar</span><span class="symbol">:TBar</span>　　              <span class="constant">UISearchBar</span><span class="symbol">:SBar</span></span><br><span class="line"><span class="constant">UITextField</span><span class="symbol">:TextField</span>　　       <span class="constant">UITextView</span><span class="symbol">:TextView</span></span><br><span class="line"><span class="constant">NSArray</span><span class="symbol">:Array</span>　　               <span class="constant">NSMutableArray</span><span class="symbol">:MArray</span></span><br><span class="line"><span class="constant">NSDictionary</span><span class="symbol">:Dict</span>　　			 <span class="constant">NSMutableDictionary</span><span class="symbol">:MDict</span></span><br><span class="line"><span class="constant">NSString</span><span class="symbol">:Str</span>　　       			<span class="constant">NSMutableString</span><span class="symbol">:MStr</span></span><br><span class="line"><span class="constant">NSSet</span><span class="symbol">:Set</span>　　　　　            <span class="constant">NSMutableSet</span><span class="symbol">:MSet</span></span><br></pre></td></tr></table></figure>
-<p>8.程序中变量、方法命名尽量能以字面意思表示功能，对于需要用注释来解释的部分代码，注释以如下格式表述：</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> 方法或变量说明</span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param 参数1说明(针对方法)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@param 参数2说明(针对方法)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span> <span class="comment">@return 若方法有返回值则对返回值作说明</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
-<p>###三、Xcode配置</p>
-<p>1.全部统一用ARC。</p>
-<p>2.用git管理代码。</p>
-<p>3.在项目.pch文件加入一段去除release状态的NSLog代码:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">ifndef</span> __OPTIMIZE__</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) NSLog(__VA_ARGS__)</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">else</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) &#123;&#125;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h3 id="字符类型">字符类型</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.  任意字符</span><br><span class="line">[] 可以在字符串中限定字符的范围</span><br><span class="line">\d [<span class="number">0</span>-<span class="number">9</span>] 数字</span><br><span class="line">\D [^<span class="number">0</span>-<span class="number">9</span>] 非数字</span><br><span class="line">\s 所有不可见字符（空格、tab）</span><br><span class="line">\S 所有可见字符</span><br><span class="line">\w [<span class="number">0</span>-<span class="number">9</span>a-zA-Z_] 单词（数字、字母、下划线）</span><br><span class="line">\W [^<span class="number">0</span>-<span class="number">9</span>a-zA-Z] 非单词</span><br></pre></td></tr></table></figure>
+<h3 id="数量限定">数量限定</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">?     前面的一个字符或者（）至多出现1次 (0次或1次)</span><br><span class="line">+     前面的一个字符或者（）至少出现1次 (1次或者多次)</span><br><span class="line"><span class="comment">*     前面的一个字符或者（）可以出现任意次数 (0次、1次或者多次)</span></span><br><span class="line">&#123;<span class="keyword">n</span>&#125;   前面的一个字符或者（）出现<span class="keyword">n</span>次</span><br><span class="line">&#123;<span class="keyword">n</span>,&#125;  前面的一个字符或者（）至少出现<span class="keyword">n</span>次</span><br><span class="line">&#123;<span class="keyword">n</span>,<span class="keyword">m</span>&#125; 前面的一个字符或者（）出现<span class="keyword">n</span>到<span class="keyword">m</span>次</span><br></pre></td></tr></table></figure>
+<h3 id="其他字符">其他字符</h3><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">^     以什么开始 ^<span class="literal">A</span>表示以<span class="literal">A</span>开始</span><br><span class="line">$     以什么结束 B$表示以B结束</span><br><span class="line">|     表示选择 gray|grey表示gray或者grey</span><br><span class="line">()    可以改变优先级，作为一个整体</span><br></pre></td></tr></table></figure>
+<p>练习：</p>
+<ol>
+<li>整数     <code>^-?\d+$</code></li>
+<li>长度为8-10位的用户密码，要求以字母开始，剩余部分可以包含大写或小写字母、数字、下划线 <code>^[a-zA-Z]\w{7,9}$</code></li>
+<li><code>^.{8}\.[a-zA-Z]{1,3}$</code></li>
+</ol>
 </span>
       
     </div>
@@ -270,16 +237,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/11/Xcode快捷键/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2015/03/04/git常用操作/" rel="next" title="Git操作">
+                <i class="fa fa-chevron-left"></i> Git操作
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/22/git-merge&git-rebase/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/03/14/kvc误点副本/" rel="prev" title="KVC误点">
+                KVC误点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -387,7 +354,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符类型"><span class="nav-number">1.</span> <span class="nav-text">字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数量限定"><span class="nav-number">2.</span> <span class="nav-text">数量限定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他字符"><span class="nav-number">3.</span> <span class="nav-text">其他字符</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

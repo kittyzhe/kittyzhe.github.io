@@ -45,28 +45,25 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="###setValue：forKey 和 setObject：forKey
-在使用NSMutableDictionary的时候经常会使用setValue forKey与setObject forKey
+<meta name="description" content="setValue：forKey 和 setObject：forKey在使用NSMutableDictionary的时候经常会使用setValue forKey与setObject forKey
 1。setValue： forKey：
 发送setObject:forKey 给接收者，也就是调用setObject:forKey方法
-除非value为nil的时候，调用方法removeObject">
+除非value为nil的时候，调用方法removeObject:for">
 <meta property="og:type" content="article">
 <meta property="og:title" content="KVC误点">
 <meta property="og:url" content="http://yoursite.com/2015/03/14/kvc误点副本/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="###setValue：forKey 和 setObject：forKey
-在使用NSMutableDictionary的时候经常会使用setValue forKey与setObject forKey
+<meta property="og:description" content="setValue：forKey 和 setObject：forKey在使用NSMutableDictionary的时候经常会使用setValue forKey与setObject forKey
 1。setValue： forKey：
 发送setObject:forKey 给接收者，也就是调用setObject:forKey方法
-除非value为nil的时候，调用方法removeObject">
-<meta property="og:updated_time" content="2015-05-13T13:15:28.000Z">
+除非value为nil的时候，调用方法removeObject:for">
+<meta property="og:updated_time" content="2015-10-22T13:34:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KVC误点">
-<meta name="twitter:description" content="###setValue：forKey 和 setObject：forKey
-在使用NSMutableDictionary的时候经常会使用setValue forKey与setObject forKey
+<meta name="twitter:description" content="setValue：forKey 和 setObject：forKey在使用NSMutableDictionary的时候经常会使用setValue forKey与setObject forKey
 1。setValue： forKey：
 发送setObject:forKey 给接收者，也就是调用setObject:forKey方法
-除非value为nil的时候，调用方法removeObject">
+除非value为nil的时候，调用方法removeObject:for">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -226,16 +223,17 @@
       
 
       
-        <span itemprop="articleBody"><p>###setValue：forKey 和 setObject：forKey</p>
-<pre><code>在使用NSMutableDictionary的时候经常会使用<span class="built_in">set</span>Value <span class="keyword">for</span>Key与<span class="built_in">set</span>Object <span class="keyword">for</span>Key
+        <span itemprop="articleBody"><h3 id="setValue：forKey_和_setObject：forKey">setValue：forKey 和 setObject：forKey</h3><pre><code>在使用NSMutableDictionary的时候经常会使用<span class="built_in">set</span>Value <span class="keyword">for</span>Key与<span class="built_in">set</span>Object <span class="keyword">for</span>Key
 <span class="number">1</span>。<span class="built_in">set</span>Value： <span class="keyword">for</span>Key：
 发送<span class="built_in">set</span>Object:<span class="keyword">for</span>Key 给接收者，也就是调用<span class="built_in">set</span>Object:<span class="keyword">for</span>Key方法
 除非value为nil的时候，调用方法removeObject:<span class="keyword">for</span>Key
 
 <span class="number">2</span>。<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：
 Key的对象是一个id类型，并不是NSString，只不过我们经常使用NSString而已。
-</code></pre><p>####区别：<br>    1.setObject：forkey：中value是不能够为nil的，不然会报错。<br>      setValue：forKey：中value能够为nil，当value为nil的时候，自动调用removeObject：forKey方法</p>
-<pre><code><span class="number">2</span>.<span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中key的参数只能够是NSString
+</code></pre><h4 id="区别：">区别：</h4><pre><code><span class="number">1</span>.<span class="built_in">set</span>Object：forkey：中value是不能够为nil的，不然会报错。
+  <span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中value能够为nil，当value为nil的时候，自动调用removeObject：<span class="keyword">for</span>Key方法
+
+<span class="number">2</span>.<span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中key的参数只能够是NSString
   <span class="built_in">set</span>Object：<span class="keyword">for</span>Key：的可以是任何类型
 
 !!!注意：<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：对象不能存放nil要与下面的这种情况区分：
@@ -244,8 +242,9 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
 
 <span class="number">2</span>.<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：中Key是NSNumber对象的时候，如下：
 [imageDictionarysetObject:obj <span class="keyword">for</span>Key:[NSNumber numberWithInt：<span class="number">10</span>]];
-</code></pre><p>####注意：<br>      上面说的区别是针对调用者是dictionary而言的。</p>
-<pre><code><span class="built_in">set</span>Object:<span class="keyword">for</span>Key:方法NSMutabledictionary特有的
+</code></pre><h4 id="注意：">注意：</h4><pre><code>  上面说的区别是针对调用者是dictionary而言的。
+
+<span class="built_in">set</span>Object:<span class="keyword">for</span>Key:方法NSMutabledictionary特有的
 <span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是KVC（键-值编码）的主要方法。
 
 当 <span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法调用者是对象的时候：
@@ -265,8 +264,8 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/02/KVC副本/" rel="next" title="KVC">
-                <i class="fa fa-chevron-left"></i> KVC
+              <a href="/2015/03/04/正则表达式/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
               </a>
             
           </div>
@@ -382,7 +381,7 @@ Key的对象是一个id类型，并不是NSString，只不过我们经常使用N
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#setValue：forKey_和_setObject：forKey"><span class="nav-number">1.</span> <span class="nav-text">setValue：forKey 和 setObject：forKey</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#区别："><span class="nav-number">1.1.</span> <span class="nav-text">区别：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">1.2.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

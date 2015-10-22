@@ -45,19 +45,85 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="####常用正则表达式
- NSString urlStr = @”jwfwfwfwf@163.com”;        NSError error;        NSRegularExpression reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;amp;">
+<meta name="description" content="基本操作
+初始化仓库
+
+git init
+
+
+配置作者信息
+
+git config –global user.email “youremail@corp.com”
+git config –global user.name “yourname”
+
+
+添加文件到暂存区
+
+git add \ 
+git add * (添加所有文件到暂存区)
+
+
+移除文件
+git rm \
+
+
+重命名一个文件
+git mv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sunshine">
-<meta property="og:url" content="http://yoursite.com/2015/10/22/常用正则表达式/index.html">
+<meta property="og:title" content="Git操作">
+<meta property="og:url" content="http://yoursite.com/2015/03/04/git常用操作/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="####常用正则表达式
- NSString urlStr = @”jwfwfwfwf@163.com”;        NSError error;        NSRegularExpression reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;amp;">
-<meta property="og:updated_time" content="2015-01-30T03:50:22.000Z">
+<meta property="og:description" content="基本操作
+初始化仓库
+
+git init
+
+
+配置作者信息
+
+git config –global user.email “youremail@corp.com”
+git config –global user.name “yourname”
+
+
+添加文件到暂存区
+
+git add \ 
+git add * (添加所有文件到暂存区)
+
+
+移除文件
+git rm \
+
+
+重命名一个文件
+git mv">
+<meta property="og:updated_time" content="2015-10-22T13:41:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sunshine">
-<meta name="twitter:description" content="####常用正则表达式
- NSString urlStr = @”jwfwfwfwf@163.com”;        NSError error;        NSRegularExpression reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;amp;">
+<meta name="twitter:title" content="Git操作">
+<meta name="twitter:description" content="基本操作
+初始化仓库
+
+git init
+
+
+配置作者信息
+
+git config –global user.email “youremail@corp.com”
+git config –global user.name “yourname”
+
+
+添加文件到暂存区
+
+git add \ 
+git add * (添加所有文件到暂存区)
+
+
+移除文件
+git rm \
+
+
+重命名一个文件
+git mv">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -69,7 +135,7 @@
 
 
 
-  <title>  | Sunshine </title>
+  <title> Git操作 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -184,7 +250,7 @@
             
             
               
-                
+                Git操作
               
             
           </h1>
@@ -193,8 +259,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-10-22T21:00:51+08:00" content="2015-10-22">
-              2015-10-22
+            <time itemprop="dateCreated" datetime="2015-03-04T12:42:54+08:00" content="2015-03-04">
+              2015-03-04
             </time>
           </span>
 
@@ -217,9 +283,148 @@
       
 
       
-        <span itemprop="articleBody"><p>####常用正则表达式</p>
-<p> NSString <em>urlStr = @”jwfwfwfwf@163.com”;<br>        NSError </em>error;<br>        NSRegularExpression <em>reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;error];<br>        NSTextCheckingResult </em>firstMatch = [reg firstMatchInString:urlStr options:0 range:NSMakeRange(0, [urlStr length])];<br>        NSRange resultRange = [firstMatch rangeAtIndex:0];<br>        NSString *result = [urlStr substringWithRange:resultRange];<br>        NSLog(@”%@”, result);</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">匹配中文字符的正则表达式： <span class="special">[</span><span class="command">\u</span>4e00-<span class="command">\u</span>9fa5<span class="special">]</span></span><br><span class="line">评注：匹配中文还真是个头疼的事，有了这个表达式就好办了</span><br><span class="line"></span><br><span class="line">匹配双字节字符(包括汉字在内)：<span class="special">[</span>^<span class="command">\x</span>00-<span class="command">\xff</span><span class="special">]</span></span><br><span class="line">评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）</span><br><span class="line"></span><br><span class="line">匹配空白行的正则表达式：<span class="command">\n</span><span class="command">\s*</span><span class="command">\r</span></span><br><span class="line">评注：可以用来删除空白行</span><br><span class="line"></span><br><span class="line">匹配HTML标记的正则表达式：&lt;(<span class="command">\S*</span>?)<span class="special">[</span>^&gt;<span class="special">]</span>*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt;</span><br><span class="line">评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力</span><br><span class="line"></span><br><span class="line">匹配首尾空白字符的正则表达式：^<span class="command">\s*</span>|<span class="command">\s*</span><span class="formula">$</span><br><span class="line">评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式</span><br><span class="line"></span><br><span class="line">匹配Email地址的正则表达式：<span class="command">\w</span>+(<span class="special">[</span>-+.<span class="special">]</span><span class="command">\w</span>+)*@<span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*<span class="command">\.</span><span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*</span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配网址URL的正则表达式：<span class="special">[</span>a-zA-z<span class="special">]</span>+://<span class="special">[</span>^<span class="command">\s</span><span class="special">]</span>*</span><br><span class="line">评注：网上流传的版本功能很有限，上面这个基本可以满足需求</span><br><span class="line"></span><br><span class="line">匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^<span class="special">[</span>a-zA-Z<span class="special">]</span><span class="special">[</span>a-zA-Z0-9_<span class="special">]</span><span class="special">&#123;</span>4,15<span class="special">&#125;</span>$</span></span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配国内电话号码：<span class="command">\d</span><span class="special">&#123;</span>3<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>8<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>4<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>7<span class="special">&#125;</span></span><br><span class="line">评注：匹配形式如 0511-4405222 或 021-87888822</span><br><span class="line"></span><br><span class="line">匹配腾讯QQ号：<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>4,<span class="special">&#125;</span></span><br><span class="line">评注：腾讯QQ号从10000开始</span><br><span class="line"></span><br><span class="line">匹配中国邮政编码：<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d</span><span class="special">&#123;</span>5<span class="special">&#125;</span>(?!<span class="command">\d</span>)</span><br><span class="line">评注：中国邮政编码为6位数字</span><br><span class="line"></span><br><span class="line">匹配身份证：<span class="command">\d</span><span class="special">&#123;</span>15<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>18<span class="special">&#125;</span></span><br><span class="line">评注：中国的身份证为15位或18位</span><br><span class="line"></span><br><span class="line">匹配ip地址：<span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+</span><br><span class="line">评注：提取ip地址时有用</span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"><h2 id="基本操作">基本操作</h2><ol>
+<li><p>初始化仓库</p>
+<ul>
+<li>git init</li>
+</ul>
+</li>
+<li><p>配置作者信息</p>
+<ul>
+<li>git config –global user.email “youremail@corp.com”</li>
+<li>git config –global user.name “yourname”</li>
+</ul>
+</li>
+<li><p>添加文件到暂存区</p>
+<ul>
+<li>git add \<filename\> </filename\></li>
+<li>git add * (添加所有文件到暂存区)</li>
+</ul>
+</li>
+<li>移除文件<ul>
+<li>git rm \<filename\></filename\></li>
+</ul>
+</li>
+<li>重命名一个文件<ul>
+<li>git mv \<oldfilename\> \<newfilename\></newfilename\></oldfilename\></li>
+</ul>
+</li>
+<li><p>提交暂存区</p>
+<p> <code>git commit只会提交暂存区（staged）里面的文件</code></p>
+<ul>
+<li>git commit -m “message”    </li>
+</ul>
+</li>
+<li>查看工作目录的状态<ul>
+<li>git status</li>
+</ul>
+</li>
+<li>查看提交历史记录<ul>
+<li>git log</li>
+</ul>
+</li>
+<li>查看文件改变<ul>
+<li>git diff</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="撤销操作">撤销操作</h2><ol>
+<li>撤销加入暂存区的操作<ul>
+<li>git reset HEAD \<file\></file\></li>
+</ul>
+</li>
+<li>撤销修改的操作<ul>
+<li>git checkout – \<file\></file\></li>
+</ul>
+</li>
+<li>将本地的修改放进回收站<ul>
+<li>git stash</li>
+</ul>
+</li>
+<li>从回收站中恢复本地的修改<ul>
+<li>git stash apply</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Tag操作">Tag操作</h2><ol>
+<li>查看tag<ul>
+<li>git tag</li>
+</ul>
+</li>
+<li>创建tag<ul>
+<li>git tag -a v1.0 -m “my version 1.0”</li>
+</ul>
+</li>
+<li>显示tag信息<ul>
+<li>git show v1.0</li>
+</ul>
+</li>
+<li>对之前的提交打tag<ul>
+<li>git tag -a v0.1 -m “version 0.1”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="分支操作">分支操作</h2><ol>
+<li>查看分支<ul>
+<li>git branch</li>
+</ul>
+</li>
+<li>创建分支<ul>
+<li>git branch \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>删除分支<ul>
+<li>git branch -d \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>切换分支<ul>
+<li>git checkout \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>合并分支<ul>
+<li>git merge \<branchname\></branchname\></li>
+</ul>
+</li>
+<li>rebase操作<ul>
+<li>git rebase \<basebranch\> \<newbranch\></newbranch\></basebranch\></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="远端仓库操作">远端仓库操作</h2><ol>
+<li>克隆一个远端仓库<ul>
+<li>git clone <em>URL</em></li>
+</ul>
+</li>
+<li>添加远端仓库<ul>
+<li>git remote add \<name\> \<url\></url\></name\></li>
+</ul>
+</li>
+<li>更新远端仓库的分支和数据<ul>
+<li>git fetch \<name\> </name\></li>
+</ul>
+</li>
+<li>获取并合并远端仓库的分支到当前分支<ul>
+<li>git pull \<reponame\> \<branchname\></branchname\></reponame\></li>
+<li>eg: <code>git pull origin master</code></li>
+</ul>
+</li>
+<li>上传本地分支和数据到远端仓库<ul>
+<li>git push \<reponame\> \<branchname\></branchname\></reponame\></li>
+<li>eg: <code>git push origin master</code> </li>
+</ul>
+</li>
+<li>跟踪远端仓库上的分支<ul>
+<li>git checkout –track origin/testbranch</li>
+<li>git checkout -b test origin/testbranch</li>
+</ul>
+</li>
+</ol>
+<hr>
+</span>
       
     </div>
 
@@ -230,16 +435,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/22/git-merge&git-rebase/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2015/03/02/KVC副本/" rel="next" title="KVC">
+                <i class="fa fa-chevron-left"></i> KVC
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/22/正则表达式/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/03/04/正则表达式/" rel="prev" title="正则表达式">
+                正则表达式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -347,7 +552,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销操作"><span class="nav-number">2.</span> <span class="nav-text">撤销操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tag操作"><span class="nav-number">3.</span> <span class="nav-text">Tag操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支操作"><span class="nav-number">4.</span> <span class="nav-text">分支操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远端仓库操作"><span class="nav-number">5.</span> <span class="nav-text">远端仓库操作</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
