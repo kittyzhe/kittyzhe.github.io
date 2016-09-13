@@ -45,52 +45,19 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="类别
-类别的简述
-
-为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；
-类别可以解决继承不能为累簇添加新方法的问题。
-
-
-类别的声明和实现
- 格式： 类名 ＋ 类别名
- 如：为NSString 创建一个类别 NSString＋NumberConvenience；
- 只要保证类别名称唯一，可以向一个类中添加任意数量的类别。
- 声明：
- @interface NSString （">
+<meta name="description" content="CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&amp;gt;homebrew-&amp;gt;RVM-&amp;gt;Ruby-&amp;gt;CocoaPots;
+1、Homebrew的安装 安装教程网站： Homebrew安装教程Homebrew的官方网站：Homebrew官网在Mac上一般homebrew都是安装好的。可以做一下测试，在终端执行  brew -v 命令，看是否正">
 <meta property="og:type" content="article">
-<meta property="og:title" content="类别">
-<meta property="og:url" content="http://yoursite.com/2015/05/04/类别副本/index.html">
+<meta property="og:title" content="亲测Mac上安装CocoaPods教程">
+<meta property="og:url" content="http://yoursite.com/2016/09/13/CocoaPods安装教程亲测/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="类别
-类别的简述
-
-为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；
-类别可以解决继承不能为累簇添加新方法的问题。
-
-
-类别的声明和实现
- 格式： 类名 ＋ 类别名
- 如：为NSString 创建一个类别 NSString＋NumberConvenience；
- 只要保证类别名称唯一，可以向一个类中添加任意数量的类别。
- 声明：
- @interface NSString （">
-<meta property="og:updated_time" content="2015-05-04T05:40:08.000Z">
+<meta property="og:description" content="CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&amp;gt;homebrew-&amp;gt;RVM-&amp;gt;Ruby-&amp;gt;CocoaPots;
+1、Homebrew的安装 安装教程网站： Homebrew安装教程Homebrew的官方网站：Homebrew官网在Mac上一般homebrew都是安装好的。可以做一下测试，在终端执行  brew -v 命令，看是否正">
+<meta property="og:updated_time" content="2016-09-13T07:47:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="类别">
-<meta name="twitter:description" content="类别
-类别的简述
-
-为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；
-类别可以解决继承不能为累簇添加新方法的问题。
-
-
-类别的声明和实现
- 格式： 类名 ＋ 类别名
- 如：为NSString 创建一个类别 NSString＋NumberConvenience；
- 只要保证类别名称唯一，可以向一个类中添加任意数量的类别。
- 声明：
- @interface NSString （">
+<meta name="twitter:title" content="亲测Mac上安装CocoaPods教程">
+<meta name="twitter:description" content="CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&amp;gt;homebrew-&amp;gt;RVM-&amp;gt;Ruby-&amp;gt;CocoaPots;
+1、Homebrew的安装 安装教程网站： Homebrew安装教程Homebrew的官方网站：Homebrew官网在Mac上一般homebrew都是安装好的。可以做一下测试，在终端执行  brew -v 命令，看是否正">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -102,7 +69,7 @@
 
 
 
-  <title> 类别 | Sunshine </title>
+  <title> 亲测Mac上安装CocoaPods教程 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,7 +184,7 @@
             
             
               
-                类别
+                亲测Mac上安装CocoaPods教程
               
             
           </h1>
@@ -226,8 +193,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-05-04T13:36:53+08:00" content="2015-05-04">
-              2015-05-04
+            <time itemprop="dateCreated" datetime="2016-09-13T14:10:01+08:00" content="2016-09-13">
+              2016-09-13
             </time>
           </span>
 
@@ -250,39 +217,66 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="类别">类别</h2><ol>
-<li><p>类别的简述</p>
-<ul>
-<li>为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；</li>
-<li>类别可以解决继承不能为累簇添加新方法的问题。</li>
-</ul>
-</li>
-<li><p>类别的声明和实现</p>
-<p> 格式： <code>类名 ＋ 类别名</code></p>
-<p> 如：为NSString 创建一个类别 <code>NSString＋NumberConvenience</code>；</p>
-<p> 只要保证类别名称唯一，可以向一个类中添加任意数量的类别。</p>
-<p> 声明：</p>
-<p> @interface NSString （NumberConvenience）</p>
-<p> － （NSNumber *）lengthAsNumber;</p>
-<p> @end</p>
-<p> 实现：</p>
-<p> @implementation NSString （NumberConvenience）</p>
-<p> － （NSNumber *）lengthAsNumber<br> {</p>
-<p> }</p>
-<p> @end</p>
-</li>
-<li><p>类别的优缺点</p>
-<p> 缺点：</p>
-<pre><code><span class="bullet">* </span>只能添加方法，只可以访问原始类的实例变量，无法向类别中添加新的实例变量
-<span class="bullet">* </span>名称冲突。类别具有最高优先级，即当类别中定义与对应类中已有的方法同名的方法，对象调用该方法时，会优先调用类别中定义的方法。
-<span class="bullet">* </span>多个Category中如果实现了相同的方法，只有最后一个参与编译的才会有效   
-</code></pre><p> 优点：</p>
-<pre><code><span class="bullet">* </span>将类的实现代码分散到多个不同文件或框架中。
-<span class="bullet">* </span>可以创建对类中私有方法的前向引用，
-<span class="bullet">* </span>向对象添加非正式协议。
-</code></pre></li>
-</ol>
-</span>
+        <span itemprop="articleBody"><h3 id="CocoaPods安装依赖于以其他软件、环境等的安装">CocoaPods安装依赖于以其他软件、环境等的安装</h3><pre><code><span class="type">Cocoapods</span>安装顺序<span class="type">Xcode</span>-&gt;homebrew-&gt;<span class="type">RVM</span>-&gt;<span class="type">Ruby</span>-&gt;<span class="type">CocoaPots</span>;
+</code></pre><h3 id="1、Homebrew的安装">1、Homebrew的安装</h3><p> 安装教程网站： <a href="http://blog.csdn.net/azhou_hui/article/details/49718511" target="_blank" rel="external">Homebrew安装教程</a><br>Homebrew的官方网站：<a href="http://brew.sh/" target="_blank" rel="external">Homebrew官网</a><br>在Mac上一般homebrew都是安装好的。可以做一下测试，在终端执行  brew -v 命令，看是否正常执行，会列出已安装的hemebrew版本号，如果没有，那么安装以上的教程进行安装。</p>
+<pre><code>一般情况下，第一步Homebrew的安装的安装基本不用管。可以从第二步开始
+</code></pre><h3 id="2、RVM、Ruby的安装">2、RVM、Ruby的安装</h3><pre><code><span class="tag">Mac</span>自带的有<span class="tag">ruby</span>，但是版本比较低，现在安装<span class="tag">Cocoapods</span>要求在<span class="tag">ruby</span>版本2<span class="class">.2</span><span class="class">.2</span>以上，所以我们要更新<span class="tag">ruby</span>版本，更新<span class="tag">ruby</span>版本需要使用<span class="tag">rvm</span>更新.
+
+<span class="rule"><span class="attribute">RVM</span>:<span class="value">Ruby Version Manager,Ruby版本管理器，包括Ruby的版本管理和Gem库管理(gemset)</span></span>
+</code></pre><h6 id="安装rvm">安装rvm</h6><pre><code>在终端执行以下命令
+
+ curl -L get.rvm.io <span class="string">| bash -s stable  </span>
+     等待一段时间后就可以成功安装好 RVM。
+
+rvm -v  
+    此命令是测试rvm是否正常安装，列出已安装的rvm版本号
+</code></pre><h6 id="重要:">重要:</h6><pre><code>安装完rvm后修改rvm里面的一个文件,在终端执行以下命令。
+
+echo <span class="string">"ruby_url=https://cache.ruby-china.org/pub/ruby"</span> <span class="prompt">&gt;&gt; </span>~<span class="regexp">/.rvm/user</span><span class="regexp">/db</span>
+</code></pre><h6 id="更新ruby版本">更新ruby版本</h6><pre><code>rvm <span class="built_in">list</span> known 
+    列出已知的ruby版本。
+
+sudo rvm install <span class="number">2.3</span>    
+    在这里我们安装ruby <span class="number">2.3</span>版本。
+
+执行成功后。我们查看已存在的ruby版本。
+rvm <span class="built_in">list</span> 
+    可以看到我们刚才更新的ruby <span class="number">2.3</span>版本
+
+rvm --<span class="keyword">default</span> use <span class="number">2.3</span> 
+    更换ruby版本为刚更新的<span class="number">2.3</span>
+</code></pre><h3 id="3、安装Cocoapods">3、安装Cocoapods</h3><p>Cocoapods官网 ：<a href="https://cocoapods.org" target="_blank" rel="external">Cocoapods官网</a>    </p>
+<pre><code>由于安装会受到墙阻碍的原因。我们可以用淘宝的Ruby镜像来访问cocoapods。按照下面的顺序在终端中敲入依次敲入命令：
+gem sources --remove <span class="string">http:</span><span class="comment">//ruby.rubygems.org/</span>
+
+gem sources -a <span class="string">https:</span><span class="comment">//ruby.taobao.org/</span>
+
+查看源对不对
+gem sources -l
+
+再安装就好了
+sudo gem install cocoapods
+</code></pre><h3 id="4、Cocoapods的使用">4、Cocoapods的使用</h3><pre><code>在终端里面，<span class="keyword">cd</span>（进入）你的Xcode项目文件。
+
+然后 pod init （初始化一个Podfile）
+
+<span class="keyword">ls</span> 看一下，Podfile是否存在，正常来说是已经存在了。
+
+pod <span class="keyword">search</span> XXXXX（XXXX表示第三方库）
+    如 pod <span class="keyword">search</span> AFNetWorking （可以打开另外一屏进行搜索，command 加 <span class="keyword">d</span> 是从新打开一屏）。
+
+编辑 vi  Podfile ，按i进入编辑模式
+
+把这句话 pod 'AFNetWorking', '~&gt; 3.1.0’粘贴进去。(3.1.0是版本号，随着第三方库的更新，版本号不一定是3.1.0)
+
+按ESC进入正常模式后。输入 :wq保存退出
+
+最后 pod install 安装就好了。
+</code></pre><p>注意：</p>
+<pre><code>使用Cocoapods的项目，打开项目的时候，打开后缀为<span class="class">.xcworkspace</span> 的文件。
+
+如果以后这些第三方库更新了，那么执行pod update  你项目里面的第三方库就会同步更新。
+</code></pre></span>
       
     </div>
 
@@ -293,17 +287,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/30/协议副本/" rel="next" title="协议">
-                <i class="fa fa-chevron-left"></i> 协议
+              <a href="/2016/09/13/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/05/04/字典副本/" rel="prev" title="字典">
-                字典 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -410,7 +400,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#类别"><span class="nav-number">1.</span> <span class="nav-text">类别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CocoaPods安装依赖于以其他软件、环境等的安装"><span class="nav-number">1.</span> <span class="nav-text">CocoaPods安装依赖于以其他软件、环境等的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、Homebrew的安装"><span class="nav-number">2.</span> <span class="nav-text">1、Homebrew的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、RVM、Ruby的安装"><span class="nav-number">3.</span> <span class="nav-text">2、RVM、Ruby的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装rvm"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">安装rvm</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重要:"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">重要:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#更新ruby版本"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">更新ruby版本</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、安装Cocoapods"><span class="nav-number">4.</span> <span class="nav-text">3、安装Cocoapods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、Cocoapods的使用"><span class="nav-number">5.</span> <span class="nav-text">4、Cocoapods的使用</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

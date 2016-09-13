@@ -182,6 +182,111 @@
             
             
               
+                <a class="post-title-link" href="/2015/03/14/kvc误点副本/" itemprop="url">
+                  KVC误点
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-03-14T21:14:39+08:00" content="2015-03-14">
+              2015-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="setValue：forKey_和_setObject：forKey">setValue：forKey 和 setObject：forKey</h3><pre><code>在使用NSMutableDictionary的时候经常会使用<span class="built_in">set</span>Value <span class="keyword">for</span>Key与<span class="built_in">set</span>Object <span class="keyword">for</span>Key
+<span class="number">1</span>。<span class="built_in">set</span>Value： <span class="keyword">for</span>Key：
+发送<span class="built_in">set</span>Object:<span class="keyword">for</span>Key 给接收者，也就是调用<span class="built_in">set</span>Object:<span class="keyword">for</span>Key方法
+除非value为nil的时候，调用方法removeObject:<span class="keyword">for</span>Key
+
+<span class="number">2</span>。<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：
+Key的对象是一个id类型，并不是NSString，只不过我们经常使用NSString而已。
+</code></pre><h4 id="区别：">区别：</h4><pre><code><span class="number">1</span>.<span class="built_in">set</span>Object：forkey：中value是不能够为nil的，不然会报错。
+  <span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中value能够为nil，当value为nil的时候，自动调用removeObject：<span class="keyword">for</span>Key方法
+
+<span class="number">2</span>.<span class="built_in">set</span>Value：<span class="keyword">for</span>Key：中key的参数只能够是NSString
+  <span class="built_in">set</span>Object：<span class="keyword">for</span>Key：的可以是任何类型
+
+!!!注意：<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：对象不能存放nil要与下面的这种情况区分：
+<span class="number">1</span>.[imageDictionarysetObject:[NSNullnull] <span class="keyword">for</span>Key:indexNumber];
+[NSNull null]表示的是一个空对象，并不是nil
+
+<span class="number">2</span>.<span class="built_in">set</span>Object：<span class="keyword">for</span>Key：中Key是NSNumber对象的时候，如下：
+[imageDictionarysetObject:obj <span class="keyword">for</span>Key:[NSNumber numberWithInt：<span class="number">10</span>]];
+</code></pre><h4 id="注意：">注意：</h4><pre><code>  上面说的区别是针对调用者是dictionary而言的。
+
+<span class="built_in">set</span>Object:<span class="keyword">for</span>Key:方法NSMutabledictionary特有的
+<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是KVC（键-值编码）的主要方法。
+
+当 <span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法调用者是对象的时候：
+<span class="built_in">set</span>Value:<span class="keyword">for</span>Key:方法是在NSObject对象中创建的，也就是说所有的oc对象都有这个方法，所以可以用于任何类。
+             比如使用:
+  SomeClass *someObj = [[SomeClass alloc] init];
+[someObj <span class="built_in">set</span>Value:<span class="literal">self</span> <span class="keyword">for</span>Key:@<span class="string">"delegate"</span>];
+表示的意思是：对象someObj设置他的delegate属性的值为当前类，当然调用此方法的对象必须要有delegate属性才能设置，不然调用了也没效果
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 <a class="post-title-link" href="/2015/03/04/正则表达式/" itemprop="url">
                   正则表达式
                 </a>
@@ -904,7 +1009,7 @@ person=<span class="literal">nil</span>;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -953,7 +1058,7 @@ person=<span class="literal">nil</span>;
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

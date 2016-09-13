@@ -182,6 +182,224 @@
             
             
               
+                <a class="post-title-link" href="/2016/09/13/CocoaPods安装教程亲测/" itemprop="url">
+                  亲测Mac上安装CocoaPods教程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-09-13T14:10:01+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="CocoaPods安装依赖于以其他软件、环境等的安装">CocoaPods安装依赖于以其他软件、环境等的安装</h3><pre><code><span class="type">Cocoapods</span>安装顺序<span class="type">Xcode</span>-&gt;homebrew-&gt;<span class="type">RVM</span>-&gt;<span class="type">Ruby</span>-&gt;<span class="type">CocoaPots</span>;
+</code></pre><h3 id="1、Homebrew的安装">1、Homebrew的安装</h3><p> 安装教程网站： <a href="http://blog.csdn.net/azhou_hui/article/details/49718511" target="_blank" rel="external">Homebrew安装教程</a><br>Homebrew的官方网站：<a href="http://brew.sh/" target="_blank" rel="external">Homebrew官网</a><br>在Mac上一般homebrew都是安装好的。可以做一下测试，在终端执行  brew -v 命令，看是否正常执行，会列出已安装的hemebrew版本号，如果没有，那么安装以上的教程进行安装。</p>
+<pre><code>一般情况下，第一步Homebrew的安装的安装基本不用管。可以从第二步开始
+</code></pre><h3 id="2、RVM、Ruby的安装">2、RVM、Ruby的安装</h3><pre><code><span class="tag">Mac</span>自带的有<span class="tag">ruby</span>，但是版本比较低，现在安装<span class="tag">Cocoapods</span>要求在<span class="tag">ruby</span>版本2<span class="class">.2</span><span class="class">.2</span>以上，所以我们要更新<span class="tag">ruby</span>版本，更新<span class="tag">ruby</span>版本需要使用<span class="tag">rvm</span>更新.
+
+<span class="rule"><span class="attribute">RVM</span>:<span class="value">Ruby Version Manager,Ruby版本管理器，包括Ruby的版本管理和Gem库管理(gemset)</span></span>
+</code></pre><h6 id="安装rvm">安装rvm</h6><pre><code>在终端执行以下命令
+
+ curl -L get.rvm.io <span class="string">| bash -s stable  </span>
+     等待一段时间后就可以成功安装好 RVM。
+
+rvm -v  
+    此命令是测试rvm是否正常安装，列出已安装的rvm版本号
+</code></pre><h6 id="重要:">重要:</h6><pre><code>安装完rvm后修改rvm里面的一个文件,在终端执行以下命令。
+
+echo <span class="string">"ruby_url=https://cache.ruby-china.org/pub/ruby"</span> <span class="prompt">&gt;&gt; </span>~<span class="regexp">/.rvm/user</span><span class="regexp">/db</span>
+</code></pre><h6 id="更新ruby版本">更新ruby版本</h6><pre><code>rvm <span class="built_in">list</span> known 
+    列出已知的ruby版本。
+
+sudo rvm install <span class="number">2.3</span>    
+    在这里我们安装ruby <span class="number">2.3</span>版本。
+
+执行成功后。我们查看已存在的ruby版本。
+rvm <span class="built_in">list</span> 
+    可以看到我们刚才更新的ruby <span class="number">2.3</span>版本
+
+rvm --<span class="keyword">default</span> use <span class="number">2.3</span> 
+    更换ruby版本为刚更新的<span class="number">2.3</span>
+</code></pre><h3 id="3、安装Cocoapods">3、安装Cocoapods</h3><p>Cocoapods官网 ：<a href="https://cocoapods.org" target="_blank" rel="external">Cocoapods官网</a>    </p>
+<pre><code>由于安装会受到墙阻碍的原因。我们可以用淘宝的Ruby镜像来访问cocoapods。按照下面的顺序在终端中敲入依次敲入命令：
+gem sources --remove <span class="string">http:</span><span class="comment">//ruby.rubygems.org/</span>
+
+gem sources -a <span class="string">https:</span><span class="comment">//ruby.taobao.org/</span>
+
+查看源对不对
+gem sources -l
+
+再安装就好了
+sudo gem install cocoapods
+</code></pre><h3 id="4、Cocoapods的使用">4、Cocoapods的使用</h3><pre><code>在终端里面，<span class="keyword">cd</span>（进入）你的Xcode项目文件。
+
+然后 pod init （初始化一个Podfile）
+
+<span class="keyword">ls</span> 看一下，Podfile是否存在，正常来说是已经存在了。
+
+pod <span class="keyword">search</span> XXXXX（XXXX表示第三方库）
+    如 pod <span class="keyword">search</span> AFNetWorking （可以打开另外一屏进行搜索，command 加 <span class="keyword">d</span> 是从新打开一屏）。
+
+编辑 vi  Podfile ，按i进入编辑模式
+
+把这句话 pod 'AFNetWorking', '~&gt; 3.1.0’粘贴进去。(3.1.0是版本号，随着第三方库的更新，版本号不一定是3.1.0)
+
+按ESC进入正常模式后。输入 :wq保存退出
+
+最后 pod install 安装就好了。
+</code></pre><p>注意：</p>
+<pre><code>使用Cocoapods的项目，打开项目的时候，打开后缀为<span class="class">.xcworkspace</span> 的文件。
+
+如果以后这些第三方库更新了，那么执行pod update  你项目里面的第三方库就会同步更新。
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2016/09/13/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-09-13T14:04:25+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 <a class="post-title-link" href="/2015/10/20/编码规范/" itemprop="url">
                   编码规范
                 </a>
@@ -321,90 +539,6 @@
             
               <h4 id="常用正则表达式">常用正则表达式</h4><p> NSString <em>urlStr = @”jwfwfwfwf@163.com”;<br>        NSError </em>error;<br>        NSRegularExpression <em>reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;error];<br>        NSTextCheckingResult </em>firstMatch = [reg firstMatchInString:urlStr options:0 range:NSMakeRange(0, [urlStr length])];<br>        NSRange resultRange = [firstMatch rangeAtIndex:0];<br>        NSString *result = [urlStr substringWithRange:resultRange];<br>        NSLog(@”%@”, result);</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">匹配中文字符的正则表达式： <span class="special">[</span><span class="command">\u</span>4e00-<span class="command">\u</span>9fa5<span class="special">]</span></span><br><span class="line">评注：匹配中文还真是个头疼的事，有了这个表达式就好办了</span><br><span class="line"></span><br><span class="line">匹配双字节字符(包括汉字在内)：<span class="special">[</span>^<span class="command">\x</span>00-<span class="command">\xff</span><span class="special">]</span></span><br><span class="line">评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）</span><br><span class="line"></span><br><span class="line">匹配空白行的正则表达式：<span class="command">\n</span><span class="command">\s*</span><span class="command">\r</span></span><br><span class="line">评注：可以用来删除空白行</span><br><span class="line"></span><br><span class="line">匹配HTML标记的正则表达式：&lt;(<span class="command">\S*</span>?)<span class="special">[</span>^&gt;<span class="special">]</span>*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt;</span><br><span class="line">评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力</span><br><span class="line"></span><br><span class="line">匹配首尾空白字符的正则表达式：^<span class="command">\s*</span>|<span class="command">\s*</span><span class="formula">$</span><br><span class="line">评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式</span><br><span class="line"></span><br><span class="line">匹配Email地址的正则表达式：<span class="command">\w</span>+(<span class="special">[</span>-+.<span class="special">]</span><span class="command">\w</span>+)*@<span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*<span class="command">\.</span><span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*</span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配网址URL的正则表达式：<span class="special">[</span>a-zA-z<span class="special">]</span>+://<span class="special">[</span>^<span class="command">\s</span><span class="special">]</span>*</span><br><span class="line">评注：网上流传的版本功能很有限，上面这个基本可以满足需求</span><br><span class="line"></span><br><span class="line">匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^<span class="special">[</span>a-zA-Z<span class="special">]</span><span class="special">[</span>a-zA-Z0-9_<span class="special">]</span><span class="special">&#123;</span>4,15<span class="special">&#125;</span>$</span></span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配国内电话号码：<span class="command">\d</span><span class="special">&#123;</span>3<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>8<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>4<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>7<span class="special">&#125;</span></span><br><span class="line">评注：匹配形式如 0511-4405222 或 021-87888822</span><br><span class="line"></span><br><span class="line">匹配腾讯QQ号：<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>4,<span class="special">&#125;</span></span><br><span class="line">评注：腾讯QQ号从10000开始</span><br><span class="line"></span><br><span class="line">匹配中国邮政编码：<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d</span><span class="special">&#123;</span>5<span class="special">&#125;</span>(?!<span class="command">\d</span>)</span><br><span class="line">评注：中国邮政编码为6位数字</span><br><span class="line"></span><br><span class="line">匹配身份证：<span class="command">\d</span><span class="special">&#123;</span>15<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>18<span class="special">&#125;</span></span><br><span class="line">评注：中国的身份证为15位或18位</span><br><span class="line"></span><br><span class="line">匹配ip地址：<span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+</span><br><span class="line">评注：提取ip地址时有用</span><br></pre></td></tr></table></figure>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/10/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-11T08:50:14+08:00" content="2015-10-11">
-              2015-10-11
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
             
           </span>
         
@@ -1210,215 +1344,6 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
 
     
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/04/30/OC副本/" itemprop="url">
-                  OC
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-30T11:49:42+08:00" content="2015-04-30">
-              2015-04-30
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p><img src="http://www.52nx.net/article/UploadPic/2011-10/2011101515463073132.png" alt="image"></p>
-<h2 id="NSLog_与_printf的不同">NSLog 与 printf的不同</h2><pre><code><span class="number">1.</span> NSLog接收oc字符串作为参数，<span class="built_in">printf</span>接收c语言的字符串作为参数
-<span class="number">2.</span> NSLog输出后会自动换行，<span class="built_in">printf</span>在输出后不会自动换行
-<span class="number">3.</span> 使用NSLog时，需要包含头文件<span class="preprocessor">#import &lt;Foundition/Foundition.h&gt;；而使用printf时，需要包含头文件#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span>
-<span class="number">4.</span> NSLog可以输出日期，时间戳，进程号等信息，而<span class="built_in">printf</span>不能输出这些信息
-</code></pre><h2 id="常用术语">常用术语</h2><p>面向过程 ： Procedure Oriented</p>
-<p>面向对象 ： Object Oriented ，<strong>简称OO</strong></p>
-<p>面向编程 ： Object Oriented Programming，<strong>简称OOP</strong></p>
-<h2 id="OC_语法">OC 语法</h2><ol>
-<li><strong>类的声明</strong></li>
-</ol>
-<pre><code><span class="class"><span class="keyword">@interface</span> 类名：父类（默认为 <span class="title">NSObject</span> 该类时根类）</span>
-
-{
-
-    定义成员变量；（默认情况下，成员变量为protect类型，）
-
-}    
-
-（ 可以用<span class="keyword">@public</span>将其定义为public类型，此时定义的属性或变量允许被外界访问）
-<span class="keyword">@property</span>(<span class="keyword">nonatomic</span>/atomic,<span class="keyword">readonly</span>/<span class="keyword">readwrite</span>,<span class="keyword">assign</span>/<span class="keyword">strong</span>/retain/wake)类型 属性名；（定义属性可以自动生成setter和getter方法）
-
-声明类方法；（标识 ＋ 该方法向类发消息）
-
-声明实例方法； （标识 － 该方法向对象发消息） 声明类方法时 返回值最好定义为`instancetype`类型
-
-<span class="keyword">@end</span>
-</code></pre><ol>
-<li><p><strong>类的实现</strong></p>
-<pre><code> <span class="variable">@implemention</span> 类名
-
- － 实例方法
-｛
-        实现代码； 
- ｝
-
- ＋ 类fangfa
-｛ 
-        实现代码； 
- ｝
-
- 重写父类方法；
- 如：descripition、 dealloc、init等
-
- <span class="variable">@end</span>
-</code></pre><p>3.<strong>创建对象</strong></p>
-<pre><code><span class="number">1.</span>包含所创建类的头文件
-<span class="number">2.</span>类名 ＊对象名；
-<span class="number">2.1</span> 类名 ＊对象名 ＝ ［［类名 alloc］init］；（创建对象并为其分配内存、初始化）
-<span class="number">2.2</span> 类名 ＊对象名 ＝ ［类名 <span class="keyword">new</span>］；（每次都会创建出新的对象，并且返回对象的地址。）
-<span class="number">3.</span> 给对象赋值；（可以调用相应的类方法）；
-<span class="number">4.</span> 给对象发消息，完成所需要进行的操作；［对象 方法］；
-</code></pre></li>
-<li><p><strong>匿名对象</strong></p>
-<pre><code>方法调用：
-
-    ［［类名 <span class="literal">new</span>］方法］；／［［［类名 alloc］init］方法］；
-
-属性访问：
-
-    ［类名 <span class="literal">new</span>］<span class="subst">-&gt;</span>属性 ＝ 赋值；（外界访问定义为<span class="keyword">public</span>类型的属性）
-</code></pre></li>
-</ol>
-<h2 id="OC方法和函数的区别">OC方法和函数的区别</h2><pre><code>1. OC方法的声明只能在@interface 和 @<span class="operator"><span class="keyword">end</span>之间，只能在@implementation 和 @<span class="keyword">end</span>之间。即OC方法独立于类存在。
-<span class="number">2.</span> <span class="keyword">C</span>函数不属于类，跟类没有联系，<span class="keyword">C</span>函数所有权只属于定义函数的文件
-<span class="number">3.</span> <span class="keyword">C</span>函数不能访问OC对象的成员变量。</span>
-</code></pre><h2 id="OC语法细节">OC语法细节</h2><pre><code><span class="number">1.</span> 成员变量不能在｛｝中进行初始化、不能直接拿去访问
-<span class="number">2.</span> 方法的声明不能写在@end之后
-<span class="number">3.</span> 方法不能当作函数一样调用
-<span class="number">4.</span> 成员变量、方法不能用<span class="keyword">static</span>等关键字进行修饰
-</code></pre><h2 id="OC方法注意点">OC方法注意点</h2><pre><code>方法只有声明，没有实现（经典错误，系统提示警告）
-方法没有声明，只有实现（编译器警告，但是可以调用，OC的弱语法）
-编译的时候，访问没有定义的成员变量直接报错，调用没有的方法，只是警告
-没有<span class="class"><span class="keyword">@interface</span>，纸偶@<span class="title">implemenation</span>也可以成功定义一个类</span>
-        @implemenation Dog : <span class="built_in">NSObject</span>
-        {
-            <span class="keyword">int</span> _age;
-            <span class="built_in">NSString</span> *_name;
-        }
-
-        - (<span class="keyword">void</span>)print
-        {
-            <span class="built_in">NSLog</span>(<span class="string">@"The dog's name is %@,ang de it's %d years old!"</span>,_name,_age);
-        }
-        <span class="keyword">@end</span>
-
-@implemenation 中不能声明和<span class="class"><span class="keyword">@interface</span>一样的成员变量</span>
-</code></pre><p>!!! OC中有<code>BOOL</code>基本数据类型，其值是<code>YES</code>和<code>NO</code>，而不是true 和false，它实际上是一种对带符号的自负类型（signed char）的定义（typedef），它使用8为存储空间。<code>YES定义为1，NO定义为0</code>；</p>
-<p><img src="http://www.52nx.net/article/UploadPic/2011-7/2011772043927764.png" alt="image"></p>
-<h3 id="类方法he实例方法">类方法he实例方法</h3><ol>
-<li><p><strong>类方法</strong></p>
-<pre><code>＊ 该方法是直接可以用类名来执行的方法（类本身会在内存中占据存储空间，里面有类／对象方法列表）
-＊ 以加号 ＋ 开头
-＊ 只能用类名调用，对象不能调用
-＊ 类方法不能访问实例变量（成员变量）
-＊ 使用场合：当不需要访问成员变量时，尽量使用类方法
-＊ 类方法和对象方法可以同名
-</code></pre></li>
-<li><p><strong>实例方法</strong></p>
-<pre><code>＊ 该方法是用对象名来执行的方法
-＊ 以减号 — 开头
-＊ 只能用对象名调用，类不能调用，该方法没有对象是不能被执行的
-＊ 对象方法能访问实例变量（成员变量）
-</code></pre></li>
-</ol>
-<h3 id="setter和getter方法">setter和getter方法</h3><ol>
-<li><p><strong>setter和getter方法的使用场合</strong></p>
-<pre><code>@<span class="keyword">public</span>的成员可以随意被赋植，应该使用<span class="keyword">set</span>和<span class="keyword">get</span>方法来管理成员变量的访问
-</code></pre></li>
-<li><p><strong>setter方法</strong></p>
-<pre><code>作用：用来设置成员变量，可以在方法里面过滤一些不合理的值
-命名规范：方法以<span class="keyword">set</span>开头，而且后面跟上成员变量名，成员变量名必须首字母大写，尽量形参名称不要与成员变量名重名（成员变量名最好以下划线 _ 开头）
-返回值：一般为<span class="keyword">void</span>
-</code></pre></li>
-<li><p><strong>getter方法</strong></p>
-<pre><code>作用：返回对象内部的成员变量
-命名规范：方法名和成员变量名同名
-返回值：一般与成员变量的类型相同  
-</code></pre></li>
-</ol>
-<h3 id="self关键字">self关键字</h3><ol>
-<li><p><strong>成员变量和局部变量同名</strong></p>
-<pre><code>当成员变量和局部变量同名时，采取就近原则，访问的是局部变量
-当<span class="keyword">self</span>访问成员变量，区分同名的局部变量
-</code></pre></li>
-<li><p><strong>使用细节</strong></p>
-<pre><code><span class="number">1.</span> 出现的地方：所有的OC方法中（对象方法／类方法），不能出现在函数
-<span class="number">2.</span> 作用：
-    使用“<span class="built_in">self</span><span class="built_in">.</span>属性”访问当前方法中的成员变量
-    使用“<span class="built_in">self</span><span class="subst">-&gt; </span>成员变量”访问当前方法中<span class="keyword">public</span>成员变量
-    使用“［<span class="built_in">self</span> 方法］”调用方法（类方法／实例方法）
-<span class="number">3.</span> 类方法中<span class="built_in">self</span>只能调用类方法，实例方法中<span class="built_in">self</span>只能调用实例方法
-</code></pre></li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1461,7 +1386,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1510,7 +1435,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
