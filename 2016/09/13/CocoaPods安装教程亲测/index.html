@@ -57,7 +57,7 @@
 1、Homebrew的安装 安装教程网站： Homebrew安装教程Homebrew的官方网站：Homebrew官网 
 做一下测试，在终端执行  brew -v 命令
 看是否正常执行，会列出已安装的hemebrew版本号">
-<meta property="og:updated_time" content="2016-09-13T10:41:15.000Z">
+<meta property="og:updated_time" content="2016-09-13T12:31:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="亲测Mac上安装CocoaPods教程">
 <meta name="twitter:description" content="CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&amp;gt;homebrew-&amp;gt;RVM-&amp;gt;Ruby-&amp;gt;CocoaPots;
@@ -235,6 +235,7 @@
 
  curl -L get.rvm.io | bash <span class="operator">-s</span> stable  
      等待一段时间后就可以成功安装好 RVM。
+
  执行以下命令
 <span class="built_in">source</span> ~/.bashrc  
 <span class="built_in">source</span> ~/.bash_profile
@@ -246,10 +247,12 @@ rvm -v
 
 echo <span class="string">"ruby_url=https://cache.ruby-china.org/pub/ruby"</span> <span class="prompt">&gt;&gt; </span>~<span class="regexp">/.rvm/user</span><span class="regexp">/db</span>
 </code></pre><h6 id="更新ruby版本">更新ruby版本</h6><pre><code>rvm <span class="built_in">list</span> known 
-    列出已知的ruby版本。
+    列出已知的ruby版本。然后按 q 退出
 
-sudo rvm install <span class="number">2.3</span>    
+rvm install <span class="number">2.3</span>    
     在这里我们安装ruby <span class="number">2.3</span>版本。
+    如果错误，那么使用超级管理员身份进行安装，即 sudo rvm install <span class="number">2.3</span>
+
 
 执行成功后。我们查看已存在的ruby版本。
 rvm <span class="built_in">list</span> 
@@ -275,13 +278,13 @@ sudo gem install cocoapods
 <span class="keyword">ls</span> 看一下，Podfile是否存在，正常来说是已经存在了。
 
 pod <span class="keyword">search</span> XXXXX（XXXX表示第三方库）
-    如 pod <span class="keyword">search</span> AFNetWorking （可以打开另外一屏进行搜索，command 加 <span class="keyword">d</span> 是从新打开一屏）。
+    如 pod <span class="keyword">search</span> AFNetWorking （可以打开另外一屏进行搜索，command 加 <span class="keyword">d</span> 是从新打开一屏）。第一次搜索需要花费很长时间，耐心等待吧。
 
-编辑 vi  Podfile ，按i进入编辑模式
+编辑 vi  Podfile ，按 i 进入编辑模式
 
 把这句话 pod 'AFNetWorking', '~&gt; 3.1.0’粘贴进去。(3.1.0是版本号，随着第三方库的更新，版本号不一定是3.1.0)
 
-按ESC进入正常模式后。输入 :wq保存退出
+按ESC进入正常模式后。输入 :wq保存退出 .如果不小心破坏了Podfile文件，那么 :q！退出。然后再重新进来。这两个命令要在英文输入状态下输入
 
 最后 pod install 安装就好了。
 </code></pre><p>注意：</p>
