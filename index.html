@@ -230,8 +230,12 @@
 <span class="rule"><span class="attribute">RVM</span>:<span class="value">Ruby Version Manager,Ruby版本管理器，包括Ruby的版本管理和Gem库管理(gemset)</span></span>
 </code></pre><h6 id="安装rvm">安装rvm</h6><pre><code>在终端执行以下命令
 
- curl -L get.rvm.io <span class="string">| bash -s stable  </span>
+ curl -L get.rvm.io | bash <span class="operator">-s</span> stable  
      等待一段时间后就可以成功安装好 RVM。
+ 执行以下命令
+<span class="built_in">source</span> ~/.bashrc  
+<span class="built_in">source</span> ~/.bash_profile
+    使rvm配置文件生效
 
 rvm -v  
     此命令是测试rvm是否正常安装，列出已安装的rvm版本号
