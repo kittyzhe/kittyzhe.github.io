@@ -268,23 +268,36 @@ gem sources -l
 
 再安装就好了
 sudo gem install cocoapods
-</code></pre><h3 id="4、Cocoapods的使用">4、Cocoapods的使用</h3><pre><code>在终端里面，<span class="keyword">cd</span>（进入）你的Xcode项目文件。
+</code></pre><h3 id="4、Cocoapods的使用">4、Cocoapods的使用</h3><h6 id="注意：以下操作_除了pod_search_XXXXX（XXXX表示第三方库）这一步，其他步骤都需要在你的项目目录进行操作。"><strong>注意</strong>：以下操作 除了pod search XXXXX（XXXX表示第三方库）这一步，其他步骤都需要在你的项目目录进行操作。</h6><pre><code>在终端里面，<span class="keyword">cd</span>（进入）你的Xcode项目文件。
 
 然后 pod init （初始化一个Podfile）
 
 <span class="keyword">ls</span> 看一下，Podfile是否存在，正常来说是已经存在了。
 
-pod <span class="keyword">search</span> XXXXX（XXXX表示第三方库）
-    如 pod <span class="keyword">search</span> AFNetWorking （可以打开另外一屏进行搜索，command 加 <span class="keyword">d</span> 是从新打开一屏）。第一次搜索需要花费很长时间，耐心等待吧。
+见下图
+</code></pre><p><img src="http://a3.qpic.cn/psb?/V11zLvyN1PYi1V/a4ITYmG393ZaF7f28h1kgi58J2GGXw4.yHvVQb94HFo!/b/dK0AAAAAAAAA&amp;bo=RAOyAAAAAAADANA!&amp;rf=viewer_4" alt="初始化和编辑podfile"></p>
+<pre><code>pod <span class="built_in">search</span> XXXXX（XXXX表示第三方库）
+    如 pod <span class="built_in">search</span> AFNetWorking （可以打开另外一屏进行搜索，<span class="keyword">command</span> 加 <span class="keyword">d</span> 是从新打开一屏）。安装完Cocoapods第一次搜索会出现 <span class="keyword">set</span> <span class="keyword">up</span> cocoapods master repo 然后就会花费很长时间，耐心等待吧。以后再pod <span class="built_in">search</span> XXX 就会很快了，不会再有<span class="keyword">set</span> <span class="keyword">up</span> cocoapods master repo，因为安装完Cocoapods第一次搜索会进行一系列的安装设置。
 
-编辑 vi  Podfile ，按 i 进入编辑模式
+见下图
+</code></pre><p><img src="http://a2.qpic.cn/psb?/V11zLvyN1PYi1V/jttzZYGHBUd2s4DOKP7oyZwUxDnPNXzt73oBAGkTrYQ!/b/dK8AAAAAAAAA&amp;bo=gALGAwAAAAADAGI!&amp;rf=viewer_4" alt="search第三方，以及成功的标志"></p>
+<pre><code>搜索完毕后再执行以下步骤。
 
-把这句话 pod 'AFNetWorking', '~&gt; 3.1.0’粘贴进去。(3.1.0是版本号，随着第三方库的更新，版本号不一定是3.1.0)
+编辑 vi  Podfile（此Podfile 是你要导入第三方库的项目里面的Podfile，因为是你的项目需要安装第三方库） ，按 <span class="tag">i</span> 进入编辑模式  
 
-按ESC进入正常模式后。输入 :wq保存退出 .如果不小心破坏了Podfile文件，那么 :q！退出。然后再重新进来。这两个命令要在英文输入状态下输入
+见下图
+</code></pre><p><img src="http://a3.qpic.cn/psb?/V11zLvyN1PYi1V/3xUxvhyYkhCG345LWda9*M5wO44roouX*Kk46zfOKyA!/b/dK0AAAAAAAAA&amp;bo=gALkAgAAAAADAEE!&amp;rf=viewer_4" alt="编辑Podfile文件"></p>
+<pre><code>pod search <span class="constant">AFNetWorking完</span>后，找到第三方库<span class="constant">AFNetWorking里</span>面的这句话 pod <span class="string">'AFNetWorking'</span>, <span class="string">'~&gt; 3.1.0'</span> 粘贴进去，不要粘贴教程里面的这句话。(<span class="number">3.1</span>.<span class="number">0</span>是<span class="constant">AFNetWorking的</span>版本号，随着<span class="constant">AFNetWorking第</span>三方库的更新，版本号不一定是<span class="number">3.1</span>.<span class="number">0</span>)
 
-最后 pod install 安装就好了。
-</code></pre><p>注意：</p>
+按<span class="constant">ESC进</span>入正常模式后。输入 <span class="symbol">:wq</span>保存退出 .如果不小心破坏了<span class="constant">Podfile文</span>件，那么 <span class="symbol">:q</span>！退出。然后再重新进来。这两个命令要在英文输入状态下输入
+
+见下图
+</code></pre><p><img src="http://a2.qpic.cn/psb?/V11zLvyN1PYi1V/idyqgqOu3AhNiwm*k4UDWQ8zvYsvt*2L215*sD2rjz8!/b/dK8AAAAAAAAA&amp;bo=gAJkAwAAAAADAMA!&amp;rf=viewer_4" alt="保存podifle文件的内容"></p>
+<pre><code>最后 pod <span class="keyword">install</span> 安装就好了。（也是在你的项目里面执行这一步，根据Podfile里面加入的第三方库，安装对应的第三方库）
+
+安装后ls 以下，目录下面出现后缀是 .xcworkspace，以及pods目录，就标明安装成功了。
+</code></pre><p><img src="http://a1.qpic.cn/psb?/V11zLvyN1PYi1V/UduIX8xEgsjqjTDZI0C*I2UwWXA3yNC6YbePYrIh4Ng!/b/dK4AAAAAAAAA&amp;bo=xgKAAgAAAAADAGM!&amp;rf=viewer_4" alt="保存完podifle候安装，安装成功标志"></p>
+<p>注意：</p>
 <pre><code>使用Cocoapods的项目，打开项目的时候，打开后缀为<span class="class">.xcworkspace</span> 的文件。
 
 如果以后这些第三方库更新了，那么执行pod update  你项目里面的第三方库就会同步更新。
