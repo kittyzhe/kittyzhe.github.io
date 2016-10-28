@@ -298,6 +298,10 @@ sudo gem install cocoapods
 安装后ls 以下，目录下面出现后缀是 .xcworkspace，以及pods目录，就标明安装成功了。
 </code></pre><p><img src="http://ww4.sinaimg.cn/mw690/cafae1a2jw1f7sz55fwpvj20ty0r0tiw.jpg" alt="保存完podifle候安装，安装成功标志"></p>
 <p>注意：</p>
+<pre><code>因第一次安装完cocoapods，进行pod <span class="keyword">search</span> XXX 比较慢，所以在安装配置好cocopods之后，把别的电脑上家目录下的.cocoaPods目录拷贝到你自己电脑上这样会很快。
+
+如果拷贝完进行pod <span class="keyword">search</span> 出现以下错误，那么进行<span class="keyword">rm</span> ~/Library/Caches/CocoaPods/search_index.json
+</code></pre><p><img src="http://ww1.sinaimg.cn/mw690/cafae1a2jw1f987ehj2y6j20uy09gwgz.jpg" alt="pod search失败"></p>
 <pre><code>使用Cocoapods的项目，打开项目的时候，打开后缀为<span class="class">.xcworkspace</span> 的文件。
 
 如果以后这些第三方库更新了，那么执行pod update  你项目里面的第三方库就会同步更新。
