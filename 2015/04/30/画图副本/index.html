@@ -1,16 +1,11 @@
 <!doctype html>
-
-
-
+<html class="theme-next use-motion theme-next-mist">
+<head>
   
 
-
-<html class="theme-next muse use-motion">
-<head>
-  <meta charset="UTF-8"/>
+<meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -23,65 +18,31 @@
 
 
 
-
-
-
-
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
   
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   
 
 
+<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
+
+
+    <meta name="description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。" />
 
 
 
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
+  <meta name="keywords" content="Hexo,next" />
 
 
 
 
 
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
 <meta name="description" content="什么是CALayer 在iOS系统中，你能看得见摸得着的东西基本上都是UIView，比如一个按钮、一个文本标签、一个文本输入框、一个图标等等，这些都是UIView。
@@ -105,26 +66,29 @@
 * 在创建UIView对象时，UIView内部会自动创建一个层(即CALayer对象)，通过UIView的layer属性可以访问这个层。当UIView需要显示到">
 
 
-
 <script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 0,
-      author: '博主'
-    }
+    scheme: 'Mist',
+    sidebar: 'always'
   };
 </script>
+
+
 
   <title> 画图 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
   
 
 
@@ -132,16 +96,7 @@
 
 
 
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -170,13 +125,13 @@
   
 
   
-    <ul id="menu" class="menu">
+    <ul id="menu" class="menu ">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-home"></i> <br />
             
             首页
           </a>
@@ -186,7 +141,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-archive"></i> <br />
             
             归档
           </a>
@@ -196,13 +151,14 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-tags"></i> <br />
             
             标签
           </a>
         </li>
       
 
+      
       
     </ul>
   
@@ -215,17 +171,11 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div id="content" class="content"> 
 
   <div id="posts" class="posts-expand">
     
 
-  
-  
-
-  
   
   
 
@@ -248,10 +198,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
+            发表于
             <time itemprop="dateCreated" datetime="2015-04-30T10:24:59+08:00" content="2015-04-30">
               2015-04-30
             </time>
@@ -265,22 +212,18 @@
 
           
 
-          
-          
-
-          
         </div>
       </header>
     
 
 
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body">
 
       
       
 
       
-        <h1 id="什么是CALayer">什么是CALayer</h1><pre><code> 在iOS系统中，你能看得见摸得着的东西基本上都是<span class="built_in">UIView</span>，比如一个按钮、一个文本标签、一个文本输入框、一个图标等等，这些都是<span class="built_in">UIView</span>。
+        <span itemprop="articleBody"><h1 id="什么是CALayer">什么是CALayer</h1><pre><code> 在iOS系统中，你能看得见摸得着的东西基本上都是<span class="built_in">UIView</span>，比如一个按钮、一个文本标签、一个文本输入框、一个图标等等，这些都是<span class="built_in">UIView</span>。
  * 其实<span class="built_in">UIView</span>之所以能显示在屏幕上，完全是因为它内部的一个层。
 
 * 在创建<span class="built_in">UIView</span>对象时，<span class="built_in">UIView</span>内部会自动创建一个层(即<span class="built_in">CALayer</span>对象)，通过<span class="built_in">UIView</span>的layer属性可以访问这个层。当<span class="built_in">UIView</span>需要显示到屏幕上时，会调用drawRect:方法进行绘图，并且会将所有内容绘制在自己的层上，绘图完毕后，系统会将层拷贝到屏幕上，于是就完成了<span class="built_in">UIView</span>的显示。
@@ -390,20 +333,7 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
 <span class="number">5</span> anim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_4, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)];
 <span class="number">6</span> 
   <span class="number">7</span> [_myView.layer addAnimation:anim forKey:nil]; 
-</code></pre><h4 id="其实可以不用设置fromValue，这里只设置了toValue">其实可以不用设置fromValue，这里只设置了toValue</h4>
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-
+</code></pre><h4 id="其实可以不用设置fromValue，这里只设置了toValue">其实可以不用设置fromValue，这里只设置了toValue</h4></span>
       
     </div>
 
@@ -442,20 +372,19 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
     </div>
   </div>
 
+ </div>
 
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
-          
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+        
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -483,12 +412,10 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="樱桃爱上阿狸" />
+          <img class="site-author-image" src="/images/avatar.jpg" alt="樱桃爱上阿狸" itemprop="image"/>
           <p class="site-author-name" itemprop="name">樱桃爱上阿狸</p>
-          <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         </div>
+        <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -497,9 +424,19 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
             </a>
           </div>
 
-          
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
 
-          
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
 
         </nav>
 
@@ -512,21 +449,22 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
         
         
 
-        
-        
+        <div class="links-of-author motion-element">
+          
+        </div>
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
-            
-              
             
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是CALayer"><span class="nav-number">1.</span> <span class="nav-text">什么是CALayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAAnimation的常用属性"><span class="nav-number">2.</span> <span class="nav-text">CAAnimation的常用属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#画图常见方法"><span class="nav-number">3.</span> <span class="nav-text">画图常见方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标"><span class="nav-number">3.1.</span> <span class="nav-text">坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变换"><span class="nav-number">3.2.</span> <span class="nav-text">变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#平移动画"><span class="nav-number">4.</span> <span class="nav-text">平移动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#*_第2行设置的keyPath是@”position”，说明要修改的是CALayer的position属性，也就是会执行平移动画"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">* 第2行设置的keyPath是@”position”，说明要修改的是CALayer的position属性，也就是会执行平移动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#*_注意第7、8行，这里并不是直接使用CGPoint这种结构体类型，而是要先包装成NSValue对象后再使用。这2行代码表示CALayer从位置(50,_80)移动到位置(300,_350)"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">* 注意第7、8行，这里并不是直接使用CGPoint这种结构体类型，而是要先包装成NSValue对象后再使用。这2行代码表示CALayer从位置(50, 80)移动到位置(300, 350)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#*_如果将第8行的toValue换成byValue，代表CALayer从位置(50,_80)开始向右移动300、向下移动350，也就是移动到位置(350,_430)"><span class="nav-number">4.0.0.3.</span> <span class="nav-text">* 如果将第8行的toValue换成byValue，代表CALayer从位置(50, 80)开始向右移动300、向下移动350，也就是移动到位置(350, 430)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#*_默认情况下，动画执行完毕后，动画会自动从CALayer上移除，CALayer又会回到原来的状态。为了保持动画执行后的状态，可以加入第14、15行代码"><span class="nav-number">4.0.0.4.</span> <span class="nav-text">* 默认情况下，动画执行完毕后，动画会自动从CALayer上移除，CALayer又会回到原来的状态。为了保持动画执行后的状态，可以加入第14、15行代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#*_第18行后面的@”translate”是给动画对象起个名称，以后可以调用CALayer的removeAnimationForKey:方法根据动画名称停止相应的动画"><span class="nav-number">4.0.0.5.</span> <span class="nav-text">* 第18行后面的@”translate”是给动画对象起个名称，以后可以调用CALayer的removeAnimationForKey:方法根据动画名称停止相应的动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#*_第11行是设置动画的代理，可以监听动画的执行过程，这里设置控制器为代理。代理需要实现的方法有："><span class="nav-number">4.0.0.6.</span> <span class="nav-text">* 第11行是设置动画的代理，可以监听动画的执行过程，这里设置控制器为代理。代理需要实现的方法有：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1_2013-04-14_23:44:26-197_CAAnimation[5995:c07]_动画开始了"><span class="nav-number">4.0.0.7.</span> <span class="nav-text">1 2013-04-14 23:44:26.197 CAAnimation[5995:c07] 动画开始了</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2013-04-14_23:44:27-697_CAAnimation[5995:c07]_动画结束了，position:{100,_100}"><span class="nav-number">4.0.0.8.</span> <span class="nav-text">2 2013-04-14 23:44:27.697 CAAnimation[5995:c07] 动画结束了，position:{100, 100}</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从第2行的打印信息可以看出，实际上，动画执行完毕后，并没有真正改变CALayer的position属性的值！"><span class="nav-number">4.0.0.9.</span> <span class="nav-text">从第2行的打印信息可以看出，实际上，动画执行完毕后，并没有真正改变CALayer的position属性的值！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过CALayer的transform属性实现平移动画，layer会从自己的初始位置平移到(350,_350)位置"><span class="nav-number">4.0.0.10.</span> <span class="nav-text">通过CALayer的transform属性实现平移动画，layer会从自己的初始位置平移到(350, 350)位置</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、缩放动画"><span class="nav-number">5.</span> <span class="nav-text">二、缩放动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现缩放动画有好几种方法，这里列举2种。"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">实现缩放动画有好几种方法，这里列举2种。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layer会从原来的尺寸(100x100)变为30x30"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">layer会从原来的尺寸(100x100)变为30x30</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、旋转动画"><span class="nav-number">6.</span> <span class="nav-text">三、旋转动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#其实可以不用设置fromValue，这里只设置了toValue"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">其实可以不用设置fromValue，这里只设置了toValue</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
         </section>
       
 
@@ -534,18 +472,16 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
   </aside>
 
 
-        
-      </div>
+      
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
+      <div class="footer-inner"> <div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="icon-next-heart fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">樱桃爱上阿狸</span>
 </div>
@@ -557,100 +493,244 @@ CTM（current transformation matrix）变换，这种变换比较简单，函数
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
-        
 
-        
-      </div>
+ </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    <div class="back-to-top"></div>
   </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
 
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
 </script>
 
 
 
+  <script type="text/javascript">
+    $(document).ready(function () {
 
+      isMobile() && FastClick.attach(document.body);
 
+      // Define Motion Sequence.
+      motionIntegrator
+        .add(motionMiddleWares.logo)
+        .add(motionMiddleWares.menu)
+        .add(motionMiddleWares.backToTop)
+        .add(motionMiddleWares.postList)
+        .add(motionMiddleWares.sidebar);
 
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
+      // Bootstrap Motion.
+      motionIntegrator.bootstrap();
+    });
+  </script>
 
   
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-  
-  
   
 
   
-
-  
-
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
 </body>
 </html>
