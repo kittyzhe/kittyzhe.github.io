@@ -1,11 +1,16 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -18,31 +23,65 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
 
 
 
   
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
-<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
-
-
-    <meta name="description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。" />
-
-
-
-  <meta name="keywords" content="Hexo,next" />
 
 
 
 
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
 
 
 <meta name="description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。">
@@ -56,29 +95,26 @@
 <meta name="twitter:description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。">
 
 
+
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'always'
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
-
-
 
   <title> Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -86,9 +122,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -117,13 +162,13 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -133,7 +178,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -143,14 +188,13 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
         </li>
       
 
-      
       
     </ul>
   
@@ -163,11 +207,17 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
     
       
 
+  
+  
+
+  
   
   
 
@@ -182,6 +232,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2016/10/11/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -192,7 +243,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-10-11T14:08:54+08:00" content="2016-10-11">
               2016-10-11
             </time>
@@ -206,21 +260,24 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+          
+            <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -230,9 +287,16 @@
 <h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -255,6 +319,10 @@
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -266,6 +334,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2016/09/13/CocoaPods安装教程亲测/" itemprop="url">
                   亲测Mac上安装CocoaPods教程
                 </a>
@@ -276,7 +345,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-09-13T14:10:01+08:00" content="2016-09-13">
               2016-09-13
             </time>
@@ -290,21 +362,24 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h3 id="CocoaPods安装依赖于以其他软件、环境等的安装">CocoaPods安装依赖于以其他软件、环境等的安装</h3><pre><code><span class="type">Cocoapods</span>安装顺序<span class="type">Xcode</span>-&gt;homebrew-&gt;<span class="type">RVM</span>-&gt;<span class="type">Ruby</span>-&gt;<span class="type">CocoaPots</span>;
+          
+            <h3 id="CocoaPods安装依赖于以其他软件、环境等的安装">CocoaPods安装依赖于以其他软件、环境等的安装</h3><pre><code><span class="type">Cocoapods</span>安装顺序<span class="type">Xcode</span>-&gt;homebrew-&gt;<span class="type">RVM</span>-&gt;<span class="type">Ruby</span>-&gt;<span class="type">CocoaPots</span>;
 </code></pre><h3 id="1、Homebrew的安装">1、Homebrew的安装</h3><p> 安装教程网站： <a href="http://blog.csdn.net/azhou_hui/article/details/49718511" target="_blank" rel="external">Homebrew安装教程</a><br>Homebrew的官方网站：<a href="http://brew.sh/" target="_blank" rel="external">Homebrew官网</a> </p>
 <pre><code>做一下测试，在终端执行  <span class="keyword">brew </span>-v 命令
 看是否正常执行，会列出已安装的hemebrew版本号
@@ -390,9 +465,16 @@ sudo gem install cocoapods
 
 如果以后这些第三方库更新了，那么执行pod update  你项目里面的第三方库就会同步更新。
 </code></pre>
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -415,6 +497,10 @@ sudo gem install cocoapods
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -426,6 +512,7 @@ sudo gem install cocoapods
             
             
               
+                
                 <a class="post-title-link" href="/2015/10/20/编码规范/" itemprop="url">
                   编码规范
                 </a>
@@ -436,7 +523,10 @@ sudo gem install cocoapods
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-10-20T15:40:54+08:00" content="2015-10-20">
               2015-10-20
             </time>
@@ -450,21 +540,24 @@ sudo gem install cocoapods
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h3 id="一、文档结构管理">一、文档结构管理</h3><p>1.建立Libraries文件夹，所有第三方库放入其中。</p>
+          
+            <h3 id="一、文档结构管理">一、文档结构管理</h3><p>1.建立Libraries文件夹，所有第三方库放入其中。</p>
 <p>2.建立Utilities文件夹，自已封装的类放入其中。</p>
 <p>3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。</p>
 <p>4.每个功能块放入一个Group，在目录里建立实际文件夹管理。</p>
@@ -489,9 +582,16 @@ sudo gem install cocoapods
 <p>3.在项目.pch文件加入一段去除release状态的NSLog代码:  </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">ifndef</span> __OPTIMIZE__</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) NSLog(__VA_ARGS__)</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">else</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> NSLog(...) &#123;&#125;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -514,6 +614,10 @@ sudo gem install cocoapods
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -525,6 +629,7 @@ sudo gem install cocoapods
             
             
               
+                
                 <a class="post-title-link" href="/2015/10/11/常用正则表达式/" itemprop="url">
                   常用的正则表达式
                 </a>
@@ -535,7 +640,10 @@ sudo gem install cocoapods
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-10-11T09:20:14+08:00" content="2015-10-11">
               2015-10-11
             </time>
@@ -549,25 +657,35 @@ sudo gem install cocoapods
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h4 id="常用正则表达式">常用正则表达式</h4><p> NSString <em>urlStr = @”jwfwfwfwf@163.com”;<br>        NSError </em>error;<br>        NSRegularExpression <em>reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;error];<br>        NSTextCheckingResult </em>firstMatch = [reg firstMatchInString:urlStr options:0 range:NSMakeRange(0, [urlStr length])];<br>        NSRange resultRange = [firstMatch rangeAtIndex:0];<br>        NSString *result = [urlStr substringWithRange:resultRange];<br>        NSLog(@”%@”, result);</p>
+          
+            <h4 id="常用正则表达式">常用正则表达式</h4><p> NSString <em>urlStr = @”jwfwfwfwf@163.com”;<br>        NSError </em>error;<br>        NSRegularExpression <em>reg = [NSRegularExpression regularExpressionWithPattern:@”jwfwfwfwf@163.com” options:0 error:&amp;error];<br>        NSTextCheckingResult </em>firstMatch = [reg firstMatchInString:urlStr options:0 range:NSMakeRange(0, [urlStr length])];<br>        NSRange resultRange = [firstMatch rangeAtIndex:0];<br>        NSString *result = [urlStr substringWithRange:resultRange];<br>        NSLog(@”%@”, result);</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">匹配中文字符的正则表达式： <span class="special">[</span><span class="command">\u</span>4e00-<span class="command">\u</span>9fa5<span class="special">]</span></span><br><span class="line">评注：匹配中文还真是个头疼的事，有了这个表达式就好办了</span><br><span class="line"></span><br><span class="line">匹配双字节字符(包括汉字在内)：<span class="special">[</span>^<span class="command">\x</span>00-<span class="command">\xff</span><span class="special">]</span></span><br><span class="line">评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）</span><br><span class="line"></span><br><span class="line">匹配空白行的正则表达式：<span class="command">\n</span><span class="command">\s*</span><span class="command">\r</span></span><br><span class="line">评注：可以用来删除空白行</span><br><span class="line"></span><br><span class="line">匹配HTML标记的正则表达式：&lt;(<span class="command">\S*</span>?)<span class="special">[</span>^&gt;<span class="special">]</span>*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt;</span><br><span class="line">评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力</span><br><span class="line"></span><br><span class="line">匹配首尾空白字符的正则表达式：^<span class="command">\s*</span>|<span class="command">\s*</span><span class="formula">$</span><br><span class="line">评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式</span><br><span class="line"></span><br><span class="line">匹配Email地址的正则表达式：<span class="command">\w</span>+(<span class="special">[</span>-+.<span class="special">]</span><span class="command">\w</span>+)*@<span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*<span class="command">\.</span><span class="command">\w</span>+(<span class="special">[</span>-.<span class="special">]</span><span class="command">\w</span>+)*</span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配网址URL的正则表达式：<span class="special">[</span>a-zA-z<span class="special">]</span>+://<span class="special">[</span>^<span class="command">\s</span><span class="special">]</span>*</span><br><span class="line">评注：网上流传的版本功能很有限，上面这个基本可以满足需求</span><br><span class="line"></span><br><span class="line">匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^<span class="special">[</span>a-zA-Z<span class="special">]</span><span class="special">[</span>a-zA-Z0-9_<span class="special">]</span><span class="special">&#123;</span>4,15<span class="special">&#125;</span>$</span></span><br><span class="line">评注：表单验证时很实用</span><br><span class="line"></span><br><span class="line">匹配国内电话号码：<span class="command">\d</span><span class="special">&#123;</span>3<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>8<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>4<span class="special">&#125;</span>-<span class="command">\d</span><span class="special">&#123;</span>7<span class="special">&#125;</span></span><br><span class="line">评注：匹配形式如 0511-4405222 或 021-87888822</span><br><span class="line"></span><br><span class="line">匹配腾讯QQ号：<span class="special">[</span>1-9<span class="special">]</span><span class="special">[</span>0-9<span class="special">]</span><span class="special">&#123;</span>4,<span class="special">&#125;</span></span><br><span class="line">评注：腾讯QQ号从10000开始</span><br><span class="line"></span><br><span class="line">匹配中国邮政编码：<span class="special">[</span>1-9<span class="special">]</span><span class="command">\d</span><span class="special">&#123;</span>5<span class="special">&#125;</span>(?!<span class="command">\d</span>)</span><br><span class="line">评注：中国邮政编码为6位数字</span><br><span class="line"></span><br><span class="line">匹配身份证：<span class="command">\d</span><span class="special">&#123;</span>15<span class="special">&#125;</span>|<span class="command">\d</span><span class="special">&#123;</span>18<span class="special">&#125;</span></span><br><span class="line">评注：中国的身份证为15位或18位</span><br><span class="line"></span><br><span class="line">匹配ip地址：<span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+<span class="command">\.</span><span class="command">\d</span>+</span><br><span class="line">评注：提取ip地址时有用</span><br></pre></td></tr></table></figure>
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -590,6 +708,10 @@ sudo gem install cocoapods
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -601,6 +723,7 @@ sudo gem install cocoapods
             
             
               
+                
                 <a class="post-title-link" href="/2015/05/11/日期与时间常用方法副本/" itemprop="url">
                   日期与时间常用方法
                 </a>
@@ -611,7 +734,10 @@ sudo gem install cocoapods
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-05-11T20:57:25+08:00" content="2015-05-11">
               2015-05-11
             </time>
@@ -625,21 +751,24 @@ sudo gem install cocoapods
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="日期与时间">日期与时间</h2><pre><code> <span class="number">1.</span><span class="built_in">NSDate</span> *date = [<span class="built_in">NSDate</span> date];<span class="comment">//当前日期</span>
+          
+            <h2 id="日期与时间">日期与时间</h2><pre><code> <span class="number">1.</span><span class="built_in">NSDate</span> *date = [<span class="built_in">NSDate</span> date];<span class="comment">//当前日期</span>
  <span class="number">2.</span><span class="built_in">NSDate</span> *date1 = [<span class="built_in">NSDate</span> distantFuture];<span class="comment">//未来随机日前</span>
  <span class="number">3.</span><span class="built_in">NSDate</span> *date2 = [<span class="built_in">NSDate</span> distantPast];<span class="comment">//过去随机日期</span>
  <span class="number">4.</span><span class="built_in">NSTimeInterval</span> time = [date2 timeIntervalSinceDate:date1];<span class="comment">//日期差，单位s</span>
@@ -652,9 +781,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 <span class="number">8.</span><span class="comment">//字符串转化为日期</span>
 <span class="built_in">NSDate</span> *date5 = [formatter dateFromString:<span class="string">@"14-12-12 03:56:34"</span>];
 </code></pre>
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -677,6 +813,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -688,6 +828,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
             
             
               
+                
                 <a class="post-title-link" href="/2015/05/04/字符串副本/" itemprop="url">
                   字符数组
                 </a>
@@ -698,7 +839,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-05-04T15:40:54+08:00" content="2015-05-04">
               2015-05-04
             </time>
@@ -712,21 +856,24 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="Foundition框架1">Foundition框架1</h2><pre><code><span class="number">1</span>. <span class="constant">OC</span>集合只能存储<span class="constant">OC</span>对象，不能存储c语言中的基本数据类型，如int，float，<span class="class"><span class="keyword">enum</span>，<span class="title">struct</span>，且不能在集合中存储<span class="title">nil</span>。</span>
+          
+            <h2 id="Foundition框架1">Foundition框架1</h2><pre><code><span class="number">1</span>. <span class="constant">OC</span>集合只能存储<span class="constant">OC</span>对象，不能存储c语言中的基本数据类型，如int，float，<span class="class"><span class="keyword">enum</span>，<span class="title">struct</span>，且不能在集合中存储<span class="title">nil</span>。</span>
 </code></pre><h4 id="字符串">字符串</h4><ol>
 <li>不可变字符串 ： NSString *string1;</li>
 <li><p>可变字符串 ：  <code>NSMutableString</code> *string2;</p>
@@ -827,9 +974,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 </li>
 </ol>
 
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -852,6 +1006,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -863,6 +1021,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
             
             
               
+                
                 <a class="post-title-link" href="/2015/05/04/字典副本/" itemprop="url">
                   字典
                 </a>
@@ -873,7 +1032,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-05-04T13:40:54+08:00" content="2015-05-04">
               2015-05-04
             </time>
@@ -887,21 +1049,24 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="Foundition框架">Foundition框架</h2><h4 id="字典">字典</h4><ol>
+          
+            <h2 id="Foundition框架">Foundition框架</h2><h4 id="字典">字典</h4><ol>
 <li>不可变数组 ： NSDictionary  *dictionary1;</li>
 <li><p>可变数组 ： <code>NSMutableDictionary</code>  *dictionary2;</p>
 <p> 字典初始化：</p>
@@ -984,9 +1149,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
     <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,obj2);
 }
 </code></pre>
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1009,6 +1181,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -1020,6 +1196,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
             
             
               
+                
                 <a class="post-title-link" href="/2015/05/04/类别副本/" itemprop="url">
                   类别
                 </a>
@@ -1030,7 +1207,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-05-04T13:36:53+08:00" content="2015-05-04">
               2015-05-04
             </time>
@@ -1044,21 +1224,24 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="类别">类别</h2><ol>
+          
+            <h2 id="类别">类别</h2><ol>
 <li><p>类别的简述</p>
 <ul>
 <li>为现有的类（自定义的类、第三方的类或者是系统定义的类）添加一些新的行为；</li>
@@ -1091,9 +1274,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 </code></pre></li>
 </ol>
 
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1116,6 +1306,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -1127,6 +1321,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
             
             
               
+                
                 <a class="post-title-link" href="/2015/04/30/协议副本/" itemprop="url">
                   协议
                 </a>
@@ -1137,7 +1332,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-04-30T21:27:37+08:00" content="2015-04-30">
               2015-04-30
             </time>
@@ -1151,21 +1349,24 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="协议">协议</h2><ol>
+          
+            <h2 id="协议">协议</h2><ol>
 <li><p>基本用途</p>
 <ul>
 <li>可以用来声明一大堆方法（不能声明成员变量）</li>
@@ -1218,9 +1419,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 </li>
 </ol>
 
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1243,6 +1451,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -1254,6 +1466,7 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
             
             
               
+                
                 <a class="post-title-link" href="/2015/04/30/内存管理副本/" itemprop="url">
                   内存管理
                 </a>
@@ -1264,7 +1477,10 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-04-30T21:25:44+08:00" content="2015-04-30">
               2015-04-30
             </time>
@@ -1278,21 +1494,24 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="内存管理">内存管理</h2><p><strong>内存管理机制：引用计数</strong></p>
+          
+            <h2 id="内存管理">内存管理</h2><p><strong>内存管理机制：引用计数</strong></p>
 <ol>
 <li><p>引用计数的计算</p>
 <ul>
@@ -1350,9 +1569,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 </li>
 </ol>
 
-            
-          </span>
+          
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1378,15 +1604,16 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   </nav>
 
 
- </div>
 
-        
+          </div>
+          
 
-        
-      </div>
 
-      
+          
+
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1405,10 +1632,12 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="樱桃爱上阿狸" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="樱桃爱上阿狸" />
           <p class="site-author-name" itemprop="name">樱桃爱上阿狸</p>
+          <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1417,19 +1646,9 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              
-          </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">标签</span>
-              </a>
-          </div>
+          
 
         </nav>
 
@@ -1442,9 +1661,8 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
 
       </section>
 
@@ -1454,16 +1672,18 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">樱桃爱上阿狸</span>
 </div>
@@ -1475,83 +1695,96 @@ formatter<span class="variable">.dateFormat</span> = <span class="string">@"yy-M
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+        
 
- </div>
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  
-  
-    
-    
-
-  
-
-
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
-
-
-
-
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
-      isMobile() && FastClick.attach(document.body);
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-      // Define Motion Sequence.
-      motionIntegrator
-        .add(motionMiddleWares.logo)
-        .add(motionMiddleWares.menu)
-        .add(motionMiddleWares.backToTop)
-        .add(motionMiddleWares.postList)
-        .add(motionMiddleWares.sidebar);
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-      // Bootstrap Motion.
-      motionIntegrator.bootstrap();
-    });
-  </script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
 
   
   
 
   
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
+
+  
+
 </body>
 </html>
