@@ -1,16 +1,11 @@
 <!doctype html>
-
-
-
+<html class="theme-next use-motion theme-next-mist">
+<head>
   
 
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -23,65 +18,31 @@
 
 
 
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
   
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   
 
 
+<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
+
+
+    <meta name="description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。" />
 
 
 
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
+  <meta name="keywords" content="CocoaPods," />
 
 
 
 
 
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
 <meta name="description" content="CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&amp;gt;homebrew-&amp;gt;RVM-&amp;gt;Ruby-&amp;gt;CocoaPots;
@@ -102,7 +63,7 @@
 <meta property="og:image" content="http://ww4.sinaimg.cn/mw690/cafae1a2jw1f7sz56px4uj20iu0pkq4p.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/mw690/cafae1a2jw1f7sz55fwpvj20ty0r0tiw.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/cafae1a2jw1f987ehj2y6j20uy09gwgz.jpg">
-<meta property="og:updated_time" content="2016-10-28T11:25:35.000Z">
+<meta property="og:updated_time" content="2017-02-05T09:15:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="亲测Mac上安装CocoaPods教程">
 <meta name="twitter:description" content="CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&amp;gt;homebrew-&amp;gt;RVM-&amp;gt;Ruby-&amp;gt;CocoaPots;
@@ -111,34 +72,12 @@
 看是否正常执行，会列出已安装的hemebrew版本号">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
+<script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    scheme: 'Mist',
+    sidebar: 'always'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2016/09/13/CocoaPods安装教程亲测/"/>
-
-
 
 
 
@@ -147,6 +86,15 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
   
 
 
@@ -154,16 +102,7 @@
 
 
 
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -177,9 +116,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-    
-      <p class="site-subtitle">Do one thing at a time, and do well.</p>
-    
+  <p class="site-subtitle">Do one thing at a time, and do well.</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -194,13 +131,13 @@
   
 
   
-    <ul id="menu" class="menu">
+    <ul id="menu" class="menu ">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-home"></i> <br />
             
             首页
           </a>
@@ -210,7 +147,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-archive"></i> <br />
             
             归档
           </a>
@@ -220,7 +157,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-tags"></i> <br />
             
             标签
           </a>
@@ -228,47 +165,27 @@
       
 
       
+      
     </ul>
   
 
   
 </nav>
 
-
-
  </div>
     </header>
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div id="content" class="content"> 
 
   <div id="posts" class="posts-expand">
     
 
   
-
-  
-  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/13/CocoaPods安装教程亲测/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="樱桃爱上阿狸">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Sunshine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -287,21 +204,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2016-09-13T14:10:01+08:00">
-                2016-09-13
-              </time>
-            
-
-            
-
-            
+            发表于
+            <time itemprop="dateCreated" datetime="2016-09-13T14:10:01+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
           </span>
 
           
@@ -312,25 +218,18 @@
 
           
 
-          
-          
-
-          
-
-          
-
         </div>
       </header>
     
 
 
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body">
 
       
       
 
       
-        <h3 id="CocoaPods安装依赖于以其他软件、环境等的安装">CocoaPods安装依赖于以其他软件、环境等的安装</h3><pre><code><span class="type">Cocoapods</span>安装顺序<span class="type">Xcode</span>-&gt;homebrew-&gt;<span class="type">RVM</span>-&gt;<span class="type">Ruby</span>-&gt;<span class="type">CocoaPots</span>;
+        <span itemprop="articleBody"><h3 id="CocoaPods安装依赖于以其他软件、环境等的安装">CocoaPods安装依赖于以其他软件、环境等的安装</h3><pre><code><span class="type">Cocoapods</span>安装顺序<span class="type">Xcode</span>-&gt;homebrew-&gt;<span class="type">RVM</span>-&gt;<span class="type">Ruby</span>-&gt;<span class="type">CocoaPots</span>;
 </code></pre><h3 id="1、Homebrew的安装">1、Homebrew的安装</h3><p> 安装教程网站： <a href="http://blog.csdn.net/azhou_hui/article/details/49718511" target="_blank" rel="external">Homebrew安装教程</a><br>Homebrew的官方网站：<a href="http://brew.sh/" target="_blank" rel="external">Homebrew官网</a> </p>
 <pre><code>做一下测试，在终端执行  <span class="keyword">brew </span>-v 命令
 看是否正常执行，会列出已安装的hemebrew版本号
@@ -415,26 +314,17 @@ sudo gem install cocoapods
 <pre><code>使用Cocoapods的项目，打开项目的时候，打开后缀为<span class="class">.xcworkspace</span> 的文件。
 
 如果以后这些第三方库更新了，那么执行pod update  你项目里面的第三方库就会同步更新。
-</code></pre>
+</code></pre></span>
       
     </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CocoaPods/" rel="tag">#CocoaPods</a>
+          
+        </div>
       
 
       
@@ -446,8 +336,6 @@ sudo gem install cocoapods
               </a>
             
           </div>
-
-          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -467,20 +355,19 @@ sudo gem install cocoapods
     </div>
   </div>
 
-          
-          </div>
-          
+ </div>
 
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
         
-          
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+        
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -506,28 +393,33 @@ sudo gem install cocoapods
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="樱桃爱上阿狸" />
+          <img class="site-author-image" src="/images/avatar.jpg" alt="樱桃爱上阿狸" itemprop="image"/>
           <p class="site-author-name" itemprop="name">樱桃爱上阿狸</p>
-          <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         </div>
+        <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">日志</span>
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">标签</span>
               </a>
-            </div>
-          
-
-          
-
-          
+          </div>
 
         </nav>
 
@@ -540,184 +432,289 @@ sudo gem install cocoapods
         
         
 
-        
-        
-
-        
-
+        <div class="links-of-author motion-element">
+          
+        </div>
 
       </section>
 
       
-      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
-
             
-              
-            
-
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CocoaPods安装依赖于以其他软件、环境等的安装"><span class="nav-number">1.</span> <span class="nav-text">CocoaPods安装依赖于以其他软件、环境等的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、Homebrew的安装"><span class="nav-number">2.</span> <span class="nav-text">1、Homebrew的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、RVM、Ruby的安装"><span class="nav-number">3.</span> <span class="nav-text">2、RVM、Ruby的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装rvm"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">安装rvm</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重要:"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">重要:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#更新ruby版本"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">更新ruby版本</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、安装Cocoapods"><span class="nav-number">4.</span> <span class="nav-text">3、安装Cocoapods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、Cocoapods的使用"><span class="nav-number">5.</span> <span class="nav-text">4、Cocoapods的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#注意：以下操作_除了pod_search_XXXXX（XXXX表示第三方库）这一步，其他步骤都需要在你的项目目录进行操作。"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">注意：以下操作 除了pod search XXXXX（XXXX表示第三方库）这一步，其他步骤都需要在你的项目目录进行操作。</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
-
           </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
         </section>
-      <!--/noindex-->
       
 
     </div>
   </aside>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5308028&auto=1&height=66"></iframe>
 
 
-        
-      </div>
+      
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
+      <div class="footer-inner"> <div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="icon-next-heart fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">樱桃爱上阿狸</span>
 </div>
 
-
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
 
-        
-
-        
-      </div>
+ </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    <div class="back-to-top"></div>
   </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
 
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
 </script>
 
 
 
+  <script type="text/javascript">
+    $(document).ready(function () {
 
+      isMobile() && FastClick.attach(document.body);
 
+      // Define Motion Sequence.
+      motionIntegrator
+        .add(motionMiddleWares.logo)
+        .add(motionMiddleWares.menu)
+        .add(motionMiddleWares.backToTop)
+        .add(motionMiddleWares.postList)
+        .add(motionMiddleWares.sidebar);
 
-
-
-
-  
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
+      // Bootstrap Motion.
+      motionIntegrator.bootstrap();
+    });
+  </script>
 
   
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
   
 
   
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
-      <!-- UY END -->
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
 </body>
 </html>
