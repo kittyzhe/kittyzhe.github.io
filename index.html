@@ -1,11 +1,16 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -18,50 +23,106 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
 
 
 
   
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
-<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
-
-
-    <meta name="description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。" />
-
-
-
-  <meta name="keywords" content="Hexo,next" />
 
 
 
 
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-<meta name="description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。">
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="我认为最深沉的爱，莫过于分开后，我把自己活成了你的样子。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sunshine">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。">
+<meta property="og:description" content="我认为最深沉的爱，莫过于分开后，我把自己活成了你的样子。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sunshine">
-<meta name="twitter:description" content="期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。">
+<meta name="twitter:description" content="我认为最深沉的爱，莫过于分开后，我把自己活成了你的样子。">
 
 
-<script type="text/javascript" id="hexo.configuration">
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'always'
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
 
 
 
@@ -70,15 +131,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -86,9 +138,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -102,7 +163,9 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">Do one thing at a time, and do well.</p>
+    
+      <p class="site-subtitle">Do one thing at a time, and do well.</p>
+    
 </div>
 
 <div class="site-nav-toggle">
@@ -117,13 +180,13 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -133,7 +196,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -143,7 +206,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -151,27 +214,47 @@
       
 
       
-      
     </ul>
   
 
   
 </nav>
 
+
+
  </div>
     </header>
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
     
       
 
   
+
+  
+  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/13/CocoaPods安装教程亲测/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="樱桃">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sunshine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -182,6 +265,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2016/09/13/CocoaPods安装教程亲测/" itemprop="url">
                   亲测Mac上安装CocoaPods教程
                 </a>
@@ -192,16 +276,34 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-09-13T14:10:01+08:00" content="2016-09-13">
-              2016-09-13
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2016-09-13T14:10:01+08:00">
+                2016-09-13
+              </time>
+            
+
+            
+
+            
           </span>
 
           
 
           
             
+          
+
+          
+
+          
+          
+
           
 
           
@@ -211,28 +313,37 @@
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&gt;homebrew-&gt;RVM-&gt;Ruby-&gt;CocoaPots;
+          
+          CocoaPods安装依赖于以其他软件、环境等的安装Cocoapods安装顺序Xcode-&gt;homebrew-&gt;RVM-&gt;Ruby-&gt;CocoaPots;
 1、Homebrew的安装 安装教程网站： Homebrew安装教程Homebrew的官方网站：Homebrew官网 
 
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2016/09/13/CocoaPods安装教程亲测/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -251,9 +362,26 @@
       
 
   
+
+  
+  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/20/编码规范/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="樱桃">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sunshine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -264,6 +392,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2015/10/20/编码规范/" itemprop="url">
                   编码规范
                 </a>
@@ -274,16 +403,34 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-20T15:40:54+08:00" content="2015-10-20">
-              2015-10-20
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-10-20T15:40:54+08:00">
+                2015-10-20
+              </time>
+            
+
+            
+
+            
           </span>
 
           
 
           
             
+          
+
+          
+
+          
+          
+
           
 
           
@@ -293,29 +440,38 @@
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            一、文档结构管理1.建立Libraries文件夹，所有第三方库放入其中。
+          
+          一、文档结构管理1.建立Libraries文件夹，所有第三方库放入其中。
 2.建立Utilities文件夹，自已封装的类放入其中。
 3.建立Constants.h头文件，所有的常量定义于其中。Constants.h文件放入Main文件组里面。
 4.每个功能块放入一个Group，在目录里建立实际文件夹
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/20/编码规范/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -334,9 +490,26 @@
       
 
   
+
+  
+  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/11/常用正则表达式/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="樱桃">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sunshine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -347,6 +520,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2015/10/11/常用正则表达式/" itemprop="url">
                   常用的正则表达式
                 </a>
@@ -357,16 +531,34 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-11T09:20:14+08:00" content="2015-10-11">
-              2015-10-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-10-11T09:20:14+08:00">
+                2015-10-11
+              </time>
+            
+
+            
+
+            
           </span>
 
           
 
           
             
+          
+
+          
+
+          
+          
+
           
 
           
@@ -376,26 +568,35 @@
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            常用正则表达式 NSString urlStr = @”jwfwfwfwf@163.com”;        NSError error;        NSRegularExpression reg = [NSRegularExpression regularExpressionWithPatte
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          
+          常用正则表达式 NSString urlStr = @”jwfwfwfwf@163.com”;        NSError error;        NSRegularExpression reg = [NSRegularExpression regularExpressionWithPatte
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/11/常用正则表达式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -414,9 +615,26 @@
       
 
   
+
+  
+  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/04/02/Mac搭建hexo指南副本/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="樱桃">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sunshine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -427,6 +645,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2015/04/02/Mac搭建hexo指南副本/" itemprop="url">
                   Mac搭建Hexo指南
                 </a>
@@ -437,16 +656,34 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-04-02T10:40:50+08:00" content="2015-04-02">
-              2015-04-02
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-04-02T10:40:50+08:00">
+                2015-04-02
+              </time>
+            
+
+            
+
+            
           </span>
 
           
 
           
             
+          
+
+          
+
+          
+          
+
           
 
           
@@ -456,31 +693,40 @@
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            搭建成功，总结的步骤
+          
+          搭建成功，总结的步骤
 安装brew包管理器，Mac自带ruby命令
  1ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 安装Nodejs
  1brew install
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/04/02/Mac搭建hexo指南副本/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -499,9 +745,26 @@
       
 
   
+
+  
+  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/03/04/git常用操作/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="樱桃">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sunshine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -512,6 +775,7 @@
             
             
               
+                
                 <a class="post-title-link" href="/2015/03/04/git常用操作/" itemprop="url">
                   Git操作
                 </a>
@@ -522,10 +786,21 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-03-04T12:42:54+08:00" content="2015-03-04">
-              2015-03-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-03-04T12:42:54+08:00">
+                2015-03-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -536,21 +811,27 @@
 
           
 
+          
+          
+
+          
+
+          
+
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            基本操作
+          
+          基本操作
 初始化仓库
 
 git init
@@ -566,16 +847,26 @@ git config –global user.name “yourname”
 
 git add \ 
 git a
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/03/04/git常用操作/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -594,9 +885,26 @@ git a
       
 
   
+
+  
+  
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/03/04/git-merge&git-rebase/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="樱桃">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sunshine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Sunshine" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -607,6 +915,7 @@ git a
             
             
               
+                
                 <a class="post-title-link" href="/2015/03/04/git-merge&git-rebase/" itemprop="url">
                   Git冲突解决
                 </a>
@@ -617,16 +926,34 @@ git a
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-03-04T00:00:00+08:00" content="2015-03-04">
-              2015-03-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-03-04T00:00:00+08:00">
+                2015-03-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
 
           
             
+          
+
+          
+
+          
+          
+
           
 
           
@@ -636,26 +963,35 @@ git a
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            git merge (冲突版)12345678910111213141516171819mkdir mergeDemocd mergeDemogit initecho "1.c" &gt; 1.cgit add 1.cgit ci -m "1.c by master"git co -b testec
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          
+          git merge (冲突版)12345678910111213141516171819mkdir mergeDemocd mergeDemogit initecho "1.c" &gt; 1.cgit add 1.cgit ci -m "1.c by master"git co -b testec
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/03/04/git-merge&git-rebase/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -675,15 +1011,16 @@ git a
 
   
 
- </div>
+          
+          </div>
+          
 
-        
 
-        
-      </div>
+          
 
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -700,33 +1037,35 @@ git a
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="樱桃爱上阿狸" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">樱桃爱上阿狸</p>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="樱桃" />
+          <p class="site-author-name" itemprop="name">樱桃</p>
+          <p class="site-description motion-element" itemprop="description">我认为最深沉的爱，莫过于分开后，我把自己活成了你的样子。</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">期待和我一样爱阿狸的朋友，一样喜欢编程的小伙伴。</p>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">标签</span>
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
               </a>
-          </div>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
 
         </nav>
 
@@ -739,9 +1078,11 @@ git a
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
+
+        
+
 
       </section>
 
@@ -749,107 +1090,149 @@ git a
 
     </div>
   </aside>
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5308028&auto=1&height=66"></iframe>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">樱桃爱上阿狸</span>
+  <span class="author" itemprop="copyrightHolder">樱桃</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
 
- </div>
+        
+
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-  
-    
-    
-
   
 
-
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+
+
+
 
   
 
-  <script type="text/javascript">
-    $(document).ready(function () {
 
-      isMobile() && FastClick.attach(document.body);
 
-      // Define Motion Sequence.
-      motionIntegrator
-        .add(motionMiddleWares.logo)
-        .add(motionMiddleWares.menu)
-        .add(motionMiddleWares.backToTop)
-        .add(motionMiddleWares.postList)
-        .add(motionMiddleWares.sidebar);
-
-      // Bootstrap Motion.
-      motionIntegrator.bootstrap();
-    });
-  </script>
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
 
   
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5308028&auto=1&height=66"></iframe>
 </body>
 </html>
